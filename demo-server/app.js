@@ -24,7 +24,6 @@ server.use(jsonServer.defaults) // logger, static and cors middlewares
 server.use(router) // Mount router on '/'
 server.listen(5000);
 app.use(cookieParser("secret", {"path": "/"}));
-app.use(session({ secret: 'polymer dashboard secret', resave: false, saveUninitialized: true, cookie: { maxAge: 60000 }}));
 app.get('/', function(req, res){
     if (!req.signedCookies.usersession) {
         res.redirect('/pages/auth/auth.html');
