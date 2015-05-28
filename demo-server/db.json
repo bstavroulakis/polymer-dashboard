@@ -1,0 +1,290 @@
+{
+  "menus": [
+    {
+      "title": "main",
+      "pages": [
+        {
+          "title": "Home",
+          "url": "/#!/",
+          "icon": "home"
+        },
+        {
+          "title": "Lists",
+          "url": "/#!/lists",
+          "icon": "view-list"
+        },
+        {
+          "title": "Grids",
+          "url": "/#!/grids",
+          "icon": "view-list"
+        },
+        {
+          "title": "Tables",
+          "url": "/#!/tables",
+          "icon": "view-module"
+        },
+        {
+          "title": "Forms",
+          "url": "/#!/forms",
+          "icon": "assignment"
+        },
+        {
+          "title": "Icons",
+          "icon": "image:collections",
+          "pages": [
+            {
+              "title": "Default",
+              "url": "/#!/icons/default"
+            },
+            {
+              "title": "Av",
+              "url": "/#!/icons/av"
+            },
+            {
+              "title": "Communication",
+              "url": "/#!/icons/communication"
+            },
+            {
+              "title": "Device",
+              "url": "/#!/icons/device"
+            },
+            {
+              "title": "Editor",
+              "url": "/#!/icons/editor"
+            },
+            {
+              "title": "Hardware",
+              "url": "/#!/icons/hardware"
+            },
+            {
+              "title": "Image",
+              "url": "/#!/icons/image"
+            },
+            {
+              "title": "Maps",
+              "url": "/#!/icons/maps"
+            },
+            {
+              "title": "Notification",
+              "url": "/#!/icons/notification"
+            },
+            {
+              "title": "Social",
+              "url": "/#!/icons/social"
+            }
+          ]
+        },
+        {
+          "title": "UI Elements",
+          "icon": "view-array",
+          "pages": [
+            {
+              "title": "Cards",
+              "url": "/#!/ui-elements/cards"
+            },
+            {
+              "title": "Typography",
+              "url": "/#!/ui-elements/typography"
+            },
+            {
+              "title": "Buttons",
+              "url": "/#!/ui-elements/buttons"
+            },
+            {
+              "title": "Messages-Notifications",
+              "url": "/#!/ui-elements/messages-notifications"
+            },
+            {
+              "title": "Colors",
+              "url": "/#!/ui-elements/colors"
+            },
+            {
+              "title": "Classes",
+              "url": "/#!/ui-elements/classes"
+            }
+          ]
+        },
+        {
+          "title": "Charts",
+          "url": "/#!/charts",
+          "icon": "assessment"
+        },
+        {
+          "title": "Pages",
+          "icon": "editor:insert-drive-file",
+          "pages": [
+            {
+              "title": "Login",
+              "url": "/pages/auth/auth.html"
+            },
+            {
+              "title": "404",
+              "url": "/#!/pages/404"
+            },
+            {
+              "title": "500",
+              "url": "/#!/pages/500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user",
+      "pages": [
+        {
+          "title": "Profile",
+          "url": "/#!/user/profile",
+          "icon": "account-box"
+        },
+        {
+          "title": "Settings",
+          "url": "/#!/user/settings",
+          "icon": "settings"
+        },
+        {
+          "title": "Logout",
+          "url": "/auth/logout",
+          "icon": "exit-to-app"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "title": "Home",
+      "url": "/#!/",
+      "template": "/pages/main/main.html"
+    },
+    {
+      "title": "Lists",
+      "url": "/#!/lists",
+      "template": "/pages/theme/lists/lists.html"
+    },
+    {
+      "title": "Tables",
+      "url": "/#!/tables",
+      "template": "/pages/theme/tables/tables.html"
+    },
+    {
+      "title": "Forms",
+      "url": "/#!/forms",
+      "template": "/pages/theme/forms/forms.html"
+    },
+    {
+      "title": "Typography",
+      "url": "/#!/ui-elements/typography",
+      "template": "/pages/theme/ui-elements/typography.html"
+    },
+    {
+      "title": "Buttons",
+      "url": "/#!/ui-elements/buttons",
+      "template": "/pages/theme/ui-elements/buttons.html"
+    },
+    {
+      "title": "Messages-Notifications",
+      "url": "/#!/ui-elements/messages-notifications",
+      "template": "/pages/theme/ui-elements/messages-notifications.html"
+    },
+    {
+      "title": "Colors",
+      "url": "/#!/ui-elements/colors",
+      "template": "/pages/theme/ui-elements/colors.html"
+    },
+    {
+      "title": "Classes",
+      "url": "/#!/ui-elements/classes",
+      "template": "/pages/theme/ui-elements/classes.html"
+    },
+    {
+      "title": "Charts",
+      "url": "/#!/charts",
+      "template": "/pages/theme/charts/charts.html"
+    },
+    {
+      "title": "404",
+      "url": "/#!/pages/404",
+      "template": "/pages/main/404.html"
+    },
+    {
+      "title": "500",
+      "url": "/#!/pages/500",
+      "template": "/pages/main/500.html"
+    },
+    {
+      "title": "Profile",
+      "url": "/#!/user/profile",
+      "template": "/pages/user/profile.html"
+    },
+    {
+      "title": "Settings",
+      "url": "/#!/user/settings",
+      "template": "/pages/user/settings.html"
+    },
+    {
+      "title": "Grids",
+      "url": "/#!/grids",
+      "template": "/pages/theme/grids/grids.html"
+    },
+    {
+      "title": "Default",
+      "url": "/#!/icons/default",
+      "template": "/pages/theme/icons/default.html"
+    },
+    {
+      "title": "Av",
+      "url": "/#!/icons/av",
+      "template": "/pages/theme/icons/av.html"
+    },
+    {
+      "title": "Communication",
+      "url": "/#!/icons/communication",
+      "template": "/pages/theme/icons/communication.html"
+    },
+    {
+      "title": "Device",
+      "url": "/#!/icons/device",
+      "template": "/pages/theme/icons/device.html"
+    },
+    {
+      "title": "Editor",
+      "url": "/#!/icons/editor",
+      "template": "/pages/theme/icons/editor.html"
+    },
+    {
+      "title": "Hardware",
+      "url": "/#!/icons/hardware",
+      "template": "/pages/theme/icons/hardware.html"
+    },
+    {
+      "title": "Image",
+      "url": "/#!/icons/image",
+      "template": "/pages/theme/icons/image.html"
+    },
+    {
+      "title": "Maps",
+      "url": "/#!/icons/maps",
+      "template": "/pages/theme/icons/maps.html"
+    },
+    {
+      "title": "Notification",
+      "url": "/#!/icons/notification",
+      "template": "/pages/theme/icons/notification.html"
+    },
+    {
+      "title": "Social",
+      "url": "/#!/icons/social",
+      "template": "/pages/theme/icons/social.html"
+    },
+    {
+      "title": "Icons",
+      "url": "/#!/ui-elements/icons",
+      "template": "/pages/theme/ui-elements/icons.html"
+    },
+    {
+      "title": "Cards",
+      "url": "/#!/ui-elements/cards",
+      "template": "/pages/theme/ui-elements/cards.html"
+    }
+  ]
+}

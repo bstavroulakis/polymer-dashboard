@@ -1,0 +1,46 @@
+﻿<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html" />
+<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html" />
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html" />
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html" />
+<link rel="import" href="../../components/pd-drawer/pd-drawer.html" />
+<dom-module id="pd-card">
+    <link rel="stylesheet" href="pd-card.css" />
+    <style>
+        :host{
+            display:inline-block;
+            width:100%;
+        }
+        .header{
+            margin:0;
+        }
+    </style>
+    <template>
+        <div class="pd-card-wrapper m-r-0-5 m-l-0-5 c-text c-text-bg">
+            <template is="dom-if" if="{{head}}">
+                <h2 class="header c-n-light c-b-b-dark p-t-0-5 p-b-0-5 p-l-1 p-r-1">
+                    <span>{{head}}</span>
+                </h2>
+            </template>
+            <div class="p-t-0-5 p-l-1 p-r-1 p-b-0-5">
+                <content></content>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </template>
+</dom-module>
+<script>
+  Polymer({
+        is: "pd-card",
+        properties: {
+            head: {
+                type: String,
+                value: "",
+                reflectToAttribute: true,
+                notify: true
+            }
+        },
+        ready: function () {
+        }
+  });
+</script>

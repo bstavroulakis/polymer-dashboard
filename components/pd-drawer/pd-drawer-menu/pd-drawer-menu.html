@@ -1,0 +1,30 @@
+﻿<dom-module id="pd-drawer-menu">
+    <link rel="stylesheet" href="pd-drawer-menu.css" />
+    <template>
+        <div id="drawer" class="drawer-profile">
+            <pd-ui-toggle>
+                <div id="profileBox" class="drawer-profile-name c-text-light toggle-trigger">
+                    <pd-list-item url="" position="right" icon="hardware:keyboard-arrow-down" class="drawer-profile-menu-toggle">
+                        billaraw
+                    </pd-list-item>
+                </div>
+                <div class="drawer-profile-menu toggle-body">
+                    <pd-list-menu title="user" position="left"></pd-list-menu>
+                </div>
+            </pd-ui-toggle>
+        </div>
+        <div id="fixedHeight">
+            <pd-list-menu title="main" position="left"></pd-list-menu>
+        </div>
+    </template>
+</dom-module>
+<script>
+  Polymer({
+      is: "pd-drawer-menu",
+      properties:{
+      },
+      ready: function () {
+          this.$.profileBox.toggleIcon = false;
+      }
+  });
+</script>

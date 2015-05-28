@@ -1,0 +1,34 @@
+﻿<dom-module id="pd-icon-page">
+    <template>
+        <template is="dom-repeat" items="{{iconList}}">
+            <pd-card head="{{item.title}}" class="p-r-0-5 p-l-0-5 p-b-1 p-t-1">
+                <pd-ui-grid class="p-t-1">
+                    <template is="dom-repeat" items="{{item.icons}}" as="icon">
+                        <pd-ui-grid-item large="6" medium="8" small="12">
+                            <div class="p-1">
+                                <iron-icon icon="{{icon}}"></iron-icon>
+                                <span class="p-l-0-5">{{icon}}</span>
+                            </div>
+                        </pd-ui-grid-item>
+                    </template>
+                </pd-ui-grid>
+            </pd-card>
+        </template>
+    </template>
+</dom-module>
+<script>
+  Polymer({
+      is: "pd-icon-page",
+        properties: {
+            iconList: {
+                type: Array,
+                value: [],
+                reflectToAttribute: true,
+                notify:true
+            }
+        },
+        ready: function () {
+
+        }
+  });
+</script>

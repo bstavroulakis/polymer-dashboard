@@ -1,0 +1,37 @@
+﻿<dom-module id="pd-ui-grid-item">
+    <template>
+        <div class$="{{gridClasses}}">
+            <content></content>
+        </div>
+    </template>
+</dom-module>
+<script>
+  Polymer({
+      is: "pd-ui-grid-item",
+      properties: {
+          large: {
+              type: String,
+              value: "24",
+              reflectToAttribute: true
+          },
+          medium: {
+              type: String,
+              value: "24",
+              reflectToAttribute: true
+          },
+          small: {
+              type: String,
+              value: "24",
+              reflectToAttribute: true
+          }
+      },
+      observers: [
+        '_computeClasses(small, medium, large)'
+      ],
+      ready: function () {
+      },
+      _computeClasses: function (small, medium, large) {
+          this.className = "pd-u-xl-" + large + "-24 pd-u-lg-" + large + "-24 pd-u-md-" + medium + "-24 pd-u-sm-" + small + "-24";
+      }
+  });
+</script>

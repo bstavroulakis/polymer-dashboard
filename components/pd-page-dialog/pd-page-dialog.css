@@ -1,0 +1,19 @@
+/* Included Padding Vars */
+/* Included Sizes Vars */
+.main-container {
+  width: 450px;
+  margin: 0 auto;
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+  vertical-align: middle;
+  position: relative;
+}
+
+@media (max-width: 470px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=pd-page-dialog.css.map */

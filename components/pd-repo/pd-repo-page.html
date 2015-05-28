@@ -1,0 +1,30 @@
+﻿<dom-module id="pd-repo-page">
+    <template>
+        <pd-context id="context"></pd-context>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+      is: "pd-repo-page",
+        //GET /pages
+        getPages: function (callback, selfCallbak) {
+            var self = this;
+            if (self.$.context.getData().model.pages.length > 0) {
+                return self.$.context.getData().model.pages;
+            } else {
+                self.$.context.$.ajax.url = self.$.context.service + "pages";
+                self.$.context.$.ajax.addEventListener('response', function (response) {
+                    try {
+                        self.$.context.getData().model.pages = response.detail.response;
+                        if (callback != null) {
+                            callback(response.detail.response, selfCallbak);
+                        }
+                    } catch (e) {
+                    }
+                });
+                self.$.context.$.ajax.generateRequest();
+            };
+        }
+  });
+</script>

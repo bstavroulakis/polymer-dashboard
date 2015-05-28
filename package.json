@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "name": "PolymerDashboard",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-vulcanize": "^0.6.4",
+    "json-server":"^0.7.11",
+    "express": "^4.12.4"
+  },
+  "dependencies": {
+
+  }
+}

@@ -1,0 +1,36 @@
+﻿<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../Components/pd-page-dialog/pd-page-dialog.html">
+<link rel="import" href="../../Components/pd-card/pd-card.html" />
+<link rel="import" href="../../bower_components/paper-input/paper-input.html"/>
+<link rel="import" href="../../bower_components/paper-button/paper-button.html" />
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
+
+<dom-module id="auth-dialog">
+    <template>
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/position.css" />
+        <link rel="stylesheet" href="../../css/skins/default/colors.css" />
+        <link rel="stylesheet" href="auth.css" />
+        <pd-page-dialog>
+            <div head class="t-center">
+                <img style="height:4em" src="../../images/LogoSymbolInverse.gif" />
+                <img style="height:4em" src="../../images/LogoTextInverse.gif" />
+            </div>
+            <div body class="p-t-2">
+                <paper-input no-label-float label="Username"></paper-input>
+                <paper-input no-label-float label="Password" type="password"></paper-input>
+                <paper-checkbox class="f-left remember-me" on-click=""></paper-checkbox><div class="f-left p-l-0-5 remember-me-txt">Remember me</div>
+                <paper-button tabindex="0" class="c-p f-right login-btn">Login</paper-button>
+            </div>
+        </pd-page-dialog>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+      is: "auth-dialog",
+        properties: {
+            
+        },
+  });
+</script>

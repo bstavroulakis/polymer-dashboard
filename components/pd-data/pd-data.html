@@ -1,0 +1,41 @@
+﻿<dom-module id="pd-data">
+    <template>
+
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: "pd-data",
+    properties: {
+        service: {
+            type: String,
+            value:""
+        },
+        model: {
+            type: Object,
+            value: {
+                user: {},
+                messages: [],
+                pages: [],
+                notifications: [],
+                menus: [],
+                route: "",
+                page: {},
+                progress:0
+            }
+        }
+    },
+    observers: [
+        'modelChanged(model.*)'
+    ],
+    modelChanged: function (changeRecord) {
+        var val = changeRecord.value;
+        var path = changeRecord.path;
+        this.fire("pd-data-updated-" + path, { value: val });
+    },
+    update: function (property, value) {
+        this.set('model.' + property, value);
+    }
+  });
+</script>

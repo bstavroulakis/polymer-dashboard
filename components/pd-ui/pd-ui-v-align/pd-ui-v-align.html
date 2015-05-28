@@ -1,0 +1,29 @@
+﻿<dom-module id="pd-ui-v-align">
+    <style>
+        #pd-ui-v-align-outer-container {
+            display: table;
+            width:100%;
+        }
+
+        #pd-ui-v-align-container {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+    <template>
+        <div id="pd-ui-v-align-outer-container">
+            <div id="pd-ui-v-align-container">
+                <content></content>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+      is: "pd-ui-v-align",
+        properties: {
+
+        }
+  });
+</script>

@@ -1,0 +1,30 @@
+﻿<link rel="import" href="../../../components/pd-ui/pd-ui-grid/pd-ui-grid-item.html" />
+
+<dom-module id="pd-ui-grid">
+    <link href="../../../components/pd-ui/pd-ui-grid/pd-ui-grid-units.css" rel="stylesheet" type="text/css">
+    <link href="../../../components/pd-ui/pd-ui-grid/pd-ui-grid-responsive.css" rel="stylesheet" type="text/css">
+    <style>
+        .pd-g {
+            width: 100%;
+            display: block;
+        }
+        .clearfix{
+            clear:both;
+        }
+    </style>
+    <template>
+        <div id="grid" class="pd-g p-l-0-5 p-r-0-5">
+            <content></content>
+            <div class="clearfix"></div>
+        </div>
+    </template>
+</dom-module>
+<script>
+  Polymer({
+      is: "pd-ui-grid",
+      properties: {
+      },
+      ready: function () {
+      }
+  });
+</script>

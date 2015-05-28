@@ -1,0 +1,25 @@
+{
+  "name": "iron-component-page",
+  "version": "0.9.2",
+  "private": true,
+  "dependencies": {
+    "polymer": "polymer/polymer#v0.9.0-rc.1",
+    "iron-doc-viewer": "PolymerElements/iron-doc-viewer#^0.9.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^0.9.0"
+  },
+  "devDependencies": {
+    "test-fixture": "PolymerElements/test-fixture#^0.9.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.6.0",
+    "web-component-tester": "*"
+  },
+  "homepage": "https://github.com/PolymerElements/iron-component-page",
+  "_release": "0.9.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.2",
+    "commit": "453e1608f3b7995e713c4171a0df5d4fa97800ae"
+  },
+  "_source": "git://github.com/PolymerElements/iron-component-page.git",
+  "_target": "0.9.2",
+  "_originalSource": "PolymerElements/iron-component-page"
+}

@@ -1,0 +1,19 @@
+﻿.drawer-profile-name {
+    background: url(../../../images/DrawerBg.gif);
+    background-size: cover;
+    height: 100px;
+    position:relative;
+}
+.drawer-profile-menu-toggle{
+    position:absolute;
+    bottom:0px;
+    background-color:rgba(0,0,0,0.2);
+    cursor:pointer;
+    width:100%;
+}
+.drawer-profile .pd-drawer-list{
+    margin-top:0;
+    margin-bottom:0;
+    border-bottom:1px solid #e0e0e0;
+}
+

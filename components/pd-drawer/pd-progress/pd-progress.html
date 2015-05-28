@@ -1,0 +1,47 @@
+﻿<link rel="import" href="../../../bower_components/paper-progress/paper-progress.html" />
+<link rel="import" href="../../../components/pd-repo/pd-context.html" />
+
+<dom-module id="pd-progress">
+    <style>
+        paper-progress {
+            display: inline-block;
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        .hidden{
+            display:none;
+        }
+    </style>
+    <template>
+        <pd-context id="context"></pd-context>
+        <paper-progress class$="{{_computeClass(value)}}" value="{{value}}"></paper-progress>
+    </template>
+</dom-module>
+<script>
+        Polymer({
+            is: "pd-progress",
+            properties: {
+                value: {
+                    type: Number,
+                    value: 100,
+                    notify: true,
+                    reflectToValue: true
+                }
+            },
+            _computeClass: function (val) {
+                if (val > 0 && val < 100) {
+                    return "";
+                } else {
+                    return "hidden";
+                }
+            },
+            ready: function () {
+                var self = this;
+                self.$.context.getData().addEventListener("pd-data-updated-model.progress", function (event) {
+                    self.value = event.detail.value;
+                });
+            }
+        });
+</script>
