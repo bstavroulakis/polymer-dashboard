@@ -286,5 +286,11 @@
       "url": "/#!/ui-elements/cards",
       "template": "/pages/theme/ui-elements/cards.html"
     }
+  ],
+  "users":[
+    {
+      "username":"bill",
+      "password":"polymer"
+    }
   ]
 }
