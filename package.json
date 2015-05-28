@@ -10,7 +10,8 @@
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-vulcanize": "^0.6.4",
     "json-server":"^0.7.11",
-    "express": "^4.12.4"
+    "express": "^4.12.4",
+    "http-auth": "^2.2.6"
   },
   "dependencies": {
 
