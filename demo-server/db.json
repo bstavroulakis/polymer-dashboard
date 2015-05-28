@@ -287,10 +287,16 @@
       "template": "/pages/theme/ui-elements/cards.html"
     }
   ],
-  "users":[
+  "users": [
     {
-      "username":"bill",
-      "password":"polymer"
+      "id": 1,
+      "username": "bill",
+      "password": "polymer"
+    },
+    {
+      "id": 2,
+      "username": "joy",
+      "password": "material"
     }
   ]
 }
