@@ -106,9 +106,7 @@ suite('Polymer.IronA11yKeysBehavior', function() {
     var XA11yBehavior = {
       keyBindings: {
         'enter': '_keyHandler'
-      },
-
-      _keyHandler: function() {}
+      }
     };
 
     Polymer({
@@ -161,6 +159,14 @@ suite('Polymer.IronA11yKeysBehavior', function() {
 
       MockInteractions.pressSpace(keys);
       expect(keys.keyCount).to.be.equal(1);
+    });
+
+    suite('edge cases', function() {
+      test('knows that `spacebar` is the same as `space`', function() {
+        var event = new CustomEvent('keydown');
+        event.key = 'spacebar';
+        expect(keys.keyboardEventMatchesKeys(event, 'space')).to.be.equal(true);
+      });
     });
 
     suite('matching keyboard events to keys', function() {

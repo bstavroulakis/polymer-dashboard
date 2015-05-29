@@ -23,7 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <test-fixture id="basic">
     <template>
-      <iron-component-page module-name="test-element"></iron-component-page>
+      <iron-component-page src="test-element.html"></iron-component-page>
     </template>
   </test-fixture>
 
@@ -34,18 +34,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       setup(function() {
         testElement = fixture('basic');
-      });
-
-      test('default demo url', function() {
-        assert.equal(testElement._demoUrl, 'demo');
-      })
-
-      test('_docUrl given the moduelName', function() {
-        assert.equal(testElement._docUrl, testElement.moduleName + '.html');
-      });
-
-      test('document title given the moduelName', function() {
-        assert.equal(document.title, testElement.moduleName);
       });
 
     });

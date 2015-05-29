@@ -298,5 +298,6 @@
       "username": "joy",
       "password": "material"
     }
-  ]
+  ],
+  "auth": []
 }

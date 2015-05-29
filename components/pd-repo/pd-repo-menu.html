@@ -1,6 +1,7 @@
 ﻿<dom-module id="pd-repo-menu">
     <template>
         <pd-context id="context"></pd-context>
+        <iron-ajax id="ajax" url="{{service}}" handle-as="json"></iron-ajax>
     </template>
 </dom-module>
 
@@ -17,15 +18,15 @@
                 return existingPages;
             } else {
                 var d = new Date();
-                self.$.context.$.ajax.url = self.$.context.service + "menus?title=" + title;
-                self.$.context.$.ajax.addEventListener('response', function (response) {
+                self.$.ajax.url = self.$.context.service + "menus?title=" + title;
+                self.$.ajax.addEventListener('response', function (response) {
                     try {
                         self.$.context.getData().model.menus.push(response.detail.response[0]);
                         callback(response.detail.response[0].pages, selfCallbak);
                     } catch (e) {
                     }
                 });
-                self.$.context.$.ajax.generateRequest();
+                self.$.ajax.generateRequest();
             };
         },
         getMenuCache: function (title) {

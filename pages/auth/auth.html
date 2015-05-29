@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <title></title>
+    <title>Polymer Dashboard</title>
     <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-    <link href="auth-dialog.html" rel="import" />
+    <link href="../../pages/auth/auth-dialog.html" rel="import" />
 </head>
 <body class="split">
+    <pd-data id="pd-data" service="http://localhost:5000/"></pd-data>
     <auth-dialog></auth-dialog>
 </body>
 </html>

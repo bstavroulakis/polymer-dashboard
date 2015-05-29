@@ -1,6 +1,6 @@
 {
   "name": "iron-ajax",
-  "version": "0.9.3",
+  "version": "0.9.6",
   "description": "Makes it easy to make ajax calls and parse the response",
   "private": true,
   "authors": [
@@ -24,7 +24,6 @@
   "ignore": [],
   "dependencies": {
     "promise-polyfill": "polymerlabs/promise-polyfill#^0.9.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
     "polymer": "Polymer/polymer#^0.9.0"
   },
   "devDependencies": {
@@ -33,16 +32,16 @@
     "iron-image": "polymerelements/iron-image#^0.9.0",
     "paper-styles": "polymerelements/paper-styles#^0.9.0",
     "test-fixture": "polymerelements/test-fixture#^0.9.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#~0.6.0",
-    "web-component-tester": "~2.2.3"
+    "web-component-tester": "~2.2.3",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
-  "_release": "0.9.3",
+  "_release": "0.9.6",
   "_resolution": {
     "type": "version",
-    "tag": "v0.9.3",
-    "commit": "dea0948efd40841e9f27051dc49fc23dd5e1c135"
+    "tag": "v0.9.6",
+    "commit": "4cd9d012c11a96dfa805de3fbaf201b53df14a48"
   },
   "_source": "git://github.com/PolymerElements/iron-ajax.git",
-  "_target": "0.9.3",
+  "_target": "^0.9.3",
   "_originalSource": "PolymerElements/iron-ajax"
 }
