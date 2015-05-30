@@ -1,6 +1,5 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -9,24 +8,19 @@ html, body {
   height: 100%;
   min-height: 100%;
   font-family: roboto, sans-serif;
-  font-weight: 300;
-}
+  font-weight: 300; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 html [hidden] {
-  display: none !important;
-}
+  display: none !important; }
 
 html /deep/ .clearfix, .clearfix {
-  clear: both;
-}
+  clear: both; }
 
 .clearfix:before, .clearfix:after {
   content: " ";
-  display: table;
-}
+  display: table; }
 
 /*# sourceMappingURL=main.css.map */

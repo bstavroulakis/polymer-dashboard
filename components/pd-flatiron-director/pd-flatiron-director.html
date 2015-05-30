@@ -33,6 +33,8 @@
                 }.bind(self));
                 self.route = self.router.getRoute() ?
                     self.router.getRoute().join(self.router.delimiter) : '';
+                if(self.route == "")
+                    window.location = '/#!/'
             },
             routeChanged: function (newValue, oldValue) {
                 if (newValue == null || newValue == "")

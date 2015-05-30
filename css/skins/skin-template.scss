@@ -1,55 +1,58 @@
 ﻿/* Components */
 .paper-toolbar, paper-toolbar.paper-toolbar-0, .split:before,
 paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox{
-    background-color:$primary-color !important;
+    background-color:$primary-color;
 }
 pd-list-menu li a:hover{
-    background-color:$color-neutral-dark !important;
+    background-color:$color-neutral-dark;
 }
 pd-list-menu li ul{
-    background-color:$color-neutral-dark !important;
+    background-color:$color-neutral-dark;
 }
 paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox{
-      border-color:$primary-color !important;
+      border-color:$primary-color;
 }
 paper-checkbox.paper-checkbox-0 #ink[checked].paper-checkbox{
-    color:$primary-color !important;
+    color:$primary-color;
 }
 .pd-drawer-list iron-icon, .main{
-    color:$color-neutral-text-dark !important;
+    color:$color-neutral-text-dark;
 }
 a{
-    color:$primary-color-dark !important;
+    color:$primary-color-dark;
 }
 /* Custom Classes */
-.c-p-light{ background-color:$primary-color !important; }
-.c-p { background-color:$primary-color !important; color:$primary-color-text !important; }
-.c-p-dark{ background-color:$primary-color !important; }
+.c-p-light{ background-color:$primary-color-light; }
+.c-p { background-color:$primary-color; color:$primary-color-text; }
+.c-p-dark{ background-color:$primary-color-dark; color:$primary-color-text;  }
 
-.c-n-light{ background-color:$color-neutral-light !important; }
-.c-n{ background-color:$color-neutral !important; }
-.c-n-dark{ background-color:$color-neutral-dark !important; }
+.c-n-light{ background-color:$color-neutral-light; }
+.c-n{ background-color:$color-neutral; }
+.c-n-dark{ background-color:$color-neutral-dark; }
 
-.c-text-bg{background-color:$color-neutral-text-bg !important;}
-.c-text, .c-text a{color:$color-neutral-text !important;}
-.c-text-dark, .c-text-dark a{color:$color-neutral-text-dark !important;}
-.c-text-light, .c-text-light a{color:$color-neutral-text-light !important;}
-.c-text-primary-light, .c-text-primary-light a{color:$primary-color-light !important;}
+.c-text-bg{background-color:$color-neutral-text-bg;}
+.c-text, .c-text a{color:$color-neutral-text;}
+.c-text-dark, .c-text-dark a{color:$color-neutral-text-dark;}
+.c-text-light, .c-text-light a{color:$color-neutral-text-light;}
+.c-text-primary-light, .c-text-primary-light a{color:$primary-color-light;}
 
-.c-b-t-light{ border-top:1px solid $color-neutral-light !important; }
-.c-b-r-light{ border-right:1px solid $color-neutral-light !important; }
-.c-b-b-light{ border-bottom:1px solid $color-neutral-light !important; }
-.c-b-l-light{ border-left:1px solid $color-neutral-light !important; }
+.c-b-light{ border-top:1px solid $color-neutral-light; }
+.c-b-t-light{ border-top:1px solid $color-neutral-light; }
+.c-b-r-light{ border-right:1px solid $color-neutral-light; }
+.c-b-b-light{ border-bottom:1px solid $color-neutral-light; }
+.c-b-l-light{ border-left:1px solid $color-neutral-light; }
 
-.c-b-t{ border-top:1px solid $color-neutral !important; }
-.c-b-r{ border-right:1px solid $color-neutral !important; }
-.c-b-b{ border-bottom:1px solid $color-neutral !important; }
-.c-b-l{ border-left:1px solid $color-neutral !important; }
+.c-b{ border-top:1px solid $color-neutral; }
+.c-b-t{ border-top:1px solid $color-neutral; }
+.c-b-r{ border-right:1px solid $color-neutral; }
+.c-b-b{ border-bottom:1px solid $color-neutral; }
+.c-b-l{ border-left:1px solid $color-neutral; }
 
-.c-b-t-dark{ border-top:1px solid $color-neutral-dark !important; }
-.c-b-r-dark{ border-right:1px solid $color-neutral-dark !important; }
-.c-b-b-dark{ border-bottom:1px solid $color-neutral-dark !important; }
-.c-b-l-dark{ border-left:1px solid $color-neutral-dark !important; }
+.c-b-dark{ border-top:1px solid $color-neutral-dark; }
+.c-b-t-dark{ border-top:1px solid $color-neutral-dark; }
+.c-b-r-dark{ border-right:1px solid $color-neutral-dark; }
+.c-b-b-dark{ border-bottom:1px solid $color-neutral-dark; }
+.c-b-l-dark{ border-left:1px solid $color-neutral-dark; }
 
 .shadow-top {
     -webkit-box-shadow: 0 -5px 5px -5px #e3e3e3;
