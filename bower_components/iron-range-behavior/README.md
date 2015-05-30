@@ -1,4 +1,4 @@
 iron-range-behavior
 ==========
 
-Provides the behavior for something with a minimum to maximum range.
+`Polymer.IronRangeBehavior` provides the behavior for something with a minimum to maximum range.

@@ -1,6 +1,6 @@
 {
   "name": "marked-element",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "description": "Element wrapper for the marked library",
   "private": true,
   "authors": [
@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "marked": "~0.3.3",
-    "polymer": "Polymer/polymer#^0.9.0"
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "license": "https://polymer.github.io/LICENSE.txt",
   "main": "marked-element.html",
@@ -25,19 +25,19 @@
     "url": "git://github.com/Polymer/marked-element.git"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^0.9.0",
-    "test-fixture": "polymerelements/test-fixture#^0.9.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "test-fixture": "polymerelements/test-fixture#^1.0.0",
     "web-component-tester": "*",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
   "homepage": "https://github.com/PolymerElements/marked-element",
-  "_release": "0.9.2",
+  "_release": "1.0.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.9.2",
-    "commit": "2444f6dfa379248637a09a1f5ec810a877b727a0"
+    "tag": "v1.0.0",
+    "commit": "d7be312805f071335c843b6bf7248b89bcd40b4e"
   },
   "_source": "git://github.com/PolymerElements/marked-element.git",
-  "_target": "^0.9.0",
+  "_target": "^1.0.0",
   "_originalSource": "PolymerElements/marked-element"
 }

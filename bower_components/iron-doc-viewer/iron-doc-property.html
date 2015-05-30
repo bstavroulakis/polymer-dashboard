@@ -29,7 +29,7 @@ Give it a hydrolysis `PropertyDescriptor` (via `descriptor`), and watch it go!
       <div id="details">
         <div id="meta" hidden$="{{_computeHideMeta(descriptor)}}">
           <span id="type" class="type">{{descriptor.type}}</span>
-          <span id="default" hidden$="{{!descriptor.default}}">default: <span class="value">{{descriptor.default}}</span></span>
+          <span id="default" hidden$="{{_computeHideDefault(descriptor.default)}}">default: <span class="value">{{_computeDefaultDisplay(descriptor.default)}}</span></span>
           <template is="dom-if" if="{{descriptor.readOnly}}"><span>&nbsp;readOnly</span></template>
           <template is="dom-if" if="{{descriptor.notify}}"><span>&nbsp;notify</span></template>
         </div>
@@ -175,6 +175,16 @@ Give it a hydrolysis `PropertyDescriptor` (via `descriptor`), and watch it go!
     // hidden if no params, and no return value
     _computeHideParams: function(descriptor,ret) {
       return (!descriptor.params || descriptor.params.length === 0) && !ret;
+    },
+
+    _computeHideDefault: function(def) {
+      return def === undefined;
+    },
+
+    _computeDefaultDisplay: function(def) {
+      if (def === '')
+        return "''";
+      return def;
     }
 
   });

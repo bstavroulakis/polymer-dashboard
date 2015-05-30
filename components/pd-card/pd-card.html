@@ -5,7 +5,7 @@
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html" />
 <link rel="import" href="../../components/pd-drawer/pd-drawer.html" />
 <dom-module id="pd-card">
-    <link rel="stylesheet" href="pd-card.css" />
+    <link rel="stylesheet" href="../../components/pd-card/pd-card.css" />
     <style>
         :host{
             display:inline-block;
@@ -16,7 +16,7 @@
         }
     </style>
     <template>
-        <div class="pd-card-wrapper m-r-0-5 m-l-0-5 c-text c-text-bg">
+        <div class="pd-card-wrapper m-r-0-5 m-l-0-5 m-t-1  c-text c-text-bg">
             <template is="dom-if" if="{{head}}">
                 <h2 class="header c-n-light c-b-b-dark p-t-0-5 p-b-0-5 p-l-1 p-r-1">
                     <span>{{head}}</span>

@@ -42,6 +42,9 @@ is separate from validation, and `allowed-pattern` does not affect how the input
 
     <!-- only allow characters that match [0-9] -->
     <input is="iron-input" prevent-invaild-input allowed-pattern="[0-9]">
+
+@hero hero.svg
+@demo demo/index.html
 */
 
   Polymer({
@@ -135,6 +138,11 @@ is separate from validation, and `allowed-pattern` does not affect how the input
       return printable;
     },
 
+    // convert printable numpad keys to number keys
+    _correctNumpadKeys: function(keyCode) {
+      return (keyCode > 95 && keyCode < 112) ? keyCode - 48 : keyCode;
+    },
+
     _onKeydown: function(event) {
       if (!this.preventInvalidInput && this.type !== 'number') {
         return;
@@ -143,7 +151,7 @@ is separate from validation, and `allowed-pattern` does not affect how the input
       if (!regexp) {
         return;
       }
-      var thisChar = String.fromCharCode(event.keyCode);
+      var thisChar = String.fromCharCode(this._correctNumpadKeys(event.keyCode));
       if (this._isPrintable(event.keyCode) && !regexp.test(thisChar)) {
         event.preventDefault();
       }
@@ -155,6 +163,10 @@ is separate from validation, and `allowed-pattern` does not affect how the input
      * @return {Boolean} True if the value is valid.
      */
     validate: function() {
+      // Empty, non-required input is valid.
+      if (!this.required && this.value == '')
+        return true;
+        
       var valid;
       if (this.hasValidator()) {
         valid = Polymer.IronValidatableBehavior.validate.call(this, this.value);

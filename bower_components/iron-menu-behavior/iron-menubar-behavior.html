@@ -11,12 +11,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="iron-menu-behavior.html">
 
-<!--
-`Polymer.IronMenubarBehavior` implements accessible menubar behavior.
--->
-
 <script>
 
+  /**
+   * `Polymer.IronMenubarBehavior` implements accessible menubar behavior.
+   *
+   * @polymerBehavior Polymer.IronMenubarBehavior
+   */
   Polymer.IronMenubarBehaviorImpl = {
 
     hostAttributes: {
@@ -55,7 +56,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   };
 
-  /** @polymerBehavior */
+  /** @polymerBehavior Polymer.IronMenubarBehavior */
   Polymer.IronMenubarBehavior = [
     Polymer.IronMenuBehavior,
     Polymer.IronMenubarBehaviorImpl

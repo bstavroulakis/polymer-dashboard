@@ -1,6 +1,6 @@
 ﻿<link href="../../../components/pd-repo/pd-repo-page.html" rel="import" />
 <dom-module id="pd-drawer-main">
-    <template is="dom-bind">
+    <template>
         <iron-ajax id="ajax" url="" handle-as="document" progress="{{progress}}"></iron-ajax>
         <pd-repo-page id="repo"></pd-repo-page>
         <div id="main"></div>
@@ -88,53 +88,6 @@
           self.$.ajax.url = url;
           self.$.ajax.generateRequest();
 
-          /*var l = document.createElement('link');
-          l.rel = 'import';
-          l.href = url;
-          l.onload = function (e) {
-              console.log("Link Loaded");
-              console.log(e.target.import.body.innerHTML)
-              self.$.main.innerHTML += e.target.import.body.innerHTML;
-          };
-          self.$.main.appendChild(l);
-          return l;*/
-
       }
-      /*,loadImports: function (url, imports) {
-
-      
-          var urlImportArr = url.split('.html');
-          var urlImport = urlImportArr[0] + "-import.html";
-          self.importHref(urlImport, function () {
-              self.$.ajax.url = url;
-              self.$.ajax.addEventListener('response', function (response) {
-                  try {
-
-                      self.$.main.innerHTML = (response.detail.response.body.innerHTML);
-
-                      //self.$.main.innerHTML += (response.detail.response.head.innerHTML);
-                      console.log(document.head);
-                      //self.loadImports(url, response.detail.response.head.innerHTML);
-                  } catch (e) {
-                  }
-              });
-              self.$.ajax.generateRequest();
-          });
-
-          var self = this;
-          var re = /href="(.*?)"/gmi;
-          var m;
-
-          var urlArr = url.split('/');
-          urlArr.pop();
-          url = urlArr.join('/');
-          
-          while ((m = re.exec(imports)) !== null) {
-              if (m.index === re.lastIndex) {
-                  re.lastIndex++;
-              }
-              self.importHref(url + '/' + m[1], function (e) { });
-          }
-      }*/
   });
 </script>

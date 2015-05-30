@@ -81,7 +81,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       test('activate event', function() {
         var item = s1.querySelector('#item2');
-        item.dispatchEvent(new CustomEvent('click', {bubbles: true}));
+        item.dispatchEvent(new CustomEvent('tap', {bubbles: true}));
         // check selected class
         assert.isTrue(item.classList.contains('iron-selected'));
       });
@@ -122,7 +122,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       test('activate event', function() {
         var item = s2.querySelector('#item2');
-        item.dispatchEvent(new CustomEvent('click', {bubbles: true}));
+        item.dispatchEvent(new CustomEvent('tap', {bubbles: true}));
         // check selected class
         assert.isTrue(item.classList.contains('iron-selected'));
       });

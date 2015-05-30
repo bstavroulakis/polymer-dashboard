@@ -17,9 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
   <script src="../../web-component-tester/browser.js"></script>
-  <script src="../../test-fixture/test-fixture-mocha.js"></script>
 
-  <link rel="import" href="../../test-fixture/test-fixture.html">
   <link rel="import" href="../iron-selector.html">
 
   <style>
@@ -31,29 +29,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body>
 
-  <test-fixture id="test">
-    <template>
-      <iron-selector id="selector" selected="1">
-        <template id="t" is="dom-repeat">
-          <div id$="[[item.name]]">{{item.name}}</div>
-        </template>
-      </iron-selector>
-    </template>
-  </test-fixture>
+  <template is="dom-bind">
+    <iron-selector id="selector" selected="1">
+      <template id="t" is="dom-repeat">
+        <div id$="[[item.name]]">{{item.name}}</div>
+      </template>
+    </iron-selector>
+  </template>
 
   <script>
 
     suite('dom-repeat', function() {
 
-      var s, t;
+      var scope, s, t;
 
-      setup(function () {
-        s = fixture('test');
-        t = s.querySelector('#t');
+      setup(function() {
+        scope = document.querySelector('template[is="dom-bind"]');
+        s = scope.$.selector;
+        t = scope.$.t;
+        t.items = [{name:'item0'}, {name: 'item1'}, {name: 'item2'}, {name: 'item3'}];
+      });
+
+      teardown(function() {
+        t.items = [];
       });
 
       test('supports repeated items', function(done) {
-        t.items = [{name:'item0'}, {name: 'item1'}, {name: 'item2'}, {name: 'item3'}];
         setTimeout(function() {
           // check items
           assert.equal(s.items.length, 4);
@@ -69,7 +70,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       });
 
       test('update items', function(done) {
-        t.items = [{name:'item0'}, {name: 'item1'}, {name: 'item2'}, {name: 'item3'}];
         setTimeout(function() {
           // check items
           assert.equal(s.items.length, 4);
@@ -90,7 +90,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       });
 
       test('set selected to something else', function(done) {
-        t.items = [{name:'item0'}, {name: 'item1'}, {name: 'item2'}, {name: 'item3'}];
         setTimeout(function() {
           // set selected to something else
           s.selected = 3;

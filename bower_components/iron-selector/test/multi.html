@@ -77,8 +77,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       test('set multi-selection via tap', function() {
         // set selectedValues
-        s.children[0].dispatchEvent(new CustomEvent('click', {bubbles: true}));
-        s.children[2].dispatchEvent(new CustomEvent('click', {bubbles: true}));
+        s.children[0].dispatchEvent(new CustomEvent('tap', {bubbles: true}));
+        s.children[2].dispatchEvent(new CustomEvent('tap', {bubbles: true}));
         // check selected class
         assert.isTrue(s.children[0].classList.contains('iron-selected'));
         assert.isTrue(s.children[2].classList.contains('iron-selected'));
@@ -100,12 +100,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           deselectEventCounter++;
         });
         // tap to select an item
-        s.children[0].dispatchEvent(new CustomEvent('click', {bubbles: true}));
+        s.children[0].dispatchEvent(new CustomEvent('tap', {bubbles: true}));
         // check events
         assert.equal(selectEventCounter, 1);
         assert.equal(deselectEventCounter, 0);
         // tap on already selected item should deselect it
-        s.children[0].dispatchEvent(new CustomEvent('click', {bubbles: true}));
+        s.children[0].dispatchEvent(new CustomEvent('tap', {bubbles: true}));
         // check selectedValues
         assert.equal(s.selectedValues.length, 0);
         // check class

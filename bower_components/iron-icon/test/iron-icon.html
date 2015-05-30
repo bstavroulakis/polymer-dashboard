@@ -99,11 +99,11 @@ suite('<iron-icon>', function() {
     test('can change its icon dynamically', function() {
       var style = icon.style;
 
-      expect(style.backgroundPositionX).to.be.eql('0px');
+      expect(style.backgroundPosition).to.match(/0(%|px) 0(%|px)/);
 
       icon.icon = "example:blank";
 
-      expect(style.backgroundPositionX).to.be.eql('-24px');
+      expect(style.backgroundPosition).to.match(/-24px 0(%|px)/);
     });
   });
 

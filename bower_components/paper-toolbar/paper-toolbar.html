@@ -61,6 +61,13 @@ Custom property | Description | Default
 `--paper-toolbar-background` | Toolbar background color     | `--default-primary-color`
 `--paper-toolbar-color`      | Toolbar foreground color     | `--text-primary-color`
 `--paper-toolbar`            | Mixin applied to the toolbar | `{}`
+
+### Accessibility
+
+`<paper-toolbar>` has `role="toolbar"` by default. Any elements with the `title` attribute will
+be used as the label of the toolbar via `aria-labelledby`.
+
+@demo demo/index.html
 -->
 
 <dom-module id="paper-toolbar">
@@ -124,12 +131,18 @@ Custom property | Description | Default
       }
     }
 
+    #topBar {
+      position: relative;
+      z-index: 1;
+    }
+
     /* middle bar */
     #middleBar {
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
+      z-index: 2;
     }
 
     :host(.tall) #middleBar,
@@ -144,6 +157,7 @@ Custom property | Description | Default
       right: 0;
       bottom: 0;
       left: 0;
+      z-index: 1;
     }
 
     /*
@@ -203,16 +217,16 @@ Custom property | Description | Default
 
   <template>
 
-    <div id="bottomBar" class$="[[_computeBarClassName(bottomJustify)]]">
-      <content select=".bottom"></content>
+    <div id="topBar" class$="[[_computeBarClassName(justify)]]">
+      <content select=":not(.middle):not(.bottom)"></content>
     </div>
 
     <div id="middleBar" class$="[[_computeBarClassName(middleJustify)]]">
       <content select=".middle"></content>
     </div>
 
-    <div id="topBar" class$="[[_computeBarClassName(justify)]]">
-      <content></content>
+    <div id="bottomBar" class$="[[_computeBarClassName(bottomJustify)]]">
+      <content select=".bottom"></content>
     </div>
 
   </template>
@@ -239,6 +253,10 @@ Custom property | Description | Default
     Polymer({
 
       is: 'paper-toolbar',
+
+      hostAttributes: {
+        'role': 'toolbar'
+      },
 
       properties: {
 
@@ -283,6 +301,50 @@ Custom property | Description | Default
           value: ''
         }
 
+      },
+
+      attached: function() {
+        this._observer = this._observe(this);
+        this._updateAriaLabelledBy();
+      },
+
+      detached: function() {
+        if (this._observer) {
+          this._observer.disconnect();
+        }
+      },
+
+      _observe: function(node) {
+        var observer = new MutationObserver(function() {
+          this._updateAriaLabelledBy();
+        }.bind(this));
+        observer.observe(node, {
+          childList: true,
+          subtree: true
+        });
+        return observer;
+      },
+
+      _updateAriaLabelledBy: function() {
+        var labelledBy = [];
+        var contents = Polymer.dom(this.root).querySelectorAll('content');
+        for (var content, index = 0; content = contents[index]; index++) {
+          var nodes = Polymer.dom(content).getDistributedNodes();
+          for (var node, jndex = 0; node = nodes[jndex]; jndex++) {
+            if (node.hasAttribute && node.hasAttribute('title')) {
+              if (node.id) {
+                labelledBy.push(node.id);
+              } else {
+                var id = 'paper-toolbar-label-' + Math.floor(Math.random() * 10000);
+                node.id = id;
+                labelledBy.push(id);
+              }
+            }
+          }
+        }
+        if (labelledBy.length > 0) {
+          this.setAttribute('aria-labelledby', labelledBy.join(' '));
+        }
       },
 
       _computeBarClassName: function(barJustify) {

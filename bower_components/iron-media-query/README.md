@@ -6,4 +6,6 @@ The `queryMatches` property is a boolean representing if the page matches that m
 
 Example:
 
-    <iron-media-query query="(min-width: 600px)" queryMatches="{{queryMatches}}"></iron-media-query>
+```html
+<iron-media-query query="(min-width: 600px)" queryMatches="{{queryMatches}}"></iron-media-query>
+```

@@ -22,6 +22,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     background-color: var(--paper-grey-50);
   }
 
+  .horizontal-section-container {
+    @apply(--layout-horizontal);
+    @apply(--layout-center-justified);
+    @apply(--layout-wrap);
+  }
+
+  .vertical-section-container {
+    @apply(--layout-vertical);
+    @apply(--center-justified);
+  }
+
   .horizontal-section {
     background-color: white;
     padding: 24px;
@@ -37,6 +48,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     margin: 0 24px 24px 24px;
 
     @apply(--shadow-elevation-2dp);
+  }
+
+  .centered {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* TODO: remove this hack and use horizontal-section-container instead */
+  body > div.layout.horizontal.center-justified {
+    @apply(--layout-wrap);
   }
 
 </style>

@@ -12,16 +12,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="iron-selectable.html">
 
 <script>
-
+  /** @polymerBehavior Polymer.IronMultiSelectableBehavior */
   Polymer.IronMultiSelectableBehaviorImpl = {
     properties: {
 
       /**
        * If true, multiple selections are allowed.
-       *
-       * @attribute multi
-       * @type Boolean
-       * @default false
        */
       multi: {
         type: Boolean,
@@ -32,9 +28,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       /**
        * Gets or sets the selected elements. This is used instead of `selected` when `multi`
        * is true.
-       *
-       * @attribute selectedValues
-       * @type Array
        */
       selectedValues: {
         type: Array,
@@ -43,9 +36,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       /**
        * Returns an array of currently selected items.
-       *
-       * @attribute selectedItems
-       * @type Array
        */
       selectedItems: {
         type: Array,

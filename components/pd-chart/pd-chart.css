@@ -1,0 +1,17 @@
+.chart-wrapper{
+    width:100%;
+}
+#chart{
+    margin:0 auto;
+}
+.ct-chart .ct-label{
+    color:#000000 !important;
+    font-weight:300;
+}
+.ct-chart .ct-chart-pie .ct-label{
+    font-size:1em;
+    font-weight:400;
+}
+.ct-chart .ct-label{
+    color:rgba(0,0,0,1);
+}

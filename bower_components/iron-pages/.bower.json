@@ -1,6 +1,7 @@
 {
   "name": "iron-pages",
-  "version": "0.9.1",
+  "version": "1.0.0",
+  "license": "http://polymer.github.io/LICENSE.txt",
   "description": "Organizes a set of pages and shows one at a time",
   "main": "iron-pages.html",
   "private": true,
@@ -10,28 +11,27 @@
   "keywords": [
     "web-components",
     "polymer",
-    "iron",
-    "pages"
+    "container"
   ],
   "dependencies": {
-    "iron-resizable-behavior": "polymerelements/iron-resizable-behavior#^0.9.0",
-    "iron-selector": "polymerelements/iron-selector#^0.9.0",
-    "polymer": "Polymer/polymer#^0.9.0"
+    "iron-resizable-behavior": "polymerelements/iron-resizable-behavior#^1.0.0",
+    "iron-selector": "polymerelements/iron-selector#^1.0.0",
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "polymerelements/iron-component-page#^0.9.0",
-    "test-fixture": "polymerelements/test-fixture#^0.9.0",
+    "iron-component-page": "polymerelements/iron-component-page#^1.0.0",
+    "test-fixture": "polymerelements/test-fixture#^1.0.0",
     "web-component-tester": "*",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
   "homepage": "https://github.com/PolymerElements/iron-pages",
-  "_release": "0.9.1",
+  "_release": "1.0.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.9.1",
-    "commit": "e8fd64c298ba795cb3082f4649f08e4833cfebba"
+    "tag": "v1.0.0",
+    "commit": "5450f62ac96fb0b21237efb58b9847cd2ce9a27c"
   },
   "_source": "git://github.com/PolymerElements/iron-pages.git",
-  "_target": "*",
+  "_target": "^1.0.0",
   "_originalSource": "PolymerElements/iron-pages"
 }

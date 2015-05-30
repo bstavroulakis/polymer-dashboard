@@ -14,8 +14,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <script>
 
-  /** @polymerBehavior */
-  Polymer.IronButtonState = [Polymer.IronA11yKeysBehavior, {
+  /** @polymerBehavior Polymer.IronButtonState */
+  Polymer.IronButtonStateImpl = {
 
     properties: {
 
@@ -126,12 +126,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       this._setReceivedFocusFromKeyboard(false);
     },
 
-    _upHandler: function(e) {
+    _upHandler: function() {
       this._setPointerDown(false);
       this._setPressed(false);
     },
 
-    _spaceKeyDownHandler: function() {
+    _spaceKeyDownHandler: function(event) {
+      var keyboardEvent = event.detail.keyboardEvent;
+      keyboardEvent.preventDefault();
+      keyboardEvent.stopImmediatePropagation();
       this._setPressed(true);
     },
 
@@ -181,6 +184,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     }
 
-  }];
+  };
+
+  /** @polymerBehavior Polymer.IronButtonState */
+  Polymer.IronButtonState = [
+    Polymer.IronA11yKeysBehavior,
+    Polymer.IronButtonStateImpl
+  ];
 
 </script>

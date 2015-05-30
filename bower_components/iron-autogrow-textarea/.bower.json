@@ -1,6 +1,6 @@
 {
   "name": "iron-autogrow-textarea",
-  "version": "0.9.5",
+  "version": "1.0.0",
   "description": "A textarea element that automatically grows with input",
   "authors": [
     "The Polymer Authors"
@@ -19,28 +19,28 @@
     "type": "git",
     "url": "git://github.com/PolymerElements/iron-autogrow-textarea.git"
   },
-  "license": "MIT",
+  "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/PolymerElements/iron-autogrow-textarea",
   "ignore": [],
   "dependencies": {
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#^0.9.0",
-    "iron-validatable-behavior": "PolymerElements/iron-validatable-behavior#^0.9.0",
-    "polymer": "Polymer/polymer#^0.9.0"
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
+    "iron-validatable-behavior": "PolymerElements/iron-validatable-behavior#^1.0.0",
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^0.9.0",
-    "test-fixture": "PolymerElements/test-fixture#^0.9.0",
-    "web-component-tester": "Polymer/web-component-tester#^2.2.3",
-    "paper-styles": "PolymerElements/paper-styles#^0.9.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0",
+    "web-component-tester": "*",
+    "paper-styles": "PolymerElements/paper-styles#^1.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
-  "_release": "0.9.5",
+  "_release": "1.0.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.9.5",
-    "commit": "fa977d760a5e6f3420f7aa8f25b221f0581a599d"
+    "tag": "v1.0.0",
+    "commit": "ae96e84193694882ff4112566bf365e495b6263f"
   },
   "_source": "git://github.com/PolymerElements/iron-autogrow-textarea.git",
-  "_target": "^0.9.0",
+  "_target": "^1.0.0",
   "_originalSource": "PolymerElements/iron-autogrow-textarea"
 }

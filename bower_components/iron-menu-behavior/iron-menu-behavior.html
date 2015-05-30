@@ -12,12 +12,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-selector/iron-multi-selectable.html">
 <link rel="import" href="../iron-a11y-keys-behavior/iron-a11y-keys-behavior.html">
 
-<!--
-`Polymer.IronMenuBehavior` implements accessible menu behavior.
--->
-
 <script>
 
+  /**
+   * `Polymer.IronMenuBehavior` implements accessible menu behavior.
+   *
+   * @demo demo/index.html
+   * @polymerBehavior Polymer.IronMenuBehavior
+   */
   Polymer.IronMenuBehaviorImpl = {
 
     properties: {
@@ -202,7 +204,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   Polymer.IronMenuBehaviorImpl._shiftTabPressed = false;
 
-  /** @polymerBehavior */
+  /** @polymerBehavior Polymer.IronMenuBehavior */
   Polymer.IronMenuBehavior = [
     Polymer.IronMultiSelectableBehavior,
     Polymer.IronA11yKeysBehavior,
