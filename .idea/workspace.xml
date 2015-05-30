@@ -2,243 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cda048c-664c-4a67-a7bb-f95f441f8410" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/pd-chart/chartist.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/pd-chart/pd-chart.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/pd-chart/pd-chart.html" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\PRIMER.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\docs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\explainer\data-bind.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\explainer\data-bind.vsdx" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\explainer\samples.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\annotations\annotations.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\annotations\demo\app-chrome.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\array-splice.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\async.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\base.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\bind\accessors.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\bind\demo\app-chrome.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\bind\demo\app.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\bind\demo\src\annotations-bind-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\bind\demo\src\bind-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\bind\effects.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\case-map.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\collection.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\css-parse.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\custom-style.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\debounce.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\dom-api.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\dom-innerHTML.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\dom-module.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\event-api.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\experimental\focus.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\experimental\gestures.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\experimental\log.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\experimental\patch-dom.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\experimental\sinspect.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\experimental\style-auditor.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\experimental\style-protector.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\expr\observe-js-behavior.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\expr\observe-js-import.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\lang.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\polymer-bootstrap.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\resolve-url.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\settings.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\style-defaults.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\style-properties.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\style-transformer.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\style-util.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\template\array-selector.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\template\dom-bind.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\template\dom-if.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\template\dom-repeat.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\template\dom-template.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\lib\template\templatizer.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\attributes.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\behaviors.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\constructor.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\debouncer.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\extends.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\mixins.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\properties.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\micro\tag.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\mini\ready.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\mini\shadow.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\mini\shady.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\mini\template.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\polymer-lib.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\annotations.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\configure.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\effects.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\events.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\gestures.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\notify-path.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\resolveUrl.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\styling.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\utils.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\src\standard\x-styling.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\polymer\wct.conf.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icon/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icons/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-input/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-media-query/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-media-query/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-meta/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-pages/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-pages/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-range-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-range-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-selector/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked-element/.bower.json" afterPath="$PROJECT_DIR$/bower_components/marked-element/.bower.json" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\classList.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\classList.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\component.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\tests\duplicationTest.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\tests\qunit.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\classlist\tests\tests.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/.bower.json" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-button/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-checkbox/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-checkbox/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-drawer-panel/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-drawer-panel/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-header-panel/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-header-panel/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-input/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-material/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-menu/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-progress/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-progress/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-styles/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/.bower.json" afterPath="$PROJECT_DIR$/bower_components/polymer/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/.bower.json" afterPath="$PROJECT_DIR$/bower_components/prism-element/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-media-query/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-media-query/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-meta/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-pages/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-pages/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-range-behavior/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-range-behavior/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/activate-event.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/activate-event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-server/app.js" afterPath="$PROJECT_DIR$/demo-server/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/av-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/av-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icon/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icons/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-input/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-media-query/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-media-query/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-meta/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-pages/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-pages/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-range-behavior/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-range-behavior/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-selector/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked-element/bower.json" afterPath="$PROJECT_DIR$/bower_components/marked-element/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-button/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-checkbox/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-checkbox/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-drawer-panel/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-drawer-panel/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-header-panel/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-header-panel/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-input/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-material/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-menu/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-progress/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-progress/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-styles/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/bower.json" afterPath="$PROJECT_DIR$/bower_components/polymer/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/bower.json" afterPath="$PROJECT_DIR$/bower_components/prism-element/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/build.log" afterPath="$PROJECT_DIR$/bower_components/polymer/build.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/auth/auth-dialog.html" afterPath="$PROJECT_DIR$/pages/auth/auth-dialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/auth/auth.html" afterPath="$PROJECT_DIR$/pages/auth/auth.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/theme/charts/charts.html" afterPath="$PROJECT_DIR$/pages/theme/charts/charts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/color.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/color.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/communication-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/communication-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/content.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/demo-pages.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/demo-pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/demo.css" afterPath="$PROJECT_DIR$/bower_components/paper-styles/demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/device-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/device-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/editor-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/editor-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/hardware-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/hardware-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/image-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/image-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-checkbox/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-checkbox/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/iron-button-state.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/iron-button-state.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/iron-component-page.css" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/iron-component-page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/iron-component-page.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/iron-component-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-property.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-property.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer.css" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/iron-form-element-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/iron-form-element-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/iron-icon.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/iron-icon.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/test/iron-icon.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/test/iron-icon.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/iron-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/iron-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/iron-iconset-svg.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/iron-iconset-svg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/iron-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/iron-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-media-query/iron-media-query.html" afterPath="$PROJECT_DIR$/bower_components/iron-media-query/iron-media-query.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menu-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menu-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menubar-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menubar-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/iron-meta.html" afterPath="$PROJECT_DIR$/bower_components/iron-meta/iron-meta.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/iron-multi-selectable.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/iron-multi-selectable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-pages/iron-pages.html" afterPath="$PROJECT_DIR$/bower_components/iron-pages/iron-pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-range-behavior/iron-range-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-range-behavior/iron-range-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/iron-resizable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/iron-resizable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/iron-selectable.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/iron-selectable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/iron-selector.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/iron-selector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/iron-validatable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/iron-validatable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/iron-validatable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/iron-validatable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/maps-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/maps-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/multi.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/multi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/notification-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/notification-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/paper-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/paper-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-checkbox/paper-checkbox.html" afterPath="$PROJECT_DIR$/bower_components/paper-checkbox/paper-checkbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-drawer-panel/paper-drawer-panel.html" afterPath="$PROJECT_DIR$/bower_components/paper-drawer-panel/paper-drawer-panel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-addon-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-addon-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-container.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-container.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/paper-material.html" afterPath="$PROJECT_DIR$/bower_components/paper-material/paper-material.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu/paper-menu.html" afterPath="$PROJECT_DIR$/bower_components/paper-menu/paper-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-progress/paper-progress.html" afterPath="$PROJECT_DIR$/bower_components/paper-progress/paper-progress.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/paper-ripple.html" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/paper-ripple.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/paper-toolbar.html" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/paper-toolbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/test/paper-toolbar.html" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/test/paper-toolbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-card/pd-card.css" afterPath="$PROJECT_DIR$/components/pd-card/pd-card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-card/pd-card.html" afterPath="$PROJECT_DIR$/components/pd-card/pd-card.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html" afterPath="$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/polymer-micro.html" afterPath="$PROJECT_DIR$/bower_components/polymer/polymer-micro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/polymer-mini.html" afterPath="$PROJECT_DIR$/bower_components/polymer/polymer-mini.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/polymer.html" afterPath="$PROJECT_DIR$/bower_components/polymer/polymer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/prism-highlighter.html" afterPath="$PROJECT_DIR$/bower_components/prism-element/prism-highlighter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/social-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/social-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/template-repeat.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/template-repeat.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/src/x-app.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/src/x-app.html" />
     </list>
     <ignored path="polymer-dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -259,91 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-server/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pd-data.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-data/pd-data.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.307693">
-              <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="charts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/theme/charts/charts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1669219">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pd-card.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-card/pd-card.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pd-chart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-chart/pd-chart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-35.96154">
-              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pd-chart.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-chart/pd-chart.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pd-drawer-main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.807693">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pd-card.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-card/pd-card.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5384614">
-              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.25274727">
+              <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -385,14 +87,10 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/demo-server/db.json" />
         <option value="$PROJECT_DIR$/components/pd-repo/pd-context.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/pages/auth/auth.html" />
-        <option value="$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html" />
         <option value="$PROJECT_DIR$/bower_components/iron-ajax/iron-ajax.html" />
         <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-menu.html" />
         <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-page.html" />
         <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-auth.html" />
-        <option value="$PROJECT_DIR$/pages/auth/auth-dialog.html" />
         <option value="$PROJECT_DIR$/components/pd-card/pd-card.css" />
         <option value="$PROJECT_DIR$/bower_components/paper-drawer-panel/paper-drawer-panel.html" />
         <option value="$PROJECT_DIR$/bower.json" />
@@ -405,6 +103,10 @@
         <option value="$PROJECT_DIR$/components/pd-chart/pd-chart.css" />
         <option value="$PROJECT_DIR$/components/pd-chart/pd-chart.html" />
         <option value="$PROJECT_DIR$/components/pd-card/pd-card.html" />
+        <option value="$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html" />
+        <option value="$PROJECT_DIR$/pages/auth/auth-dialog.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/pages/auth/auth.html" />
         <option value="$PROJECT_DIR$/pages/theme/charts/charts.html" />
       </list>
     </option>
@@ -431,10 +133,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1296" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -612,6 +314,10 @@
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -656,6 +362,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pd-data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pd-dashboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -828,15 +552,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13066386" sideWeight="0.733871" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19713831" sideWeight="0.733871" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12539515" sideWeight="0.26612905" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23567568" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23982398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1044,6 +768,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
           <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,24 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/auth/auth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo-server/db.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.523536">
           <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15614237">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -1102,13 +813,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.961538">
           <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/auth/auth-dialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45350173">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,14 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27324915">
           <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1176,7 +873,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1221,14 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-data/pd-data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.307693">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/pd-card/pd-card.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1269,10 +958,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-data/pd-data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6094946">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.8461537">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/auth/auth-dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.73077">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#pd-page-dialog#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#pd-page-dialog#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/auth/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/theme/charts/charts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1669219">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.25274727">
+          <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
           <folding />
         </state>
       </provider>

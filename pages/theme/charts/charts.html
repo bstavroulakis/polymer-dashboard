@@ -12,8 +12,7 @@
         <pd-card head="Pie Chart">
             <pd-chart width="100%" height="300px" chart-type="Pie"
                       data='{"labels": ["Bananas", "Apples", "Grapes"],"series": [20, 15, 40]}'
-                      options='{"labelInterpolationFnc": function(value) {return value[0]}}'
-                      responsive-options='[["screen and (min-width: 640px)", {"chartPadding": 30,"labelOffset": 100,"labelDirection": "explode","labelInterpolationFnc": function(value) {return value;}}],["screen and (min-width: 1024px)", {"labelOffset": 80,"chartPadding": 20}]]'>
+                      options='{"labelInterpolationFnc": function(value) {return value[0]}}'>
             </pd-chart>
         </pd-card>
     </pd-ui-grid-item>
@@ -22,8 +21,7 @@
         <pd-card head="Line Chart">
             <pd-chart width="100%" height="300px" chart-type="Line"
                       data='{"labels": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],"series": [[12, 9, 7, 8, 5],[2, 1, 3.5, 7, 3],[1, 3, 4, 5, 6]]}'
-                      options='{"fullWidth": true, "chartPadding": {"right": 40}}'
-                      responsive-options='[["screen and (min-width: 640px)", {"chartPadding": 30,"labelOffset": 100,"labelDirection": "explode","labelInterpolationFnc": function(value) {return value;}}],["screen and (min-width: 1024px)", {"labelOffset": 80,"chartPadding": 20}]]'>
+                      options='{"fullWidth": true, "chartPadding": {"right": 40}}'>
             </pd-chart>
         </pd-card>
     </pd-ui-grid-item>
