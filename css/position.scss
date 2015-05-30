@@ -92,11 +92,6 @@
 .m-b-3{ margin-bottom:$p-3; }
 .m-b-4{ margin-bottom:$p-4; }
 
-/* Polymer Compoents */
-iron-icon{
-    float:left;
-}
-
 /* Floats */
 .f-left{
     float:left !important;
@@ -104,6 +99,23 @@ iron-icon{
 
 .f-right{
     float:right !important;
+}
+
+/* Positioning */
+.p-relative{
+  position:relative;
+}
+
+.p-absolute{
+  position:absolute;
+}
+
+.p-fixed{
+  position:fixed;
+}
+
+.p-static{
+  position:static;
 }
 
 /* Fillings */
@@ -136,3 +148,13 @@ h1{
     margin: 0;
     padding: 0;
 }
+
+/* Polymer Compoents */
+iron-icon{
+  float:left;
+}
+
+code{
+  padding:$p-0-1;
+}
+

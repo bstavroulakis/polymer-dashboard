@@ -246,16 +246,25 @@
 .m-b-4 {
   margin-bottom: 4em; }
 
-/* Polymer Compoents */
-iron-icon {
-  float: left; }
-
 /* Floats */
 .f-left {
   float: left !important; }
 
 .f-right {
   float: right !important; }
+
+/* Positioning */
+.p-relative {
+  position: relative; }
+
+.p-absolute {
+  position: absolute; }
+
+.p-fixed {
+  position: fixed; }
+
+.p-static {
+  position: static; }
 
 /* Fillings */
 .fill-dom {
@@ -290,5 +299,12 @@ iron-icon {
 h1 {
   margin: 0;
   padding: 0; }
+
+/* Polymer Compoents */
+iron-icon {
+  float: left; }
+
+code {
+  padding: 0.1em; }
 
 /*# sourceMappingURL=position.css.map */

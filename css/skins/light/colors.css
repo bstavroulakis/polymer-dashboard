@@ -4,7 +4,7 @@
 paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox {
   background-color: #FFEB3B; }
 
-pd-list-menu li a:hover {
+pd-list-menu li a:hover, code {
   background-color: #ececec; }
 
 pd-list-menu li ul {
@@ -43,6 +43,9 @@ a {
 .c-n-dark {
   background-color: #ececec; }
 
+.c-accent {
+  background-color: #CDDC39; }
+
 .c-text-bg {
   background-color: #ffffff; }
 
@@ -59,7 +62,7 @@ a {
   color: #FFF9C4; }
 
 .c-b-light {
-  border-top: 1px solid #f7f7f7; }
+  border: 1px solid #f7f7f7; }
 
 .c-b-t-light {
   border-top: 1px solid #f7f7f7; }
@@ -74,7 +77,7 @@ a {
   border-left: 1px solid #f7f7f7; }
 
 .c-b {
-  border-top: 1px solid #f4f4f4; }
+  border: 1px solid #f4f4f4; }
 
 .c-b-t {
   border-top: 1px solid #f4f4f4; }
@@ -89,7 +92,7 @@ a {
   border-left: 1px solid #f4f4f4; }
 
 .c-b-dark {
-  border-top: 1px solid #ececec; }
+  border: 1px solid #ececec; }
 
 .c-b-t-dark {
   border-top: 1px solid #ececec; }
