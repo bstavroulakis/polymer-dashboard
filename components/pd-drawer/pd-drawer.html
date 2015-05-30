@@ -68,6 +68,12 @@
                 mainClasses: {
                     type: String,
                     computed: '_computeClasses(leftShow, rightShow, leftLocked, rightLocked)'
+                },
+                drawerClasses:{
+                    type: String,
+                    value: "",
+                    reflectToAttribute: true,
+                    notify: true
                 }
             },
             _computeClasses: function (leftShow, rightShow, leftLocked, rightLocked) {
@@ -80,6 +86,7 @@
                     classStr.push('right-locked');
                 if (rightShow)
                     classStr.push('right-show');
+                this.drawerClasses = classStr.join(' ');
                 return classStr.join(' ');
             },
             toggleLeft: function () {

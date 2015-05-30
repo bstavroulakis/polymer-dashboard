@@ -158,3 +158,8 @@ code{
   padding:$p-0-1;
 }
 
+@media (min-width: $polymer-mobile-mode) {
+  [drawer-classes="left-locked"] paper-toast{
+    left: 18.5em;
+  }
+}
