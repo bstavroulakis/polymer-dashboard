@@ -21,7 +21,7 @@ server.post('/auth/login', function(req, res){
             res.cookie('usersession',users[i].id, { maxAge: 9000000, httpOnly: false, signed:true });
             res.send(JSON.stringify({ success: true }));
         }else{
-            res.send(JSON.stringify({ success: false }));
+            res.send(JSON.stringify({ success: false, error: 'Wrong username or password' }));
         }
     }
 });

@@ -33,14 +33,16 @@
 </script>
 
 <dom-module id="pd-dashboard">
-    <link rel="stylesheet" href="../../css/main.css" />
-    <link rel="stylesheet" href="../../css/skins/default/colors.css" />
-    <link rel="stylesheet" href="../../css/position.css" />
-    <link rel="stylesheet" href="../../css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/skins/default/colors.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/position.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/font.css" />
     <template>
         <pd-drawer class$="{{drawerClasses}}">
             <div class="logo">
-                <img src="../../images/LogoSymbol.png" /><img src="../../images/LogoText.png" />
+                <a href="/#!/">
+                    <img src="../../images/LogoSymbol.png" /><img class="p-l-0-5" src="../../images/LogoText.png" />
+                </a>
             </div>
             <div class="left-menu">
                 <pd-drawer-menu drawer-classes="{{drawerClasses}}"></pd-drawer-menu>

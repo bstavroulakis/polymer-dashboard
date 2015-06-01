@@ -1,0 +1,31 @@
+<dom-module id="template-user-details">
+    <template>
+        <div class="row">
+            <div class="cell">
+                <paper-checkbox></paper-checkbox>
+            </div>
+            <div class="cell">{{item.id}}</div>
+            <div class="cell">{{item.firstName}}</div>
+            <div class="cell">{{item.lastName}}</div>
+            <div class="cell">{{item.type}}</div>
+            <div class="cell">{{item.username}}</div>
+            <div class="cell">{{item.active}}</div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "template-user-details",
+        properties: {
+            item:{
+                type:Object,
+                reflectToAttribute:true,
+                notify:true
+            }
+        },
+        ready: function () {
+            console.log(this.item);
+        }
+    });
+</script>

@@ -1,0 +1,102 @@
+<link rel="import" href="../../pages/theme/tables/template-user-details.html" />
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
+
+<dom-module id="pd-table">
+    <style>
+        table,tr,td,th{
+            font-weight:300;
+        }
+        th{
+            font-weight:500;
+        }
+        table
+        {
+            width:100%;
+            font-size:90%;
+        }
+        table, td, th{
+            border-collapse: collapse;
+        }
+        table thead{
+            text-align:left;
+        }
+    </style>
+    <template>
+        <div class="head p-t-0-5 p-r-0-5 p-b-1 p-l-1">
+            <h2 class="f-left m-0 p-t-0-5 p-l-0-5">
+                <span>{{head}}</span>
+            </h2>
+            <paper-icon-button class="f-right" icon="delete"></paper-icon-button>
+            <div class="clearfix"></div>
+        </div>
+        <table id="table">
+            <thead>
+                <tr class="">
+                    <th class="t-center c-text-dark c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">
+                        <paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox>
+                    </th>
+                    <template is="dom-repeat" items="{{headers}}">
+                        <th class="c-text-dark c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">{{item}}</th>
+                    </template>
+                </tr>
+            </thead>
+            <template is="dom-repeat" items="{{data}}" class="c-b-b-dark row">
+                <tr>
+                    <td class="t-center c-text-dark c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">
+                        <paper-checkbox checked="{{item.selected}}"></paper-checkbox>
+                    </td>
+                    <td class="c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">{{item.id}}</td>
+                    <td class="c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">{{item.firstName}}</td>
+                    <td class="c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">{{item.lastName}}</td>
+                    <td class="c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">{{item.type}}</td>
+                    <td class="c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">{{item.username}}</td>
+                    <td class="c-b-b-dark p-t-1 p-b-1 p-l-0-5 p-r-0-5">{{item.active}}</td>
+                </tr>
+            </template>
+
+        </table>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: "pd-table",
+        properties: {
+            head:{
+                type:String,
+                value:"",
+                notify:true,
+                reflectToAttribute:true
+            },
+            headers:{
+                type:Array,
+                value:[],
+                notify:true,
+                reflectToAttribute:true
+            },
+            data:{
+                type:Array,
+                value:[],
+                notify:true,
+                reflectToAttribute:true
+            },
+            templateName:{
+                type:String,
+                value:"",
+                notify:true,
+                reflectToAttribute:true
+            }
+        },
+        toggleAll:function(){
+            var self = this;
+            if(self.$.toggleAll.checked){
+                for(var i=0;i<=self.data.length-1;i++){
+                    self.data[i].selected = self.$.toggleAll.checked;
+                }
+            }
+        },
+        ready  : function () {
+            var self = this;
+        }
+    });
+</script>
+

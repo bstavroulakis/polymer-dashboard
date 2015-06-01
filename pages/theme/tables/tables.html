@@ -1,3 +1,18 @@
-﻿<div class="p-l-1 p-r-1">
-    <h1>Tables</h1>
+﻿<link rel="import" href="../../../Components/pd-card/pd-card.html" />
+<link rel="import" href="../../../Components/pd-ui/pd-ui-grid/pd-ui-grid.html" />
+<link rel="import" href="../../../Components/pd-table/pd-table.html" />
+
+<div class="p-l-1 p-r-1 p-b-0">
+    <h1 class="p-l-1 m-b-0">Tables</h1>
 </div>
+
+<pd-ui-grid>
+    <pd-ui-grid-item large="24" medium="24" small="24">
+        <pd-card fill="true" head="">
+            <pd-table head="Users" headers='["ID","First Name", "Last Name", "Type", "Username", "Active"]'
+                      data='[{"id":1,"firstName":"Bill","lastName":"Stavroulakis", "type":"itadmin", "username":"bill", "active":1},
+                      {"id":2,"firstName":"Joy","lastName":"Johnson","type":"teacher","username":"joy","active":1}]'>
+            </pd-table>
+        </pd-card>
+    </pd-ui-grid-item>
+</pd-ui-grid>

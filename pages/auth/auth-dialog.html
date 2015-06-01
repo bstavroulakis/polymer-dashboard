@@ -7,6 +7,7 @@
 <link rel="import" href="../../components/pd-card/pd-card.html" />
 <link rel="import" href="../../components/pd-repo/pd-repo-auth.html" />
 <link rel="import" href="../../components/pd-data/pd-data.html" />
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html" />
 
 <dom-module id="auth-dialog">
     <template>
@@ -18,8 +19,8 @@
         <pd-repo-auth id="repo"></pd-repo-auth>
         <pd-page-dialog id="dialog">
             <div head class="t-center">
-                <img style="height:4em" src="../../images/LogoSymbolInverse.gif" />
-                <img style="height:4em" src="../../images/LogoTextInverse.gif" />
+                <img style="height:4em" src="../../images/LogoSymbolInverse.png" />
+                <img style="height:4em" src="../../images/LogoTextInverse.png" />
             </div>
             <div body class="p-t-2">
                 <paper-input no-label-float label="Username" value="{{user.username}}"></paper-input>
@@ -28,6 +29,7 @@
                 <paper-button on-click="login" tabindex="0" class="c-p f-right login-btn">Login</paper-button>
             </div>
         </pd-page-dialog>
+        <paper-toast id="toast" text=""></paper-toast>
     </template>
 </dom-module>
 
@@ -45,7 +47,6 @@
             }
         },
         ready: function(){
-            console.log("ready");
         },
         login: function(){
             this.$.repo.login(this.user, this.loginCallback, this);
@@ -53,6 +54,12 @@
         loginCallback:function(response, self){
             if(response.success){
                 window.location.href = "/";
+            }else{
+                self.$.toast.text = response.error;
+                self.$.toast.hide();
+                self.async(function(){
+                    self.$.toast.show();
+                },100);
             }
         }
   });
