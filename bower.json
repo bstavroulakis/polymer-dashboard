@@ -18,7 +18,8 @@
     "paper-progress": "PolymerElements/paper-progress#^1.0.0",
     "iron-a11y-keys": "PolymerElements/iron-a11y-keys#^1.0.0",
     "paper-toast": "PolymerElements/paper-toast#^1.0.0",
-    "chartist-js": "gionkunz/chartist-js"
+    "chartist-js": "gionkunz/chartist-js",
+    "firebase-element":"GoogleWebComponents/firebase-element"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.1",

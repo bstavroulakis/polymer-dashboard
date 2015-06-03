@@ -118,6 +118,15 @@
   position:static;
 }
 
+/* Displaying */
+.d-inherit{
+  display:inherit;
+}
+
+.hidden{
+  display:none;
+}
+
 /* Fillings */
 .fill-dom{
     @include fill-dom();

@@ -1,0 +1,42 @@
+<link rel="import" href="../../../components/pd-repo/pd-repo-profile-table.html" />
+<dom-module id="table-user-details-sample">
+    <template>
+        <pd-repo-profile-table id="repo"></pd-repo-profile-table>
+        <pd-table paging="10" id="table" head="Users" alternate="true"
+                  headers='[{"name":"ID", "sortable":false, "grid":2},{"name":"First Name", "sortable":true, "grid":4},
+                            {"name":"Last Name", "sortable":true, "grid":4},{"name":"Type", "sortable":true, "grid":4},
+                            {"name":"Username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":4}]'
+                  alternate
+                >
+        </pd-table>
+
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "table-user-details-sample",
+        properties:{
+
+        },
+        ready:function(){
+            var self = this;
+            self.$.repo.getData(self.dataCallback, self);
+            self.$.table.addEventListener("deleteItems",function(e){
+                self.$.repo.deleteItems(self.deletedCallback, e.detail, self);
+            });
+            self.$.table.addEventListener("order",function(e){
+                console.log(e.detail);
+            });
+            self.$.table.addEventListener("filter",function(e){
+                console.log(e.detail);
+            });
+        },
+        dataCallback:function(data, self){
+            self.$.table.data = data;
+        },
+        deletedCallback:function(self){
+            self.$.repo.getData(self.dataCallback, self);
+        }
+    });
+</script>

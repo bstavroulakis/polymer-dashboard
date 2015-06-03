@@ -266,6 +266,13 @@
 .p-static {
   position: static; }
 
+/* Displaying */
+.d-inherit {
+  display: inherit; }
+
+.hidden {
+  display: none; }
+
 /* Fillings */
 .fill-dom {
   position: absolute;

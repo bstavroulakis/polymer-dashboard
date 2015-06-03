@@ -10,7 +10,7 @@ pd-list-menu li ul{
     background-color:$color-neutral-dark;
 }
 paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox{
-      border-color:$primary-color;
+    border-color:$primary-color;
 }
 paper-checkbox.paper-checkbox-0 #ink[checked].paper-checkbox{
     color:$primary-color;
@@ -79,4 +79,10 @@ a{
 .shadow {
     -webkit-box-shadow: 0 0 5px #e3e3e3;
 	box-shadow: 0 0 5px #e3e3e3;
+}
+
+html, table, tr, td, .selected {
+    --color-neutral: $color-neutral;
+    --color-neutral-dark: $color-neutral-dark;
+    --color-neutral-light: $color-neutral-light;
 }

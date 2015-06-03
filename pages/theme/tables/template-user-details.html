@@ -1,31 +1,45 @@
 <dom-module id="template-user-details">
     <template>
-        <div class="row">
-            <div class="cell">
-                <paper-checkbox></paper-checkbox>
-            </div>
-            <div class="cell">{{item.id}}</div>
-            <div class="cell">{{item.firstName}}</div>
-            <div class="cell">{{item.lastName}}</div>
-            <div class="cell">{{item.type}}</div>
-            <div class="cell">{{item.username}}</div>
-            <div class="cell">{{item.active}}</div>
-        </div>
+        <pd-ui-grid-item large="{{cellGrid(headers,0)}}" medium="{{cellGrid(headers,0)}}" small="{{cellGrid(headers,0)}}">
+            <span>{{item.id}}</span>
+        </pd-ui-grid-item>
+        <pd-ui-grid-item large="{{cellGrid(headers,1)}}" medium="{{cellGrid(headers,1)}}" small="{{cellGrid(headers,1)}}">
+            <span>{{item.firstName}}</span>
+        </pd-ui-grid-item>
+        <pd-ui-grid-item large="{{cellGrid(headers,2)}}" medium="{{cellGrid(headers,2)}}" small="{{cellGrid(headers,2)}}">
+            <span>{{item.lastName}}</span>
+        </pd-ui-grid-item>
+        <pd-ui-grid-item large="{{cellGrid(headers,3)}}" medium="{{cellGrid(headers,3)}}" small="{{cellGrid(headers,3)}}">
+            <span>{{item.type}}</span>
+        </pd-ui-grid-item>
+        <pd-ui-grid-item large="{{cellGrid(headers,4)}}" medium="{{cellGrid(headers,4)}}" small="{{cellGrid(headers,4)}}">
+            <span>{{item.username}}</span>
+        </pd-ui-grid-item>
+        <pd-ui-grid-item large="{{cellGrid(headers,5)}}" medium="{{cellGrid(headers,5)}}" small="{{cellGrid(headers,5)}}">
+            <span>{{item.active}}</span>
+        </pd-ui-grid-item>
     </template>
 </dom-module>
-
 <script>
     Polymer({
         is: "template-user-details",
         properties: {
+            headers:{
+                type:Array,
+                value:[],
+                notify:true,
+                reflectToAttribute:true
+            },
             item:{
                 type:Object,
                 reflectToAttribute:true,
                 notify:true
             }
         },
+        cellGrid:function(headers,key){
+            return headers[key].grid;
+        },
         ready: function () {
-            console.log(this.item);
         }
     });
 </script>

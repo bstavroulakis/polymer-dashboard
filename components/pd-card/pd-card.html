@@ -16,7 +16,7 @@
         }
     </style>
     <template>
-        <div class="pd-card-wrapper m-r-0-5 m-l-0-5 m-t-1  c-text c-text-bg">
+        <div class="pd-card-wrapper m-r-1 m-l-1 m-t-1  c-text c-text-bg">
             <template is="dom-if" if="{{head}}">
                 <h2 class="header c-n-light c-b-b-dark p-t-0-5 p-b-0-5 p-l-1 p-r-1">
                     <span>{{head}}</span>
@@ -51,7 +51,6 @@
             }
         },
         _computeFill:function(fill){
-            console.log(fill);
             if(fill == false)
                 return "p-t-0-5 p-l-1 p-r-1 p-b-0-5";
             else

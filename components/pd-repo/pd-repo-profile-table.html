@@ -1,0 +1,61 @@
+<dom-module id="pd-repo-profile-table">
+    <template>
+        <pd-context id="context"></pd-context>
+        <iron-ajax id="ajax" url="{{service}}" handle-as="json" on-response="dataSelected" with-credentials="true"></iron-ajax>
+        <iron-ajax id="ajaxDelete" url="{{service}}" handle-as="json" method="DELETE" on-response="itemDeleted" with-credentials="true"></iron-ajax>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "pd-repo-profile-table",
+        properties:{
+            itemsToDelete:{
+                type:Number,
+                value:0
+            },
+            itemsDeleted:{
+                type:Number,
+                value:0
+            },
+            selfCallback:{
+                type:Object
+            },
+            responseCallback:{
+                type:Object
+            }
+        },
+        //GET /pages
+        getData: function (callback, selfCallback) {
+            var self = this;
+            self.selfCallback = selfCallback;
+            self.responseCallback = callback;
+            self.$.ajax.url = self.$.context.service + "profiles";
+            self.$.ajax.generateRequest();
+        },
+        dataSelected:function(response){
+            if(this.responseCallback != null) {
+                this.responseCallback(response.detail.response, this.selfCallback);
+            }
+        },
+        deleteItems:function(callback,items,selfCallback){
+            var self = this;
+            self.itemsToDelete = items.length;
+            self.itemsDeleted = 0;
+            self.selfCallback = selfCallback;
+            self.responseCallback = callback;
+            for(var i=0; i<=items.length-1; i++){
+                self.$.ajaxDelete.url = self.$.context.service + "profiles/" + items[i];
+                self.$.ajaxDelete.generateRequest();
+            }
+        },
+        itemDeleted:function(response){
+            var self = this;
+            console.log()
+            self.itemsDeleted = self.itemsDeleted + 1;
+            if(self.itemsDeleted == self.itemsToDelete){
+                self.responseCallback(self.selfCallback);
+            }
+        }
+    });
+</script>
