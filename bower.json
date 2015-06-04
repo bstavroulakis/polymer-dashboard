@@ -20,7 +20,8 @@
     "paper-toast": "PolymerElements/paper-toast#^1.0.0",
     "chartist-js": "gionkunz/chartist-js",
     "firebase-element":"GoogleWebComponents/firebase-element",
-    "paper-fab": "PolymerElements/paper-fab"
+    "paper-fab": "PolymerElements/paper-fab",
+    "iron-selector": "PolymerElements/iron-selector#^1.0.0"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.1",

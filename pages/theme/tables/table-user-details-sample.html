@@ -16,7 +16,7 @@
                   alternate
                 >
         </pd-table>
-        <pd-edit-panel></pd-edit-panel>
+        <pd-edit-panel id="editPanel"></pd-edit-panel>
     </template>
 </dom-module>
 
@@ -40,6 +40,9 @@
             });
             self.$.table.addEventListener("search",function(e){
                 console.log(e.detail);
+            });
+            self.$.table.addEventListener("addItem",function(e){
+                self.$.editPanel.togglePanel();
             });
         },
         dataCallback:function(data, self){

@@ -3,33 +3,27 @@
 <link href="../../bower_components/paper-button/paper-button.html" rel="import"/>
 
 <dom-module id="pd-edit-panel">
-    <style>
-        .edit-panel{
-            position:absolute;
-            left:0;
-            top:0;
-            height:100%;
-        }
-        .closeBtn{
-            position:absolute;
-            right:0px;
-            top:0px;
-        }
-        .closeBtnInner{
-            margin-top:50%;
-            margin-left:50%;
-        }
-    </style>
+    <link rel="import" type="css" href="../../components/pd-edit-panel/pd-edit-panel.css"/>
     <template>
-        <div class="drawer-offset edit-panel p-1 c-n p-relative">
-            <h2>Item</h2>
-            <paper-input label="First Name"></paper-input>
-            <paper-input label="Last Name"></paper-input>
-            <paper-input label="Summary"></paper-input>
-            <paper-button tabindex="0" raised>button</paper-button>
-            <div class="closeBtn">
-                <div class="closeBtnInner">
-                    <paper-fab icon="clear" title="clear" tabindex="0"></paper-fab>
+        <div class$="{{toggledClass}}">
+            <div class="edit-panel drawer-offset p-1 c-n p-relative">
+                <h2>Item</h2>
+                <paper-input label="First Name"></paper-input>
+                <paper-input label="Last Name"></paper-input>
+                <iron-selector selected="0">
+                    <div>Item 1</div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                </iron-selector>
+
+                <div class="f-right">
+                    <paper-button tabindex="0" raised>Save</paper-button>
+                </div>
+
+                <div class="closeBtn">
+                    <div class="closeBtnInner">
+                        <paper-fab on-click="togglePanel" icon="clear" title="clear" tabindex="0"></paper-fab>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,10 +34,28 @@
 Polymer({
     is: "pd-edit-panel",
     properties: {
-
+        toggled:{
+            type: Boolean,
+            value: false,
+            reflectToAttribute:true,
+            notify:true
+        },
+        toggledClass:{
+            type: String,
+            computed: "_computeClass(toggled)",
+            notify:true
+        }
+    },
+    _computeClass:function(toggled){
+        if(toggled){
+            return "toggled";
+        }
+        return "";
+    },
+    togglePanel:function(){
+        this.toggled = !this.toggled;
     },
     ready: function () {
-
     }
 });
 </script>

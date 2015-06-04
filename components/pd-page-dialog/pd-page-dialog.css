@@ -7,13 +7,10 @@
   background: #fff;
   box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
   vertical-align: middle;
-  position: relative;
-}
+  position: relative; }
 
 @media (max-width: 470px) {
   .main-container {
-    width: 90%;
-  }
-}
+    width: 90%; } }
 
 /*# sourceMappingURL=pd-page-dialog.css.map */

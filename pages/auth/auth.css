@@ -1,8 +1,7 @@
 /* Included Padding Vars */
 /* Included Sizes Vars */
 body {
-  text-align: center;
-}
+  text-align: center; }
 
 body:before {
   height: 50%;
@@ -11,29 +10,24 @@ body:before {
   left: 0;
   content: "";
   z-index: 0;
-  position: absolute;
-}
+  position: absolute; }
 
 body:after {
   content: "";
   vertical-align: middle;
   display: inline-block;
   width: 1px;
-  height: 100%;
-}
+  height: 100%; }
 
 .main-container {
   text-align: left;
-  padding: 3em;
-}
+  padding: 3em; }
 
 .login-btn {
-  margin-top: 1.1em;
-}
+  margin-top: 1.1em; }
 
 .remember-me, .remember-me-txt {
   margin-top: 1.6em;
-  padding-top: 0.1em;
-}
+  padding-top: 0.1em; }
 
 /*# sourceMappingURL=auth.css.map */

@@ -176,7 +176,10 @@ code{
   [drawer-classes="left-locked"] paper-toast {
     left: 18.5em;
   }
+}
+
+@media (min-width: $tablet-mode) {
   [drawer-classes="left-locked"] .drawer-offset{
-    left:$drawer-width;
+    margin-left:$drawer-width;
   }
 }

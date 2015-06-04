@@ -12,7 +12,7 @@
         .selected{
             background-color: var(--color-neutral-dark);
         }
-        .alternate tr:nth-child(even){
+        .alternate .row:nth-child(even){
             background-color: var(--color-neutral-dark);
         }
     </style>
@@ -25,6 +25,7 @@
                         <span>{{numSelected}}</span> selected
                     </span>
                 </h2>
+                <paper-icon-button class="m-t-0-1 f-right" icon="add" on-click="addItem"></paper-icon-button>
                 <div class="f-right headOptions p-t-0-1">
                     <div>
                         <paper-icon-button class="f-left" icon="delete" on-click="deleteItems"></paper-icon-button>
@@ -34,18 +35,27 @@
             </div>
             <div id="table" class="table">
                 <pd-ui-grid>
-                    <pd-ui-grid-item large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
-                    <template is="dom-repeat" items="{{headers}}" index-as="key_no">
-                        <pd-ui-grid-item large="{{cellGrid(key_no)}}" medium="{{cellGrid(key_no)}}" small="{{cellGrid(key_no)}}">{{item.name}}</pd-ui-grid-item>
-                    </template>
-                    <div class="clearfix"></div>
+
+                    <div class="row">
+
+                        <pd-ui-grid-item large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
+                        <template is="dom-repeat" items="{{headers}}" index-as="key_no">
+                            <pd-ui-grid-item large="{{cellGrid(key_no)}}" medium="{{cellGrid(key_no)}}" small="{{cellGrid(key_no)}}">{{item.name}}</pd-ui-grid-item>
+                        </template>
+                        <div class="clearfix"></div>
+
+                    </div>
+
                     <template is="dom-repeat" items="{{data}}" class="c-b-b-dark" index-as="key_no">
                         <div class$="{{_computedLineSelected(item.selected)}}" data-itemid$="{{item.id}}">
+
                             <pd-ui-grid-item custom-class="" large="2" medium="2" small="2">
                                 <paper-checkbox checked="{{item.selected}}" on-click="refreshSelectedCheckbox"></paper-checkbox>
                             </pd-ui-grid-item>
+                            <div class="clearfix"></div>
+
                         </div>
-                        <div class="clearfix"></div>
+
                     </template>
                 </pd-ui-grid>
             </div>
@@ -144,9 +154,9 @@
         },
         _computedLineSelected:function(checked){
             if(checked){
-                return "tableTemplateWrap p-relative selected";
+                return "row tableTemplateWrap p-relative selected";
             }
-            return "tableTemplateWrap p-relative ";
+            return "row tableTemplateWrap p-relative ";
         },
         _computedCheckboxSelected:function(numSelected, alternate){
             var classes = [];
@@ -157,6 +167,9 @@
                 classes.push("alternate")
             }
             return classes.join(" ");
+        },
+        addItem:function(){
+            this.fire("addItem");
         },
         deleteItems:function(){
             var self = this;

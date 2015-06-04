@@ -320,9 +320,9 @@ code {
 
 @media (min-width: 640px) {
   [drawer-classes="left-locked"] paper-toast {
-    left: 18.5em; }
-
+    left: 18.5em; } }
+@media (min-width: 50em) {
   [drawer-classes="left-locked"] .drawer-offset {
-    left: 15em; } }
+    margin-left: 15em; } }
 
 /*# sourceMappingURL=position.css.map */

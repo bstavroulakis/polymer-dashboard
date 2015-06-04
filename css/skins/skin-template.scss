@@ -1,7 +1,8 @@
 ﻿/* Components */
-.paper-toolbar, paper-toolbar.paper-toolbar-0, .split:before,
+paper-button[raised],.paper-toolbar, paper-toolbar.paper-toolbar-0, .split:before,
 paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox{
     background-color:$primary-color;
+    color:$color-neutral-light;
 }
 pd-list-menu li a:hover, code, table > tr:hover{
     background-color:$color-neutral-dark;
@@ -9,7 +10,7 @@ pd-list-menu li a:hover, code, table > tr:hover{
 pd-list-menu li ul{
     background-color:$color-neutral-dark;
 }
-paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox{
+ paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox{
     border-color:$primary-color;
 }
 paper-checkbox.paper-checkbox-0 #ink[checked].paper-checkbox{
@@ -30,7 +31,7 @@ a{
 .c-n{ background-color:$color-neutral; }
 .c-n-dark{ background-color:$color-neutral-dark; }
 
-.c-accent { background-color: $accent-color; }
+.c-accent { background-color: $accent-color !important; }
 
 .c-text-bg{background-color:$color-neutral-text-bg;}
 .c-text, .c-text a{color:$color-neutral-text;}

@@ -1,8 +1,9 @@
 /* Included Color Vars */
 /* Components */
-.paper-toolbar, paper-toolbar.paper-toolbar-0, .split:before,
+paper-button[raised], .paper-toolbar, paper-toolbar.paper-toolbar-0, .split:before,
 paper-checkbox.paper-checkbox-0 #checkbox.checked.paper-checkbox {
-  background-color: #3F51B5; }
+  background-color: #3F51B5;
+  color: #f7f7f7; }
 
 pd-list-menu li a:hover, code, table > tr:hover {
   background-color: #ececec; }
@@ -44,7 +45,7 @@ a {
   background-color: #ececec; }
 
 .c-accent {
-  background-color: #8BC34A; }
+  background-color: #8BC34A !important; }
 
 .c-text-bg {
   background-color: #ffffff; }
