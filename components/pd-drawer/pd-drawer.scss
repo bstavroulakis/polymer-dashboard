@@ -86,11 +86,11 @@ paper-icon-button {
     width: 1.1em !important;
 }
 
-.right-locked .main-section{
-    width:calc(100% - 15em);
-}
-
 @media (min-width: $tablet-mode) {
+
+    .right-locked .main-section{
+        width:calc(100% - 15em);
+    }
     .left-locked .left-drawer, .right-locked .right-drawer{
         visibility:visible;
         width:$drawer-width;

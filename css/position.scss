@@ -173,13 +173,19 @@ code{
 }
 
 @media (min-width: $polymer-mobile-mode) {
-  [drawer-classes="left-locked"] paper-toast {
+  [drawer-classes="left-locked"] paper-toast,
+  [drawer-classes="left-locked right-show"] paper-toast,
+  [drawer-classes="left-locked right-locked"] paper-toast
+  {
     left: 18.5em;
   }
 }
 
 @media (min-width: $tablet-mode) {
-  [drawer-classes="left-locked"] .drawer-offset{
-    margin-left:$drawer-width;
+  [drawer-classes="left-locked"] .drawer-offset,
+  [drawer-classes="left-locked right-show"] .drawer-offset,
+  [drawer-classes="left-locked right-locked"] .drawer-offset
+  {
+    left:$drawer-width;
   }
 }

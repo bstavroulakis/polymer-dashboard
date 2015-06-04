@@ -1,0 +1,140 @@
+<!--
+Copyright 2013 The Polymer Authors. All rights reserved.
+Use of this source code is governed by a BSD-style
+license that can be found in the LICENSE file.
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="chartjs-import.html">
+
+<!--
+ Chartjs Element
+
+ Easy, object oriented client side graphs for designers and developers.
+
+ http://www.chartjs.org
+
+ @class chart-js
+ @origin-url http://www.chartjs.org/
+ @categories Charts and Graphs
+ @demo demo/index.html
+ @license Three-clause BSD
+-->
+
+<dom-module name="chartjs-element">
+
+  <style>
+    :host {
+      display: inline-block;
+      width: 300px;
+      height: 260px;
+    }
+  </style>
+
+  <template>
+
+    <canvas id="chart" width="{{width}}" height="{{height}}"></canvas>
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'chartjs-element',
+
+      properties: {
+
+        color: {
+          type: String,
+          value: '#AABBDD'
+        },
+
+        data: {
+          type: Object,
+          value: {
+            labels: ['January','February','March','April','May','June','July'],
+            data: [28,48,40,19,96,27,100]
+          }
+        },
+
+        options: {
+          type: Object,
+          value: null
+        },
+
+        kind: {
+          type: String,
+          value: function() {
+            return ['Radar', 'Line', 'Bar'][Math.floor(Math.random()*3)];
+          }
+        },
+
+        _chartData: {
+          type: Object,
+          computed: '_computeChartData(data, color)'
+        },
+
+        chart: {
+          type: Object,
+          observer: '_chartChanged',
+          computed: '_computeChart(kind, options, ctx, _chartData)'
+        }
+
+      },
+
+      attached: function() {
+        // TODO(sjmiles): measuring not available synchronously at attached (on Chrome)
+        // TODO(sjmiles): size of canvas not settable synchronously at attached (on Chrome)
+        this.async(this._createContext, 1);
+      },
+
+      _createContext: function() {
+        this.width = Math.max(this.offsetWidth, 200);
+        this.height = Math.max(this.offsetHeight, 100);
+        this.ctx = this.$.chart.getContext('2d');
+      },
+
+      _computeChart: function(kind, options, ctx, _chartData) {
+        var chart = new Chart(ctx);
+        var factory = chart[kind] || chart.Line;
+        return factory.call(chart, _chartData, options);
+      },
+
+      _chartChanged: function(chart, old) {
+        if (old) {
+          old.destroy();
+        }
+      },
+
+      _computeChartData: function(data, color) {
+        if (data) {
+          var labels = data.labels;
+          var dataPts = data.data;
+        }
+        var rgbColor = this.hexToRgb(color).join(',');
+        var dataset = {
+          fillColor : 'rgba(' + rgbColor + ', 0.5)',
+          strokeColor : 'rgba(' + rgbColor + ', 1)',
+          pointColor : 'rgba(' + rgbColor + ', 1)',
+          pointStrokeColor: '#fff',
+          data: dataPts
+        };
+        return {
+          labels: labels,
+          datasets: [dataset]
+        };
+      },
+
+      hexToRgb: function(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? [
+          parseInt(result[1], 16),
+          parseInt(result[2], 16),
+          parseInt(result[3], 16)
+        ] : [0, 0, 0];
+      }
+
+    });
+  </script>
+
+</dom-module>

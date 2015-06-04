@@ -108,20 +108,20 @@ a {
   border-left: 1px solid #ececec; }
 
 .shadow-top {
-  -webkit-box-shadow: 0 -5px 5px -5px #e3e3e3;
-  box-shadow: 0 -5px 5px -5px #e3e3e3; }
+  -webkit-box-shadow: 0px -7px 8px -7px #e3e3e3;
+  box-shadow: 0px -7px 8px -7px #e3e3e3; }
 
 .shadow-right {
-  -webkit-box-shadow: 5px 0 5px -5px #e3e3e3;
-  box-shadow: 5px 0 5px -5px #e3e3e3; }
+  -webkit-box-shadow: 8px 0 8px -7px #e3e3e3;
+  box-shadow: 8px 0 8px -7px #e3e3e3; }
 
 .shadow-bottom {
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -7px 8px -7px #e3e3e3;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); }
 
 .shadow-left {
-  -webkit-box-shadow: -5px 0 5px -5px #e3e3e3;
-  box-shadow: -5px 0 5px -5px #e3e3e3; }
+  -webkit-box-shadow: -7px 0 8px -7px #e3e3e3;
+  box-shadow: -7px 0 8px -7px #e3e3e3; }
 
 .shadow {
   -webkit-box-shadow: 0 0 5px #e3e3e3;

@@ -1,6 +1,7 @@
 ﻿<link rel="import" href="../../../Components/pd-card/pd-card.html" />
 <link rel="import" href="../../../Components/pd-chart/pd-chart.html" />
 <link rel="import" href="../../../Components/pd-ui/pd-ui-grid/pd-ui-grid.html" />
+<link rel="import" href="../../../bower_components/chartjs-element/chartjs-element.html" />
 
 <div class="p-l-1 p-r-1 p-b-0-5">
     <h1 class="p-l-1 m-b-0">Charts</h1>
@@ -14,6 +15,7 @@
                       data='{"labels": ["Bananas", "Apples", "Grapes"],"series": [20, 15, 40]}'
                       options='{"labelInterpolationFnc": function(value) {return value[0]}}'>
             </pd-chart>
+
         </pd-card>
     </pd-ui-grid-item>
 
@@ -36,7 +38,7 @@
     </pd-ui-grid-item>
 
     <pd-ui-grid-item large="12" medium="12" small="24">
-        <pd-card head="Bar Chart">
+        <pd-card head="Radar">
             <pd-chart width="95%" height="300px" chart-type="Bar"
                       data='{"labels": ["Q1", "Q2", "Q3", "Q4"],"series": [[800000, 1200000, 1400000, 1300000],[200000, 400000, 500000, 300000],[100000, 200000, 400000, 600000]]}'
                       options='{"stackBars": true,"axisY": {"labelInterpolationFnc": function(value) {return (value / 1000) + "k";}}}'>

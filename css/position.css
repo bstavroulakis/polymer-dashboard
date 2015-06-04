@@ -319,10 +319,14 @@ code {
   padding: 0.1em; }
 
 @media (min-width: 640px) {
-  [drawer-classes="left-locked"] paper-toast {
+  [drawer-classes="left-locked"] paper-toast,
+  [drawer-classes="left-locked right-show"] paper-toast,
+  [drawer-classes="left-locked right-locked"] paper-toast {
     left: 18.5em; } }
 @media (min-width: 50em) {
-  [drawer-classes="left-locked"] .drawer-offset {
-    margin-left: 15em; } }
+  [drawer-classes="left-locked"] .drawer-offset,
+  [drawer-classes="left-locked right-show"] .drawer-offset,
+  [drawer-classes="left-locked right-locked"] .drawer-offset {
+    left: 15em; } }
 
 /*# sourceMappingURL=position.css.map */

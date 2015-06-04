@@ -6,7 +6,6 @@
     "polymer",
     "docs"
   ],
-  "version": "1.0.4",
   "private": true,
   "license": "http://polymer.github.io/LICENSE.txt",
   "dependencies": {
@@ -27,13 +26,13 @@
     "web-component-tester": "*"
   },
   "homepage": "https://github.com/PolymerElements/iron-component-page",
-  "_release": "1.0.4",
+  "_release": "1f0cc2cafe",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.0.4",
+    "type": "branch",
+    "branch": "master",
     "commit": "1f0cc2cafea23d2712db695a5d6e694ab816a4d7"
   },
   "_source": "git://github.com/PolymerElements/iron-component-page.git",
-  "_target": "^1.0.0",
+  "_target": "master",
   "_originalSource": "PolymerElements/iron-component-page"
 }
