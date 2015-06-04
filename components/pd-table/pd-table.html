@@ -1,16 +1,10 @@
-<link rel="import" href="../../pages/theme/tables/template-user-details.html" />
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
 
 <dom-module id="pd-table">
+    <link href="pd-table.css" rel="import" type="css"/>
     <style>
         .selected{
             --color-neutral-dark: #f7f7f7;
-        }
-        .headTitle{
-            display:inline-block;
-        }
-        .checkboxSelected .headTitle{
-            display:none;
         }
         .checkboxSelected .head{
             background-color:#edf4fd;
@@ -20,15 +14,6 @@
         }
         .alternate tr:nth-child(even){
             background-color: var(--color-neutral-dark);
-        }
-        .headOptions, .headNum{
-            visibility: hidden;
-        }
-        .checkboxSelected .headOptions, .checkboxSelected .headNum {
-            visibility: visible;
-        }
-        .table /deep/ pd-ui-grid-item{
-            padding:1em;
         }
     </style>
     <template>
@@ -47,28 +32,26 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-
-            <div class="table">
+            <div id="table" class="table">
                 <pd-ui-grid>
                     <pd-ui-grid-item large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
                     <template is="dom-repeat" items="{{headers}}" index-as="key_no">
                         <pd-ui-grid-item large="{{cellGrid(key_no)}}" medium="{{cellGrid(key_no)}}" small="{{cellGrid(key_no)}}">{{item.name}}</pd-ui-grid-item>
                     </template>
                     <div class="clearfix"></div>
-                    <template is="dom-repeat" items="{{data}}" class="c-b-b-dark row" index-as="key_no">
-                        <pd-ui-grid-item large="2" medium="2" small="2" class$="{{_computedLineSelected(item.selected)}}">
-                            <paper-checkbox checked="{{item.selected}}" on-click="refreshSelectedCheckbox"></paper-checkbox>
-                        </pd-ui-grid-item>
-                        <template-user-details headers="{{headers}}" item="{{item}}"></template-user-details>
+                    <template is="dom-repeat" items="{{data}}" class="c-b-b-dark" index-as="key_no">
+                        <div class$="{{_computedLineSelected(item.selected)}}" data-itemid$="{{item.id}}">
+                            <pd-ui-grid-item custom-class="" large="2" medium="2" small="2">
+                                <paper-checkbox checked="{{item.selected}}" on-click="refreshSelectedCheckbox"></paper-checkbox>
+                            </pd-ui-grid-item>
+                        </div>
                         <div class="clearfix"></div>
                     </template>
-
                 </pd-ui-grid>
             </div>
         </div>
     </template>
 </dom-module>
-
 <script>
     Polymer({
         is: "pd-table",
@@ -130,12 +113,40 @@
                     self.dataParams.push(prop);
                 }
             }
+            self.async(function(){
+                var templates = self.$.table.querySelectorAll(".tableTemplateWrap");
+                for(var j=0;  j <= templates.length - 1; j++){
+                    var template = templates[j];
+                    var tmpl = template.querySelector(".tableTemplate");
+                    if(tmpl == null){
+                        tmpl = document.createElement(self.templateName);
+                        tmpl.item = self.getItem(template.dataset.itemid);
+                        tmpl.className = "tableTemplate";
+                        template.insertBefore(tmpl,template.querySelector("pd-ui-grid-item"));
+                    }
+                    var items = tmpl.querySelectorAll("pd-ui-grid-item");
+                    for (var i = 0; i <= items.length - 2; i++) {
+                        items[i + 1].large = self.headers[i].grid;
+                        items[i + 1].medium = self.headers[i].grid;
+                        items[i + 1].small = self.headers[i].grid;
+                    }
+                }
+                self.refreshSelected();
+            }, 100);
+        },
+        getItem:function(id){
+            var self = this;
+            for(var i=0; i <= self.data.length - 1; i++){
+                if(self.data[i].id == id){
+                    return self.data[i];
+                }
+            }
         },
         _computedLineSelected:function(checked){
             if(checked){
-                return "row selected";
+                return "tableTemplateWrap p-relative selected";
             }
-            return "row";
+            return "tableTemplateWrap p-relative ";
         },
         _computedCheckboxSelected:function(numSelected, alternate){
             var classes = [];
@@ -158,7 +169,6 @@
             self.fire('deleteItems',deleteIDs);
         },
         headClicked:function(e){
-            //console.log(e.target.innerText);
         },
         refreshSelectedCheckbox:function(){
             this.refreshSelected();
@@ -189,8 +199,8 @@
             }
         },
         ready  : function () {
+            var self = this;
             this.refreshData();
         }
     });
 </script>
-

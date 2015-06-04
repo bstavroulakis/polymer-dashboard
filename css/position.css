@@ -302,6 +302,10 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+/* Z-Index */
+.z-index-1 {
+  z-index: 1; }
+
 /* Headers */
 h1 {
   margin: 0;
@@ -316,6 +320,9 @@ code {
 
 @media (min-width: 640px) {
   [drawer-classes="left-locked"] paper-toast {
-    left: 18.5em; } }
+    left: 18.5em; }
+
+  [drawer-classes="left-locked"] .drawer-offset {
+    left: 15em; } }
 
 /*# sourceMappingURL=position.css.map */

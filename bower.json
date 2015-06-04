@@ -19,7 +19,8 @@
     "iron-a11y-keys": "PolymerElements/iron-a11y-keys#^1.0.0",
     "paper-toast": "PolymerElements/paper-toast#^1.0.0",
     "chartist-js": "gionkunz/chartist-js",
-    "firebase-element":"GoogleWebComponents/firebase-element"
+    "firebase-element":"GoogleWebComponents/firebase-element",
+    "paper-fab": "PolymerElements/paper-fab"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.1",

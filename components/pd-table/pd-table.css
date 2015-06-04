@@ -1,0 +1,25 @@
+.headOptions, .headNum{
+    visibility: hidden;
+}
+.checkboxSelected .headOptions, .checkboxSelected .headNum {
+    visibility: visible;
+}
+.table /deep/ pd-ui-grid-item{
+    padding:1em;
+}
+.table /deep/ .tableTemplate, .tableTemplate{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+}
+.headTitle{
+    display:inline-block;
+}
+.checkboxSelected .headTitle{
+    display:none;
+}
+
+:host /deep/ pd-ui-grid-item{
+    float:left;
+}

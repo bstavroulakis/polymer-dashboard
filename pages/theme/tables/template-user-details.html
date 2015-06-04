@@ -1,21 +1,22 @@
 <dom-module id="template-user-details">
     <template>
-        <pd-ui-grid-item large="{{cellGrid(headers,0)}}" medium="{{cellGrid(headers,0)}}" small="{{cellGrid(headers,0)}}">
+        <pd-ui-grid-item large="2" medium="2" small="2"></pd-ui-grid-item>
+        <pd-ui-grid-item>
             <span>{{item.id}}</span>
         </pd-ui-grid-item>
-        <pd-ui-grid-item large="{{cellGrid(headers,1)}}" medium="{{cellGrid(headers,1)}}" small="{{cellGrid(headers,1)}}">
+        <pd-ui-grid-item>
             <span>{{item.firstName}}</span>
         </pd-ui-grid-item>
-        <pd-ui-grid-item large="{{cellGrid(headers,2)}}" medium="{{cellGrid(headers,2)}}" small="{{cellGrid(headers,2)}}">
+        <pd-ui-grid-item>
             <span>{{item.lastName}}</span>
         </pd-ui-grid-item>
-        <pd-ui-grid-item large="{{cellGrid(headers,3)}}" medium="{{cellGrid(headers,3)}}" small="{{cellGrid(headers,3)}}">
+        <pd-ui-grid-item>
             <span>{{item.type}}</span>
         </pd-ui-grid-item>
-        <pd-ui-grid-item large="{{cellGrid(headers,4)}}" medium="{{cellGrid(headers,4)}}" small="{{cellGrid(headers,4)}}">
+        <pd-ui-grid-item>
             <span>{{item.username}}</span>
         </pd-ui-grid-item>
-        <pd-ui-grid-item large="{{cellGrid(headers,5)}}" medium="{{cellGrid(headers,5)}}" small="{{cellGrid(headers,5)}}">
+        <pd-ui-grid-item>
             <span>{{item.active}}</span>
         </pd-ui-grid-item>
     </template>
@@ -24,22 +25,14 @@
     Polymer({
         is: "template-user-details",
         properties: {
-            headers:{
-                type:Array,
-                value:[],
-                notify:true,
-                reflectToAttribute:true
-            },
             item:{
                 type:Object,
                 reflectToAttribute:true,
                 notify:true
             }
         },
-        cellGrid:function(headers,key){
-            return headers[key].grid;
-        },
         ready: function () {
+            var self = this;
         }
     });
 </script>

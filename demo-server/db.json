@@ -307,14 +307,6 @@
       "type": "itadmin",
       "username": "bill",
       "active": 1
-    },
-    {
-      "id": 2,
-      "firstName": "Hara",
-      "lastName": "Giannika",
-      "type": "teacher",
-      "username": "hara",
-      "active": 1
     }
   ]
 }

@@ -23,15 +23,24 @@
               type: String,
               value: "24",
               reflectToAttribute: true
+          },
+          customClass:{
+              type:String,
+              value:"",
+              reflectToAttribute: true,
+              notify:true
           }
       },
       observers: [
-        '_computeClasses(small, medium, large)'
+        '_computeClasses(small, medium, large, customClass)'
       ],
       ready: function () {
+          if(this.customClass == null){
+              this.customClass = "";
+          }
       },
-      _computeClasses: function (small, medium, large) {
-          this.className = "pd-u-xl-" + large + "-24 pd-u-lg-" + large + "-24 pd-u-md-" + medium + "-24 pd-u-sm-" + small + "-24";
+      _computeClasses: function (small, medium, large, customClass) {
+          this.className = customClass + " pd-u-xl-" + large + "-24 pd-u-lg-" + large + "-24 pd-u-md-" + medium + "-24 pd-u-sm-" + small + "-24";
       }
   });
 </script>

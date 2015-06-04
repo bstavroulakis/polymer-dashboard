@@ -1,15 +1,22 @@
 <link rel="import" href="../../../components/pd-repo/pd-repo-profile-table.html" />
+<link rel="import" href="../../../pages/theme/tables/template-user-details.html" />
+<link rel="import" href="../../../components/pd-edit-panel/pd-edit-panel.html" />
+
 <dom-module id="table-user-details-sample">
     <template>
         <pd-repo-profile-table id="repo"></pd-repo-profile-table>
-        <pd-table paging="10" id="table" head="Users" alternate="true"
+        <pd-table id="table"
+                  head="Users"
+                  alternate="true"
+                  paging="10"
                   headers='[{"name":"ID", "sortable":false, "grid":2},{"name":"First Name", "sortable":true, "grid":4},
                             {"name":"Last Name", "sortable":true, "grid":4},{"name":"Type", "sortable":true, "grid":4},
                             {"name":"Username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":4}]'
+                  template-name="template-user-details"
                   alternate
                 >
         </pd-table>
-
+        <pd-edit-panel></pd-edit-panel>
     </template>
 </dom-module>
 
@@ -29,6 +36,9 @@
                 console.log(e.detail);
             });
             self.$.table.addEventListener("filter",function(e){
+                console.log(e.detail);
+            });
+            self.$.table.addEventListener("search",function(e){
                 console.log(e.detail);
             });
         },

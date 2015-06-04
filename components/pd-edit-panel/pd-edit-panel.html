@@ -1,0 +1,49 @@
+<link href="../../bower_components/paper-input/paper-input.html" rel="import"/>
+<link href="../../bower_components/paper-fab/paper-fab.html" rel="import"/>
+<link href="../../bower_components/paper-button/paper-button.html" rel="import"/>
+
+<dom-module id="pd-edit-panel">
+    <style>
+        .edit-panel{
+            position:absolute;
+            left:0;
+            top:0;
+            height:100%;
+        }
+        .closeBtn{
+            position:absolute;
+            right:0px;
+            top:0px;
+        }
+        .closeBtnInner{
+            margin-top:50%;
+            margin-left:50%;
+        }
+    </style>
+    <template>
+        <div class="drawer-offset edit-panel p-1 c-n p-relative">
+            <h2>Item</h2>
+            <paper-input label="First Name"></paper-input>
+            <paper-input label="Last Name"></paper-input>
+            <paper-input label="Summary"></paper-input>
+            <paper-button tabindex="0" raised>button</paper-button>
+            <div class="closeBtn">
+                <div class="closeBtnInner">
+                    <paper-fab icon="clear" title="clear" tabindex="0"></paper-fab>
+                </div>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+Polymer({
+    is: "pd-edit-panel",
+    properties: {
+
+    },
+    ready: function () {
+
+    }
+});
+</script>
