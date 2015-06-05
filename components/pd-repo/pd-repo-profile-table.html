@@ -1,8 +1,9 @@
 <dom-module id="pd-repo-profile-table">
     <template>
         <pd-context id="context"></pd-context>
-        <iron-ajax id="ajax" url="{{service}}" handle-as="json" on-response="dataSelected" with-credentials="true"></iron-ajax>
-        <iron-ajax id="ajaxDelete" url="{{service}}" handle-as="json" method="DELETE" on-response="itemDeleted" with-credentials="true"></iron-ajax>
+        <iron-ajax id="ajax"       url="{{service}}" handle-as="json" method="GET"    on-response="dataSelected" with-credentials="true"></iron-ajax>
+        <iron-ajax id="ajaxDelete" url="{{service}}" handle-as="json" method="DELETE" on-response="itemDeleted"  with-credentials="true"></iron-ajax>
+        <iron-ajax id="ajaxCreate" url="{{service}}" handle-as="json" method="POST"   on-response="itemCreated"  with-credentials="true"></iron-ajax>
     </template>
 </dom-module>
 
@@ -51,11 +52,23 @@
         },
         itemDeleted:function(response){
             var self = this;
-            console.log()
             self.itemsDeleted = self.itemsDeleted + 1;
             if(self.itemsDeleted == self.itemsToDelete){
                 self.responseCallback(self.selfCallback);
             }
+        },
+        createItem:function(callback,item,selfCallback){
+            var self = this;
+            self.selfCallback = selfCallback;
+            self.responseCallback = callback;
+            self.$.ajaxCreate.url = self.$.context.service + "profiles";
+            self.$.ajaxCreate.body = JSON.stringify(item);
+            self.$.ajaxCreate.contentType = "application/json";
+            self.$.ajaxCreate.generateRequest();
+        },
+        itemCreated:function(response){
+            var self = this;
+            self.responseCallback(self.selfCallback);
         }
     });
 </script>

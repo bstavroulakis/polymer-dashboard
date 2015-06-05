@@ -307,6 +307,22 @@
       "type": "itadmin",
       "username": "bill",
       "active": 1
+    },
+    {
+      "firstName": "Joy",
+      "lastName": "Johnson",
+      "type": "teacher",
+      "username": "joy",
+      "active": "Inactive",
+      "id": 2
+    },
+    {
+      "firstName": "test",
+      "lastName": "test2",
+      "type": "teacher",
+      "username": "bill",
+      "active": "Inactive",
+      "id": 3
     }
   ]
 }

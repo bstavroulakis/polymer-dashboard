@@ -12,17 +12,13 @@
         <div class$="{{toggledClass}}">
             <div class="edit-panel drawer-offset p-1 c-text-bg p-relative shadow-right">
 
-                <h2 class="m-b-0">Item</h2>
+                <h2 class="m-b-0">{{label}}</h2>
 
-                <paper-input  floatingLabel="true" label="First Name"></paper-input>
-                <paper-input floatingLabel="true" label="Last Name"></paper-input>
-                <pd-select  floatingLabel="true" options='["itadmin", "teacher", "principle"]' label="Type"></pd-select>
-                <paper-input  floatingLabel="true" label="Username"></paper-input>
-                <pd-select  floatingLabel="true" options='["Active", "Inactive"]' label="Active"></pd-select>
+                <content></content>
 
                 <div class="clearfix"></div>
                 <div class="f-right p-t-1">
-                    <paper-button tabindex="0" raised>Save</paper-button>
+                    <paper-button tabindex="0" raised on-click="saveItem">Save</paper-button>
                 </div>
                 <div class="closeBtn">
                     <div class="closeBtnInner">
@@ -48,7 +44,16 @@ Polymer({
             type: String,
             computed: "_computeClass(toggled)",
             notify:true
+        },
+        label:{
+            type: String,
+            value: "",
+            notify: true,
+            reflectToAttribute: true
         }
+    },
+    saveItem:function(){
+        this.fire('saveItem');
     },
     _computeClass:function(toggled){
         if(toggled){

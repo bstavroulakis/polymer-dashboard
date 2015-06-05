@@ -16,7 +16,7 @@
         }
     </style>
     <template>
-        <div id="grid" class="pd-g p-l-1 p-r-1">
+        <div id="grid" class$="{{paddingClass}}">
             <content></content>
             <div class="clearfix"></div>
         </div>
@@ -26,6 +26,24 @@
   Polymer({
       is: "pd-ui-grid",
       properties: {
+          noPadding:{
+              type:Boolean,
+              value:false,
+              notify:true,
+              reflectToAttribute:true
+          },
+          paddingClass:{
+              type:String,
+              value:"",
+              computed:"_computePaddingClass(noPadding)"
+          }
+      },
+      _computePaddingClass:function(noPadding){
+          if(noPadding){
+              return "pd-g";
+          }else{
+              return "pd-g p-l-1 p-r-1";
+          }
       },
       ready: function () {
       }

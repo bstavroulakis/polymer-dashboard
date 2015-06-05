@@ -23,7 +23,7 @@
                         <span class="label">(Select <span>{{label}}</span>)</span>
                     </template>
                     <template is="dom-if" if="{{!selectedEmpty}}">
-                        <span class="selectedOption">{{selected}}</span>
+                        <span class="selectedOption">{{value}}</span>
                     </template>
                     <span class="expand-icon">
                         <iron-icon icon="expand-more"></iron-icon>
@@ -60,9 +60,9 @@
             selectedEmpty:{
                 type:Boolean,
                 value:false,
-                computed:"_computeSelectedEmpty(selected)"
+                computed:"_computeSelectedEmpty(value)"
             },
-            selected:{
+            value:{
                 type:String,
                 value:"",
                 notify:true,
@@ -98,7 +98,7 @@
             }
         },
         selectItem:function(e){
-            this.selected = e.target.dataset.select;
+            this.value = e.target.dataset.select;
             this.selectToggled = false;
         },
         toggle:function(){

@@ -15,8 +15,17 @@
                   template-name="template-user-details"
                   alternate
                 >
+            <template is="dom-repeat" items="{{data}}">
+                <template-user-details item="{{item}}"></template-user-details>
+            </template>
         </pd-table>
-        <pd-edit-panel id="editPanel" toggled></pd-edit-panel>
+        <pd-edit-panel id="editPanel" label="New Profile">
+            <paper-input  floatingLabel="true" label="First Name" value="{{newItem.firstName}}"></paper-input>
+            <paper-input floatingLabel="true" label="Last Name" value="{{newItem.lastName}}"></paper-input>
+            <pd-select  floatingLabel="true" options='["itadmin", "teacher", "principle"]' label="Type" value="{{newItem.type}}"></pd-select>
+            <paper-input  floatingLabel="true" label="Username" value="{{newItem.username}}"></paper-input>
+            <pd-select  floatingLabel="true" options='["Active", "Inactive"]' label="Active" value="{{newItem.active}}"></pd-select>
+        </pd-edit-panel>
     </template>
 </dom-module>
 
@@ -24,7 +33,21 @@
     Polymer({
         is: "table-user-details-sample",
         properties:{
-
+            newItem:{
+                type:Object,
+                value:{
+                    firstName:"",
+                    lastName:"",
+                    type:"",
+                    username:"",
+                    active:false
+                },
+                notify:true
+            },
+            data:{
+                type:Array,
+                notify:true
+            }
         },
         ready:function(){
             var self = this;
@@ -44,11 +67,25 @@
             self.$.table.addEventListener("addItem",function(e){
                 self.$.editPanel.togglePanel();
             });
+            self.$.editPanel.addEventListener("saveItem", function(obj){
+                console.log("new item");
+                self.$.repo.createItem(self.createdProfileCallback, self.newItem, self);
+            });
         },
         dataCallback:function(data, self){
             self.$.table.data = data;
+            self.data = data;
         },
         deletedCallback:function(self){
+            self.$.repo.getData(self.dataCallback, self);
+        },
+        createdProfileCallback:function(self){
+            self.$.editPanel.togglePanel();
+            self.set("self.newItem.firstName","");
+            self.set("self.newItem.lastName","");
+            self.set("self.newItem.type","");
+            self.set("self.newItem.username","");
+            self.set("self.newItem.active","false");
             self.$.repo.getData(self.dataCallback, self);
         }
     });

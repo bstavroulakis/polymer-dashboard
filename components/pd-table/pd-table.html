@@ -3,17 +3,17 @@
 <dom-module id="pd-table">
     <link href="../../components/pd-table/pd-table.css" rel="import" type="css"/>
     <style>
-        .selected{
-            --color-neutral-dark: #f7f7f7;
+        .alternate .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
+            border-color: var(--color-neutral);
         }
         .checkboxSelected .head{
             background-color:#edf4fd;
         }
-        .selected{
-            background-color: var(--color-neutral-dark);
-        }
         .alternate .row:nth-child(even){
-            background-color: var(--color-neutral-dark);
+            background-color: var(--color-neutral);
+        }
+        .selected{
+            background-color: var(--color-neutral-dark) !important;
         }
     </style>
     <template>
@@ -34,7 +34,7 @@
                 <div class="clearfix"></div>
             </div>
             <div id="table" class="table">
-                <pd-ui-grid>
+                <pd-ui-grid no-padding>
 
                     <div class="row">
 
