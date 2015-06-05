@@ -1,27 +1,43 @@
 <link href="../../bower_components/paper-ripple/paper-ripple.html" rel="import"/>
+<link href="../../components/pd-animation/pd-animation-dropdown.html" rel="import"/>
 <dom-module id="pd-select">
     <style>
         .select-body .line:hover{
             background-color: var(--color-neutral-dark);
         }
+        .selectToggled .label{
+            color: var(--primary-color);
+        }
+        .selectToggled .select-action{
+            border-bottom-color: var(--primary-color);
+            border-bottom-width: 2px;
+        }
     </style>
     <template>
-        <link rel="stylesheet" href="../../components/pd-select/pd-select.css"/>
+        <link rel="stylesheet" type="css" href="../../components/pd-select/pd-select.css"/>
         <div id="pdSelector" class$="{{toggledClass}}">
-            <div class="select-wrap p-relative m-t-1">
-                <div class="select-action p-t-0-5 p-b-0-2" on-click="toggle">
-                    <span>{{selected}}</span>
+            <div class="select-wrap p-relative m-t-0-5 m-b-0-5">
+                <label class="label p-b-0-5" hidden$="[[!label]]">[[label]]</label>
+                <div class="select-action  p-b-0-2" on-click="toggle">
+                    <template is="dom-if" if="{{selectedEmpty}}">
+                        <span class="label">(Select <span>{{label}}</span>)</span>
+                    </template>
+                    <template is="dom-if" if="{{!selectedEmpty}}">
+                        <span class="selectedOption">{{selected}}</span>
+                    </template>
                     <span class="expand-icon">
                         <iron-icon icon="expand-more"></iron-icon>
                     </span>
                 </div>
-                <div class="select-body c-text-bg shadow">
+                <pd-animation-dropdown  id="toggleAnimation">
+                <div class="select-body c-text-bgs">
                     <template is="dom-repeat" items="{{options}}">
-                        <div class="line p-1">
-                            <span>{{item}}</span>
+                        <div class="line">
+                            <div class=" p-1" data-select$="{{item}}" on-click="selectItem">{{item}}</div>
                         </div>
                     </template>
                 </div>
+                </pd-animation-dropdown>
             </div>
         </div>
     </template>
@@ -31,14 +47,26 @@
     Polymer({
         is: "pd-select",
         properties: {
+            label:{
+                type:String,
+                value:"",
+                reflectToAttribute:true
+            },
             options:{
                 type:Array,
                 notify: true,
                 reflectToAttribute: true
             },
+            selectedEmpty:{
+                type:Boolean,
+                value:false,
+                computed:"_computeSelectedEmpty(selected)"
+            },
             selected:{
                 type:String,
-                value:"test"
+                value:"",
+                notify:true,
+                reflectToAttribute: true
             },
             selectToggled:{
                 type:Boolean,
@@ -52,28 +80,42 @@
                 notify:true
             }
         },
+        _computeSelectedEmpty:function(selected){
+            if(selected == "")
+                return true;
+            return false;
+        },
         _computetoggledClass:function(toggled){
+            if(toggled){
+                this.$.toggleAnimation.show();
+            }else{
+                this.$.toggleAnimation.hide();
+            }
             if(toggled){
                 return "selectToggled";
             } else {
                 return "";
             }
         },
+        selectItem:function(e){
+            this.selected = e.target.dataset.select;
+            this.selectToggled = false;
+        },
         toggle:function(){
             this.selectToggled = !this.selectToggled;
         },
         ready:function(){
             var self = this;
-            document.body.onclick  = function() {
+
+            document.body.addEventListener('click',function () {
                 self.selectToggled = false;
-            };
+            });
             this.$.pdSelector.querySelector(".select-wrap").onclick = function(event){
                 event.preventDefault();
                 event.stopPropagation();
                 return;
             };
             this.$.pdSelector.querySelector(".select-body").onclick = function(event){
-                console.log("block");
                 event.preventDefault();
                 event.stopPropagation();
                 return;

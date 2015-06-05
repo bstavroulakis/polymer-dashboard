@@ -1,5 +1,8 @@
 .select-wrap{
     width:100%;
+}
+
+.line, .select-action{
     cursor:pointer;
 }
 
@@ -8,17 +11,27 @@
     position: relative;
 }
 
-.select-body{
-    display:none;
-    z-index: 1;
-    width:100%;
+.label{
+    display: inline-block;
+    color: #727272;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 12px;
+    font-weight: 400;
 }
 
-.selectToggled .select-body{
-    display:block;
-    position: absolute;
-    left:0px;
+.selectedOption{
+    font-weight:400;
+}
 
+pd-animation-dropdown{
+    padding:0;
+}
+
+#toggleAnimation{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }
 
 .expand-icon{
