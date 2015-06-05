@@ -26,6 +26,18 @@ module.exports = function (grunt) {
                 }
             }
         },
+        file_append: {
+            default_options: {
+                files: [
+                    {
+                        append: "</style>",
+                        prepend: "<style is=\"custom-style\">",
+                        input: 'css/skins/default/color-vars-body.css',
+                        output: 'css/skins/default/color-vars.css'
+                    }
+                ]
+            }
+        },
         sass: {
             dist: {
                 options: {
@@ -43,16 +55,6 @@ module.exports = function (grunt) {
                     'wwwroot/pages/auth/auth.css': 'wwwroot/pages/auth/auth.scss'
                 }
             }
-        },
-        copy: {
-            main: {
-                files: [
-                    { expand: true, cwd: 'bower_components/', src: ['**'], dest: 'wwwroot/bower_components/' },
-                    //{ expand: true, cwd: 'Components/', src: ['**'], dest: 'wwwroot/Components/' },
-                    //{ src: 'dev.html', dest: 'wwwroot/dev.html' }
-                    //{ src: 'bower_components/webcomponentsjs/webcomponents-lite.min.js', dest: 'wwwroot/webcomponents-lite.min.js' }
-                ]
-            }
         }
     });
 
@@ -60,6 +62,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks("grunt-vulcanize");
     grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks('grunt-file-append');
 
-    grunt.registerTask('skins', ['default-skin']);
+    grunt.registerTask('default', ['file_append']);
 };
