@@ -1,15 +1,25 @@
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
 <dom-module id="pd-table">
     <link href="../../components/pd-table/pd-table.css" rel="import" type="css"/>
+    <style>
+        .alternate .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
+            border-color: var(--color-neutral-dark);
+        }
+        .alternate .row:nth-child(even){
+            background-color: var(--color-neutral-dark);
+        }
+        .checkboxSelected .head{
+            background-color:#edf4fd;
+        }
+        #tableBody /deep/ .selected{
+            background-color: var(--color-neutral-dark);
+        }
+        .header-row{
+            font-weight: 400;
+            border-bottom:1px solid var(--color-neutral);
+        }
+    </style>
     <template>
-        <style>
-            .alternate .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
-                border-color: var(--color-neutral);
-            }
-            .alternate .row:nth-child(even){
-                background-color: var(--color-neutral);
-            }
-        </style>
         <div class$="{{checkboxSelected(numSelected)}}">
             <div class="head p-t-0-5 p-r-0-5 p-b-1 p-l-1">
                 <h2 class="f-left m-0 p-t-0-5 p-l-0-5">
@@ -28,16 +38,18 @@
             </div>
             <div id="table" class="table">
                 <pd-ui-grid no-padding>
-                    <div class="row">
+                    <div class="row header-row">
 
-                        <pd-ui-grid-item large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
+                        <pd-ui-grid-item custom-class="t-center" large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
                         <template is="dom-repeat" items="{{headers}}" index-as="key_no">
                             <pd-ui-grid-item large="{{cellGrid(key_no)}}" medium="{{cellGrid(key_no)}}" small="{{cellGrid(key_no)}}">{{item.name}}</pd-ui-grid-item>
                         </template>
                         <div class="clearfix"></div>
 
                     </div>
-                    <div id="tableBody"></div>
+                    <div id="tableBody">
+                        <content id="tableContent"></content>
+                    </div>
                 </pd-ui-grid>
             </div>
         </div>
@@ -76,13 +88,6 @@
             initialized:{
                 type:Boolean,
                 value:false
-            },
-            templateElement:{},
-            elementData:{
-                type:String,
-                notify:true,
-                value:"",
-                reflectToAttribute:true
             }
         },
         observers: [
@@ -110,12 +115,13 @@
                     self.numSelected += 1;
                 }
             }
-            if(!self.initialized && self.elementData != null){
+            if(!self.initialized){
                 self.initialized = true;
                 self.init();
             }
-            if(self.templateElement != null){
-                self.templateElement.data = self.data;
+            var el = self.$.tableBody.childNodes[0].nextElementSibling;
+            if(el != null){
+                el.setAttribute("data", JSON.stringify(self.data));
             }
         },
         getItem:function(id){
@@ -153,14 +159,11 @@
             for(var i=0; i<=self.data.length - 1; i++){
                 self.set("data." + i +".selected",self.$.toggleAll.checked);
             }
-            var el = document.createElement(self.elementData);
-            el.data = self.data;
+            var el = self.$.tableBody.childNodes[0].nextElementSibling;
             el.addEventListener("templateDataChanged",function(){
                 self.data = el.data;
                 self.dataChanged();
             });
-            self.templateElement = el;
-            self.$.tableBody.appendChild(el);
         },
         ready:function(){
         }

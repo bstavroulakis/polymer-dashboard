@@ -1,16 +1,8 @@
 <dom-module id="template-user-details">
     <template>
-        <style>
-            .checkboxSelected .head{
-                background-color:#edf4fd;
-            }
-            .selected{
-                background-color: var(--color-neutral-dark) !important;
-            }
-        </style>
         <template is="dom-repeat" items="{{data}}">
             <div class$="{{_computedLineSelected(item.selected)}}" data-itemid$="{{item.id}}">
-                <pd-ui-grid-item custom-class="" large="2" medium="2" small="2">
+                <pd-ui-grid-item custom-class="t-center" large="2" medium="2" small="2">
                     <paper-checkbox checked="{{item.selected}}"></paper-checkbox>
                 </pd-ui-grid-item>
                 <pd-ui-grid-item large="2" medium="2" small="2">
@@ -60,6 +52,7 @@
         _computedLineSelected:function(selected){
             if(selected)
                 return "selected";
+            return "";
         },
         ready: function () {
             var self = this;

@@ -328,17 +328,17 @@
       "firstName": "test",
       "lastName": "test2",
       "type": "teacher",
-      "username": "test",
-      "active": "Inactive",
+      "username": "sadf",
+      "active": "Active",
       "id": 4
     },
     {
       "firstName": "test",
-      "lastName": "aewf",
+      "lastName": "test",
       "type": "teacher",
-      "username": "",
-      "active": false,
-      "id": 7
+      "username": "test",
+      "active": "Inactive",
+      "id": 5
     }
   ]
 }

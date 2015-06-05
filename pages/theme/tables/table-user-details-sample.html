@@ -1,6 +1,7 @@
 <link rel="import" href="../../../components/pd-repo/pd-repo-profile-table.html" />
 <link rel="import" href="../../../pages/theme/tables/template-user-details.html" />
 <link rel="import" href="../../../components/pd-edit-panel/pd-edit-panel.html" />
+<link href="../../../bower_components/paper-toast/paper-toast.html" rel="import"/>
 
 <dom-module id="table-user-details-sample">
     <template>
@@ -13,16 +14,17 @@
                             {"name":"Last Name", "sortable":true, "grid":4},{"name":"Type", "sortable":true, "grid":4},
                             {"name":"Username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":4}]'
                   alternate
-                  element-data="template-user-details"
                 >
+            <template-user-details data="{{data}}"></template-user-details>
         </pd-table>
         <pd-edit-panel id="editPanel" label="New Profile">
             <paper-input  floatingLabel="true" label="First Name" value="{{newItem.firstName}}"></paper-input>
-            <paper-input  floatingLabel="true" label="Last Name" value="{{newItem.lastName}}"></paper-input>
-            <pd-select    floatingLabel="true" label="Type" options='["itadmin", "teacher", "principle"]' value="{{newItem.type}}"></pd-select>
-            <paper-input  floatingLabel="true" label="Username" value="{{newItem.username}}"></paper-input>
-            <pd-select    floatingLabel="true" label="Active" options='["Active", "Inactive"]' value="{{newItem.active}}"></pd-select>
+            <paper-input  floatingLabel="true" label="Last Name"  value="{{newItem.lastName}}"></paper-input>
+            <pd-select    floatingLabel="true" label="Type"       value="{{newItem.type}}" options='["itadmin", "teacher", "principle"]' ></pd-select>
+            <paper-input  floatingLabel="true" label="Username"   value="{{newItem.username}}"></paper-input>
+            <pd-select    floatingLabel="true" label="Active"     value="{{newItem.active}}"options='["Active", "Inactive"]'></pd-select>
         </pd-edit-panel>
+        <paper-toast id="toast" text=""></paper-toast>
     </template>
 </dom-module>
 
@@ -78,12 +80,12 @@
         createdProfileCallback:function(self){
             self.$.editPanel.togglePanel();
             self.$.repo.getData(self.dataCallback, self);
-            console.log(self);
-            self.newItem.firstName = "";
-            self.newItem.lastName = "";
-            self.newItem.type = "";
-            self.newItem.username = "";
-            self.newItem.active = false;
+
+            self.set('newItem.firstName','');
+            self.set('newItem.lastName','');
+            self.set('newItem.type','');
+            self.set('newItem.username','');
+            self.set('newItem.active',false);
         }
     });
 </script>
