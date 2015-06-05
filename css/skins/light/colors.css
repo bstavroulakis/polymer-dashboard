@@ -108,28 +108,28 @@ a {
   border-left: 1px solid #ececec; }
 
 .shadow-top {
-  -webkit-box-shadow: 0px -7px 8px -7px #e3e3e3;
-  box-shadow: 0px -7px 8px -7px #e3e3e3; }
+  -webkit-box-shadow: 0px -4px 8px -4px #e3e3e3;
+  -moz-box-shadow: 0px -4px 8px -4px #e3e3e3;
+  box-shadow: 0px -4px 8px -4px #e3e3e3; }
 
 .shadow-right {
-  -webkit-box-shadow: 8px 0 8px -7px #e3e3e3;
-  box-shadow: 8px 0 8px -7px #e3e3e3; }
+  -webkit-box-shadow: 8px 0 8px -4px #e3e3e3;
+  -moz-box-shadow: 8px 0 8px -4px #e3e3e3;
+  box-shadow: 8px 0 8px -4px #e3e3e3; }
 
 .shadow-bottom {
-  -webkit-box-shadow: 0px -7px 8px -7px #e3e3e3;
+  -webkit-box-shadow: 0px -4px 8px -4px #e3e3e3;
+  -moz-box-shadow: 0px -4px 8px -4px #e3e3e3;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); }
 
 .shadow-left {
-  -webkit-box-shadow: -7px 0 8px -7px #e3e3e3;
-  box-shadow: -7px 0 8px -7px #e3e3e3; }
+  -webkit-box-shadow: -4px 0 4px -4px #e3e3e3;
+  -moz-box-shadow: -4px 0 4px -4px #e3e3e3;
+  box-shadow: -4px 0 4px -4px #e3e3e3; }
 
 .shadow {
-  -webkit-box-shadow: 0 0 5px #e3e3e3;
-  box-shadow: 0 0 5px #e3e3e3; }
-
-html, table, tr, td, .selected {
-  --color-neutral: #f4f4f4;
-  --color-neutral-dark: #ececec;
-  --color-neutral-light: #f7f7f7; }
+  -webkit-box-shadow: 0px 0px 6px 3px #e3e3e3;
+  -moz-box-shadow: 0px 0px 6px 3px #e3e3e3;
+  box-shadow: 0px 0px 6px 3px #e3e3e3; }
 
 /*# sourceMappingURL=colors.css.map */

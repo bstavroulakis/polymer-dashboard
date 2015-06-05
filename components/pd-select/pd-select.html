@@ -1,0 +1,87 @@
+<link href="../../bower_components/paper-ripple/paper-ripple.html" rel="import"/>
+
+
+<dom-module id="pd-select">
+    <link href="../../components/pd-dashboard/pd-styles/pd-styles.html" rel="import"/>
+    <link href="../../components/pd-select/pd-select.css" rel="import" type="css" />
+    <style>
+        .select-body .line{
+            background-color: var(--cust-paper-blue-grey-900);
+        }
+    </style>
+    <template>
+        <div id="pdSelector" class$="{{toggledClass}}">
+            <div class="select-wrap p-relative m-t-1 m-b-1">
+                <div class="select-action p-t-0-5 p-b-0-2" on-click="toggle">
+                    <span>{{selected}}</span>
+                    <span class="expand-icon">
+                        <iron-icon icon="expand-more"></iron-icon>
+                    </span>
+                    <paper-ripple></paper-ripple>
+                </div>
+                <div class="select-body c-text-bg shadow">
+                    <template is="dom-repeat" items="{{options}}">
+                        <div class="line p-1">
+                            <span>{{item}}</span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "pd-select",
+        properties: {
+            options:{
+                type:Array,
+                notify: true,
+                reflectToAttribute: true
+            },
+            selected:{
+                type:String,
+                value:"test"
+            },
+            selectToggled:{
+                type:Boolean,
+                value:false,
+                notify:true
+            },
+            toggledClass:{
+                type:String,
+                value:"",
+                computed:"_computetoggledClass(selectToggled)",
+                notify:true
+            }
+        },
+        _computetoggledClass:function(toggled){
+            if(toggled){
+                return "selectToggled";
+            } else {
+                return "";
+            }
+        },
+        toggle:function(){
+            this.selectToggled = !this.selectToggled;
+        },
+        ready:function(){
+            var self = this;
+            document.body.onclick  = function() {
+                self.selectToggled = false;
+            };
+            this.$.pdSelector.querySelector(".select-wrap").onclick = function(event){
+                event.preventDefault();
+                event.stopPropagation();
+                return;
+            };
+            this.$.pdSelector.querySelector(".select-body").onclick = function(event){
+                console.log("block");
+                event.preventDefault();
+                event.stopPropagation();
+                return;
+            };
+        }
+    });
+</script>

@@ -45,7 +45,7 @@
                 </a>
             </div>
             <div class="left-menu">
-                <pd-drawer-menu drawer-classes="{{drawerClasses}}"></pd-drawer-menu>
+                <pd-drawer-menu drawer-classes=""></pd-drawer-menu>
             </div>
         </pd-drawer>
         <pd-flatiron-director></pd-flatiron-director>
@@ -56,11 +56,6 @@
   Polymer({
       is: "pd-dashboard",
       properties: {
-          drawerClasses:{
-              type: String,
-              value: "",
-              notify:true
-          }
       },
       ready: function () {
           

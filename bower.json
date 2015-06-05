@@ -22,7 +22,8 @@
     "firebase-element":"GoogleWebComponents/firebase-element",
     "paper-fab": "PolymerElements/paper-fab",
     "iron-selector": "PolymerElements/iron-selector#^1.0.0",
-    "chartjs-element": "PolymerElements/chartjs-element"
+    "chartjs-element": "PolymerElements/chartjs-element",
+    "paper-ripple": "PolymerElements/paper-ripple"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.1",
