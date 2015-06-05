@@ -1,23 +1,16 @@
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
-
 <dom-module id="pd-table">
     <link href="../../components/pd-table/pd-table.css" rel="import" type="css"/>
-    <style>
-        .alternate .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
-            border-color: var(--color-neutral);
-        }
-        .checkboxSelected .head{
-            background-color:#edf4fd;
-        }
-        .alternate .row:nth-child(even){
-            background-color: var(--color-neutral);
-        }
-        .selected{
-            background-color: var(--color-neutral-dark) !important;
-        }
-    </style>
     <template>
-        <div class$="{{checkboxSelected}}">
+        <style>
+            .alternate .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
+                border-color: var(--color-neutral);
+            }
+            .alternate .row:nth-child(even){
+                background-color: var(--color-neutral);
+            }
+        </style>
+        <div class$="{{checkboxSelected(numSelected)}}">
             <div class="head p-t-0-5 p-r-0-5 p-b-1 p-l-1">
                 <h2 class="f-left m-0 p-t-0-5 p-l-0-5">
                     <span class="headTitle">{{head}}</span>
@@ -35,7 +28,6 @@
             </div>
             <div id="table" class="table">
                 <pd-ui-grid no-padding>
-
                     <div class="row">
 
                         <pd-ui-grid-item large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
@@ -45,18 +37,7 @@
                         <div class="clearfix"></div>
 
                     </div>
-
-                    <template is="dom-repeat" items="{{data}}" class="c-b-b-dark" index-as="key_no">
-                        <div class$="{{_computedLineSelected(item.selected)}}" data-itemid$="{{item.id}}">
-
-                            <pd-ui-grid-item custom-class="" large="2" medium="2" small="2">
-                                <paper-checkbox checked="{{item.selected}}" on-click="refreshSelectedCheckbox"></paper-checkbox>
-                            </pd-ui-grid-item>
-                            <div class="clearfix"></div>
-
-                        </div>
-
-                    </template>
+                    <div id="tableBody"></div>
                 </pd-ui-grid>
             </div>
         </div>
@@ -68,81 +49,74 @@
         properties: {
             headers:{
                 type:Array,
-                value:[],
                 notify:true,
                 reflectToAttribute:true
             },
             data:{
                 type:Array,
-                value: function() {
+                notify:true,
+                value:function(){
                     return [];
                 },
-                notify:true,
                 reflectToAttribute:true
             },
             dataParams:{
                 type:Array,
-                value:[],
                 notify:true
-            },
-            templateName:{
-                type:String,
-                value:"",
-                notify:true,
-                reflectToAttribute:true
-            },
-            checkboxSelected:{
-                type: String,
-                value: "hidden",
-                notify: true,
-                computed:"_computedCheckboxSelected(numSelected, alternate)"
             },
             numSelected:{
                 type:Number,
-                value:0,
                 notify: true
             },
             alternate:{
                 type:Boolean,
                 value:true,
                 reflectToAttribute:true
+            },
+            initialized:{
+                type:Boolean,
+                value:false
+            },
+            templateElement:{},
+            elementData:{
+                type:String,
+                notify:true,
+                value:"",
+                reflectToAttribute:true
             }
         },
         observers: [
-            'dataChanged(data.length)'
+            'dataChanged(data.*)'
         ],
+        checkboxSelected:function(numSelected){
+            if(numSelected > 0)
+                return "checkboxSelected";
+        },
         cellGrid:function(key){
             return this.headers[key].grid;
         },
-        dataChanged:function(length){
+        dataChanged:function(){
             var self = this;
             self.dataParams = [];
-            if(length > 0){
+            if(self.data.length > 0){
                 var item = self.data[0];
                 for(var prop in item){
                     self.dataParams.push(prop);
                 }
             }
-            self.async(function(){
-                var templates = self.$.table.querySelectorAll(".tableTemplateWrap");
-                for(var j=0;  j <= templates.length - 1; j++){
-                    var template = templates[j];
-                    var tmpl = template.querySelector(".tableTemplate");
-                    if(tmpl == null){
-                        tmpl = document.createElement(self.templateName);
-                        tmpl.item = self.getItem(template.dataset.itemid);
-                        tmpl.className = "tableTemplate";
-                        template.insertBefore(tmpl,template.querySelector("pd-ui-grid-item"));
-                    }
-                    var items = tmpl.querySelectorAll("pd-ui-grid-item");
-                    for (var i = 0; i <= items.length - 2; i++) {
-                        items[i + 1].large = self.headers[i].grid;
-                        items[i + 1].medium = self.headers[i].grid;
-                        items[i + 1].small = self.headers[i].grid;
-                    }
+            self.numSelected = 0;
+            for(var i = 0;i <= self.data.length - 1; i++){
+                if(self.data[i].selected){
+                    self.numSelected += 1;
                 }
-                self.refreshSelected();
-            }, 100);
+            }
+            if(!self.initialized && self.elementData != null){
+                self.initialized = true;
+                self.init();
+            }
+            if(self.templateElement != null){
+                self.templateElement.data = self.data;
+            }
         },
         getItem:function(id){
             var self = this;
@@ -151,22 +125,6 @@
                     return self.data[i];
                 }
             }
-        },
-        _computedLineSelected:function(checked){
-            if(checked){
-                return "row tableTemplateWrap p-relative selected";
-            }
-            return "row tableTemplateWrap p-relative ";
-        },
-        _computedCheckboxSelected:function(numSelected, alternate){
-            var classes = [];
-            if(numSelected != 0) {
-                classes.push("checkboxSelected");
-            }
-            if(alternate) {
-                classes.push("alternate")
-            }
-            return classes.join(" ");
         },
         addItem:function(){
             this.fire("addItem");
@@ -181,39 +139,30 @@
             };
             self.fire('deleteItems',deleteIDs);
         },
-        headClicked:function(e){
-        },
-        refreshSelectedCheckbox:function(){
-            this.refreshSelected();
-            this.$.toggleAll.checked = false;
-        },
-        refreshSelected: function(){
-            var self = this;
-            self.numSelected = 0;
-            for(var i=0; i<=self.data.length - 1; i++){
-                if(self.data[i].selected){
-                    self.numSelected = self.numSelected + 1;
-                }
-            }
-        },
         toggleAll:function(){
             var self = this;
             for(var i=0; i<=self.data.length - 1; i++){
                 self.set("data." + i +".selected",self.$.toggleAll.checked);
             }
-            self.refreshSelected();
         },
-        refreshData:function(){
+        templateDataChanged:function(){
+            self.data = self.templateElement.data;
+        },
+        init: function(){
             var self = this;
-            if(self.data != null){
-                for(var i=0; i<=self.data.length - 1; i++){
-                    self.set("data." + i +".selected",false);
-                }
+            for(var i=0; i<=self.data.length - 1; i++){
+                self.set("data." + i +".selected",self.$.toggleAll.checked);
             }
+            var el = document.createElement(self.elementData);
+            el.data = self.data;
+            el.addEventListener("templateDataChanged",function(){
+                self.data = el.data;
+                self.dataChanged();
+            });
+            self.templateElement = el;
+            self.$.tableBody.appendChild(el);
         },
-        ready  : function () {
-            var self = this;
-            this.refreshData();
+        ready:function(){
         }
     });
 </script>

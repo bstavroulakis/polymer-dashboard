@@ -1,24 +1,39 @@
 <dom-module id="template-user-details">
     <template>
-        <pd-ui-grid-item large="2" medium="2" small="2"></pd-ui-grid-item>
-        <pd-ui-grid-item large="2" medium="2" small="2">
-            <span>{{item.id}}</span>
-        </pd-ui-grid-item>
-        <pd-ui-grid-item large="4" medium="4" small="4">
-            <span>{{item.firstName}}</span>
-        </pd-ui-grid-item>
-        <pd-ui-grid-item large="4" medium="4" small="4">
-            <span>{{item.lastName}}</span>
-        </pd-ui-grid-item>
-        <pd-ui-grid-item large="4" medium="4" small="4">
-            <span>{{item.type}}</span>
-        </pd-ui-grid-item>
-        <pd-ui-grid-item large="4" medium="4" small="4">
-            <span>{{item.username}}</span>
-        </pd-ui-grid-item>
-        <pd-ui-grid-item large="4" medium="4" small="4">
-            <span>{{item.active}}</span>
-        </pd-ui-grid-item>
+        <style>
+            .checkboxSelected .head{
+                background-color:#edf4fd;
+            }
+            .selected{
+                background-color: var(--color-neutral-dark) !important;
+            }
+        </style>
+        <template is="dom-repeat" items="{{data}}">
+            <div class$="{{_computedLineSelected(item.selected)}}" data-itemid$="{{item.id}}">
+                <pd-ui-grid-item custom-class="" large="2" medium="2" small="2">
+                    <paper-checkbox checked="{{item.selected}}"></paper-checkbox>
+                </pd-ui-grid-item>
+                <pd-ui-grid-item large="2" medium="2" small="2">
+                    <span>{{item.id}}</span>
+                </pd-ui-grid-item>
+                <pd-ui-grid-item large="4" medium="4" small="4">
+                    <span>{{item.firstName}}</span>
+                </pd-ui-grid-item>
+                <pd-ui-grid-item large="4" medium="4" small="4">
+                    <span>{{item.lastName}}</span>
+                </pd-ui-grid-item>
+                <pd-ui-grid-item large="4" medium="4" small="4">
+                    <span>{{item.type}}</span>
+                </pd-ui-grid-item>
+                <pd-ui-grid-item large="4" medium="4" small="4">
+                    <span>{{item.username}}</span>
+                </pd-ui-grid-item>
+                <pd-ui-grid-item large="4" medium="4" small="4">
+                    <span>{{item.active}}</span>
+                </pd-ui-grid-item>
+                <div class="clearfix"></div>
+            </div>
+        </template>
     </template>
 </dom-module>
 <script>
@@ -29,7 +44,22 @@
                 type:Object,
                 reflectToAttribute:true,
                 notify:true
+            },
+            data:{
+                type:Array,
+                notify:true,
+                reflectToAttribute:true
             }
+        },
+        observers: [
+            'dataChanged(data.*)'
+        ],
+        dataChanged:function(){
+            this.fire("templateDataChanged");
+        },
+        _computedLineSelected:function(selected){
+            if(selected)
+                return "selected";
         },
         ready: function () {
             var self = this;

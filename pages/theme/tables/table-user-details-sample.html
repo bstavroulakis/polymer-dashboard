@@ -12,19 +12,16 @@
                   headers='[{"name":"ID", "sortable":false, "grid":2},{"name":"First Name", "sortable":true, "grid":4},
                             {"name":"Last Name", "sortable":true, "grid":4},{"name":"Type", "sortable":true, "grid":4},
                             {"name":"Username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":4}]'
-                  template-name="template-user-details"
                   alternate
+                  element-data="template-user-details"
                 >
-            <template is="dom-repeat" items="{{data}}">
-                <template-user-details item="{{item}}"></template-user-details>
-            </template>
         </pd-table>
         <pd-edit-panel id="editPanel" label="New Profile">
             <paper-input  floatingLabel="true" label="First Name" value="{{newItem.firstName}}"></paper-input>
-            <paper-input floatingLabel="true" label="Last Name" value="{{newItem.lastName}}"></paper-input>
-            <pd-select  floatingLabel="true" options='["itadmin", "teacher", "principle"]' label="Type" value="{{newItem.type}}"></pd-select>
+            <paper-input  floatingLabel="true" label="Last Name" value="{{newItem.lastName}}"></paper-input>
+            <pd-select    floatingLabel="true" label="Type" options='["itadmin", "teacher", "principle"]' value="{{newItem.type}}"></pd-select>
             <paper-input  floatingLabel="true" label="Username" value="{{newItem.username}}"></paper-input>
-            <pd-select  floatingLabel="true" options='["Active", "Inactive"]' label="Active" value="{{newItem.active}}"></pd-select>
+            <pd-select    floatingLabel="true" label="Active" options='["Active", "Inactive"]' value="{{newItem.active}}"></pd-select>
         </pd-edit-panel>
     </template>
 </dom-module>
@@ -58,17 +55,16 @@
             self.$.table.addEventListener("order",function(e){
                 console.log(e.detail);
             });
-            self.$.table.addEventListener("filter",function(e){
+            self.$.table.addEventListener("search",function(e){
                 console.log(e.detail);
             });
-            self.$.table.addEventListener("search",function(e){
+            self.$.table.addEventListener("page",function(e){
                 console.log(e.detail);
             });
             self.$.table.addEventListener("addItem",function(e){
                 self.$.editPanel.togglePanel();
             });
             self.$.editPanel.addEventListener("saveItem", function(obj){
-                console.log("new item");
                 self.$.repo.createItem(self.createdProfileCallback, self.newItem, self);
             });
         },
@@ -81,12 +77,13 @@
         },
         createdProfileCallback:function(self){
             self.$.editPanel.togglePanel();
-            self.set("self.newItem.firstName","");
-            self.set("self.newItem.lastName","");
-            self.set("self.newItem.type","");
-            self.set("self.newItem.username","");
-            self.set("self.newItem.active","false");
             self.$.repo.getData(self.dataCallback, self);
+            console.log(self);
+            self.newItem.firstName = "";
+            self.newItem.lastName = "";
+            self.newItem.type = "";
+            self.newItem.username = "";
+            self.newItem.active = false;
         }
     });
 </script>
