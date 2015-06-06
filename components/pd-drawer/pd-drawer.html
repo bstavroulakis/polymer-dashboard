@@ -12,7 +12,7 @@
         }
     </style>
     <template>
-        <div class$="{{mainClasses}}">
+        <div id="drawer" class$="{{mainClasses}}">
             <div class="c-p paper-toolbar p-l-05 p-r-05 shadow-bottom">
                 <div class="scrim" on-click="closeDrawers"></div>
                 <paper-icon-button class="left-show-btn f-left" icon="menu" title="menu" on-click="toggleLeft"></paper-icon-button>
@@ -22,7 +22,7 @@
             </div>
             <div class="main c-n-dark">
                 <div class="main-section">
-                    <pd-drawer-main></pd-drawer-main>
+                    <pd-drawer-main id="drawerMain" ></pd-drawer-main>
                 </div>
                 <div class="scrim" on-click="closeDrawers"></div>
                 <div class="left-drawer c-n-light shadow-right">
@@ -65,9 +65,21 @@
                     type: Boolean,
                     value: false
                 },
+                mobileMode:{
+                    type:Boolean,
+                    value:false,
+                },
+                tabletMode:{
+                    type:Boolean,
+                    value:false,
+                },
+                pcMode:{
+                    type:Boolean,
+                    value:false,
+                },
                 mainClasses: {
                     type: String,
-                    computed: '_computeClasses(leftShow, rightShow, leftLocked, rightLocked)'
+                    computed: '_computeClasses(leftShow, rightShow, leftLocked, rightLocked,mobileMode,tabletMode,pcMode)'
                 },
                 drawerClasses:{
                     type: String,
@@ -76,7 +88,7 @@
                     notify: true
                 }
             },
-            _computeClasses: function (leftShow, rightShow, leftLocked, rightLocked) {
+            _computeClasses: function (leftShow, rightShow, leftLocked, rightLocked,mobileMode,tabletMode,pcMode) {
                 var classStr = [];
                 if (leftLocked)
                     classStr.push('left-locked');
@@ -86,8 +98,37 @@
                     classStr.push('right-locked');
                 if (rightShow)
                     classStr.push('right-show');
+                if (mobileMode)
+                    classStr.push('mobile-mode-main');
+                if (tabletMode)
+                    classStr.push('tablet-mode-main');
+                if (pcMode)
+                    classStr.push('pc-mode-main');
                 this.drawerClasses = classStr.join(' ');
                 return classStr.join(' ');
+            },
+            mobileModeCheck: function(){
+                var self = this;
+                self.async(function(){
+                    var el = self.$.drawer.querySelector("#main");
+                    var width = el.offsetWidth;
+                    if(width <= 500){
+                        self.mobileMode = true;
+                    }else{
+                        self.mobileMode = false;
+                    }
+                    if(width > 500 && width <= 800){
+                        self.tabletMode = true;
+                    }else{
+                        self.tabletMode = false;
+                    }
+                    if(width > 800){
+                        self.pcMode = true;
+                    }else{
+                        self.pcMode = false;
+                    }
+                },200);
+
             },
             toggleLeft: function () {
                 this.rightShow = false;
@@ -100,14 +141,24 @@
             pinLeft: function () {
                 this.leftLocked = !this.leftLocked;
                 this.closeDrawers();
+                this.mobileModeCheck();
             },
             pinRight: function () {
                 this.rightLocked = !this.rightLocked;
                 this.closeDrawers();
+                this.mobileModeCheck();
             },
             closeDrawers: function () {
                 this.leftShow = false;
                 this.rightShow = false;
+            },
+            ready:function(){
+                var self = this;
+                this.mobileModeCheck();
+                window.addEventListener("resize",function(){
+                    console.log("on resize");
+                    self.mobileModeCheck();
+                });
             }
         });
 </script>

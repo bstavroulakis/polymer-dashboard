@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
+
 <dom-module id="pd-table">
-    <link href="../../components/pd-table/pd-table.css" rel="import" type="css"/>
+    <link href="../../components/pd-table/pd-table.css" rel="stylesheet" type="css"/>
     <style>
         .alternate /deep/ .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
             border-color: var(--color-neutral);
@@ -36,7 +37,7 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div id="table" class="table">
+            <div id="table">
                 <pd-ui-grid no-padding>
                     <div class="row header-row">
 
@@ -99,6 +100,7 @@
                 classes.push("checkboxSelected");
             if(alternate)
                 classes.push("alternate");
+            classes.push("table");
             return classes.join(" ");
         },
         cellGrid:function(key){

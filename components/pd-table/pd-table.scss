@@ -9,6 +9,7 @@
 .table /deep/ pd-ui-grid-item{
   padding:1em;
 }
+
 .table /deep/ .tableTemplate, .tableTemplate{
   position:absolute;
   width:100%;
@@ -35,7 +36,7 @@
   text-align:center;
 }
 
-@media (max-width: $tablet-mode)  {
+html /deep/ .mobile-mode-main {
 
   .table /deep/ .select-chk{
     text-align:left;
@@ -60,7 +61,7 @@
   .table /deep/ pd-ui-grid-item:before {
     position: absolute;
     top: 30%;
-    right: 52%;
+    right: 50%;
     width: 50%;
     padding-right: 10px;
     white-space: nowrap;
@@ -68,4 +69,5 @@
     text-align:right;
     font-weight:400;
   }
+
 }

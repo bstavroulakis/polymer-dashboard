@@ -24,7 +24,9 @@
     "iron-selector": "PolymerElements/iron-selector#^1.0.0",
     "chartjs-element": "PolymerElements/chartjs-element",
     "paper-ripple": "PolymerElements/paper-ripple",
-    "neon-animation": "PolymerElements/neon-animation#^1.0.0"
+    "neon-animation": "PolymerElements/neon-animation#^1.0.0",
+    "css-element-queries":"marcj/css-element-queries",
+    "element-query":"tysonmatanich/elementQuery"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.1",
