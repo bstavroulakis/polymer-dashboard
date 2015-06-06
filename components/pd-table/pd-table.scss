@@ -8,6 +8,9 @@
 }
 .table /deep/ pd-ui-grid-item{
   padding:1em;
+  overflow:hidden;
+  word-break: keep-all;
+  word-wrap: normal;
 }
 
 .table /deep/ .tableTemplate, .tableTemplate{

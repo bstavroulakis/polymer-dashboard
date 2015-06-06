@@ -130,7 +130,7 @@ manipulation of the collection without direct knowledge of Firebase key values.
        */
       limitToFirst: {
         type: Number,
-        value: 100,
+        value: null,
         reflectToAttribute: true,
       },
 
@@ -266,6 +266,20 @@ manipulation of the collection without direct knowledge of Firebase key values.
      */
     removeByKey: function(key) {
       this.query.ref().child(key).remove();
+    },
+
+    _applyLocalDataChanges: function(change) {
+      var pathParts = change.path.split('.');
+      var index;
+      var value;
+
+      if (pathParts.length < 2 || pathParts[1] === 'splices') {
+        return;
+      }
+
+      index = parseInt(pathParts[1], 10);
+      value = this.data[index];
+      this.query.ref().child(value.__firebaseKey__).set(value);
     },
 
     _computeQuery: function(location, limitToFirst, limitToLast, orderByMethodName, startAt, endAt, equalTo) {
@@ -431,7 +445,7 @@ manipulation of the collection without direct knowledge of Firebase key values.
 
         this._valueMap[oldValue.__firebaseKey__] = null;
         this._valueMap[value.__firebaseKey__] = value;
-        this.splice('data' + this.data.indexOf(oldValue), 1, value);
+        this.splice('data', this.data.indexOf(oldValue), 1, value);
       });
     },
 

@@ -40,6 +40,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </firebase-collection>
     </template>
   </test-fixture>
+  <test-fixture id="ChangingChildren">
+    <template>
+      <firebase-collection
+        location="https://fb-element-demo.firebaseio.com/test/changing_children"
+        order-by-child="foo"
+        log>
+      </firebase-collection>
+    </template>
+  </test-fixture>
 
   <test-fixture id="SyncingCollections">
     <template>
@@ -144,6 +153,55 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             });
 
             key = firebase.add(newValue).key();
+          });
+        });
+      });
+
+      suite('a child changes', function() {
+        setup(function(done) {
+          firebase = fixture('ChangingChildren');
+          waitForEvent(firebase, 'firebase-value').then(function() {
+            done();
+          }).catch(function(e) {
+            done(e)
+          });
+        });
+
+        test('updates the child key in place with the new value', function(done) {
+          var childrenKeys = [];
+
+          waitForEvent(firebase, 'firebase-value').then(function() {
+            var middleValue = firebase.getByKey(childrenKeys[1]);
+            var changes;
+
+            expect(middleValue.foo).to.be.equal(1);
+            expect(middleValue.bar).to.be.equal(1);
+
+            changes = waitForEvent(firebase, 'firebase-child-changed');
+
+            firebase.set('data.' + firebase.data.indexOf(middleValue) + '.bar', 2);
+
+            return changes;
+          }).then(function() {
+            var middleValue = firebase.getByKey(childrenKeys[1]);
+
+            expect(middleValue.foo).to.be.equal(1);
+            expect(middleValue.bar).to.be.equal(2);
+
+            done();
+          }).catch(function(e) {
+            done(e);
+          }).then(function() {
+            childrenKeys.forEach(function(key) {
+              firebase.removeByKey(key);
+            });
+          });
+
+          childrenKeys = [0, 1, 2].map(function(value, index) {
+            return firebase.add({
+              foo: value,
+              bar: index
+            }).key();
           });
         });
       });

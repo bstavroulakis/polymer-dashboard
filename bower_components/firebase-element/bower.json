@@ -1,8 +1,8 @@
 {
   "name": "firebase-element",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "main": "firebase-collection.html",
+  "main": ["firebase-collection.html","firebase-document.html","firebase-auth.html","firebase-query-behavior.html"],
   "dependencies": {
     "polymer": "polymer/polymer#^1.0.0",
     "firebase": "^2.2.0"

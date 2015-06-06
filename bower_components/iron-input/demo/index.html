@@ -21,35 +21,58 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <link rel="import" href="../iron-input.html">
 
-  <link rel="stylesheet" href="../../paper-styles/demo.css">
+  <link href="../../paper-styles/paper-styles.html" rel="import">
+  <link href="../../paper-styles/demo-pages.html" rel="import">
 
+  <style is="custom-style">
+
+    .vertical-section {
+      @apply(--paper-font-body1);
+
+      line-height: 40px;
+    }
+
+    code {
+      color: var(--google-grey-700);
+    }
+
+    input[is=iron-input] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input, button {
+      font-size: 20px;
+      padding: 0.2em;
+    }
+
+  </style>
 </head>
 <body>
 
-  <template is="dom-bind">
-
-    <section>
-
+  <div class="vertical-section vertical-section-container centered">
+    <template is="dom-bind">
       <p>
         <input is="iron-input" bind-value="{{bindValue}}" value="{{value::input}}">
         <br>
-        bind to <code>bind-value</code>: <span>[[bindValue]]</span>
+        bind to <code>bind-value</code>: <b>[[bindValue]]</b>
         <br>
-        bind to <code>value::input</code>: <span>{{value}}</span>
+        bind to <code>value::input</code>: <b>{{value}}</b>
       </p>
 
       <p on-click="setValue">
-        set bind-value to: <input> <button value="bindValue">set</button>
+        set bind-value to: <input> <button is="paper-button" value="bindValue">set</button>
         <br>
         set value to: <input> <button value="value">set</button>
       </p>
+    </template>
+    <p>only allows these characters:
+    <code>!@#0123456789</code></p>
+    <input is="iron-input" allowed-pattern="[!@#0-9]" prevent-invalid-input>
 
-    </section>
-
-  </template>
+  </div>
 
   <script>
-
     var scope = document.querySelector('template[is=dom-bind]');
 
     scope.setValue = function(event) {
@@ -61,3 +84,4 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </script>
 
 </body>
+</html>

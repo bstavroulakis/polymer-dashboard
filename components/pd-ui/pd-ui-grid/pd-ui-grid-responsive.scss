@@ -434,7 +434,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 /*@media screen and (min-width: $tablet-mode) {*/
-.pc-mode-main{
+.pc-mode-main /deep/ {
   .pd-g .pd-u-lg-1,
   .pd-g .pd-u-lg-1-1,
   .pd-g .pd-u-lg-1-2,
@@ -649,7 +649,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 /*@media screen and (min-width: $tablet-mode) {*/
-.pc-large-mode{
+.pc-mode-large-main /deep/ {
   .pd-g .pd-u-xl-1,
   .pd-g .pd-u-xl-1-1,
   .pd-g .pd-u-xl-1-2,

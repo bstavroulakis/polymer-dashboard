@@ -48,7 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <test-fixture id="prevent-invalid-input">
     <template>
-      <input is="iron-input" prevent-invalid-input pattern="[0-9]*">
+      <input is="iron-input" prevent-invalid-input pattern="[0-9]">
     </template>
   </test-fixture>
 
@@ -70,6 +70,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <input is="iron-input" validator="letters-only" pattern="[0-9]*">
     </template>
   </test-fixture>
+
+  <template is="dom-bind" id="bind-to-object">
+    <input is="iron-input" id="input" bind-value="{{foo}}">
+  </template>
 
   <script>
 
@@ -103,6 +107,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         assert.equal(input.value, input.bindValue, 'value equals to bindValue');
       });
 
+      test('set bindValue to undefined', function() {
+        var scope = document.getElementById('bind-to-object');
+        scope.foo = undefined;
+        assert.ok(!scope.$.input.bindValue, 'bindValue is falsy');
+        assert.ok(!scope.$.input.value, 'value is falsy');
+      });
+
       test('validator used instead of constraints api if provided', function() {
         var input = fixture('has-validator')[1];
         input.value = '123';
@@ -110,6 +121,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         assert.isTrue(input.invalid, 'input is invalid');
       });
 
+      test('prevent invalid input works in _onInput', function() {
+        var input = fixture('prevent-invalid-input');
+        input.value = '123';
+        input._onInput();
+        assert.equal(input.bindValue, '123');
+
+        input.value = '123foo';
+        input._onInput();
+        assert.equal(input.bindValue, '123');
+      });
     });
 
   </script>
