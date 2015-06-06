@@ -86,7 +86,7 @@ paper-icon-button {
   height: 1.1em !important;
   width: 1.1em !important; }
 
-@media (min-width: 50em) {
+@media (min-width: 800px) {
   .right-locked .main-section {
     width: calc(100% - 15em); }
 
@@ -127,7 +127,7 @@ paper-icon-button {
 @media (max-width: 640px) {
   .main {
     top: 3.6em; } }
-@media (max-width: 50em) {
+@media (max-width: 800px) {
   .pin-btn {
     display: none; }
 

@@ -323,7 +323,7 @@ code {
   [drawer-classes="left-locked right-show"] paper-toast,
   [drawer-classes="left-locked right-locked"] paper-toast {
     left: 18.5em; } }
-@media (min-width: 50em) {
+@media (min-width: 800px) {
   [drawer-classes="left-locked"] .drawer-offset,
   [drawer-classes="left-locked right-show"] .drawer-offset,
   [drawer-classes="left-locked right-locked"] .drawer-offset {

@@ -304,14 +304,15 @@
       "id": 1,
       "firstName": "Bill",
       "lastName": "Stavroulakis",
-      "type": "itadmin",
+      "type": "teacher",
       "username": "bill",
-      "active": 1
+      "active": 1,
+      "selected": false
     },
     {
       "firstName": "Joy",
       "lastName": "Johnson",
-      "type": "teacher",
+      "type": "principle",
       "username": "joy",
       "active": "Inactive",
       "id": 2
@@ -321,14 +322,15 @@
       "lastName": "test2",
       "type": "teacher",
       "username": "test",
-      "active": "Inactive",
-      "id": 3
+      "active": "Active",
+      "id": 3,
+      "selected": false
     },
     {
-      "firstName": "test",
-      "lastName": "test2",
+      "firstName": "asdf",
+      "lastName": "dfawe",
       "type": "teacher",
-      "username": "sadf",
+      "username": "gers",
       "active": "Active",
       "id": 4
     },
@@ -336,7 +338,7 @@
       "firstName": "test",
       "lastName": "test",
       "type": "teacher",
-      "username": "test",
+      "username": "asdf",
       "active": "Inactive",
       "id": 5
     }

@@ -1,25 +1,62 @@
-.headOptions, .headNum{
-    visibility: hidden;
-}
-.checkboxSelected .headOptions, .checkboxSelected .headNum {
-    visibility: visible;
-}
-.table /deep/ pd-ui-grid-item{
-    padding:1em;
-}
-.table /deep/ .tableTemplate, .tableTemplate{
-    position:absolute;
-    width:100%;
-    left:0;
-    top:0;
-}
-.headTitle{
-    display:inline-block;
-}
-.checkboxSelected .headTitle{
-    display:none;
-}
+/* Included Padding Vars */
+/* Included Sizes Vars */
+.headOptions, .headNum {
+  visibility: hidden; }
 
-:host /deep/ pd-ui-grid-item{
-    float:left;
-}
+.checkboxSelected .headOptions, .checkboxSelected .headNum {
+  visibility: visible; }
+
+.table /deep/ pd-ui-grid-item {
+  padding: 1em; }
+
+.table /deep/ .tableTemplate, .tableTemplate {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.headTitle {
+  display: inline-block; }
+
+.checkboxSelected .headTitle {
+  display: none; }
+
+:host /deep/ pd-ui-grid-item {
+  float: left; }
+
+.table /deep/ .button {
+  padding: 0.5em;
+  text-align: center; }
+
+.table /deep/ .select-chk {
+  text-align: center; }
+
+@media (max-width: 800px) {
+  .table /deep/ .select-chk {
+    text-align: left; }
+
+  .table /deep/ .header-row {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+
+  .table /deep/ .row {
+    border-bottom: 1px solid #ccc; }
+
+  .table /deep/ pd-ui-grid-item {
+    border: none;
+    position: relative;
+    padding-left: 50%; }
+
+  .table /deep/ pd-ui-grid-item:before {
+    position: absolute;
+    top: 30%;
+    right: 52%;
+    width: 50%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-th) ": ";
+    text-align: right;
+    font-weight: 400; } }
+
+/*# sourceMappingURL=pd-table.css.map */

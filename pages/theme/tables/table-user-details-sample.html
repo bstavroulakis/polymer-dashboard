@@ -10,19 +10,17 @@
                   head="Users"
                   alternate="true"
                   paging="10"
-                  headers='[{"name":"ID", "sortable":false, "grid":2},{"name":"First Name", "sortable":true, "grid":4},
-                            {"name":"Last Name", "sortable":true, "grid":4},{"name":"Type", "sortable":true, "grid":4},
-                            {"name":"Username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":4}]'
+                  headers="{{headers}}"
                   alternate
                 >
-            <template-user-details data="{{data}}"></template-user-details>
+            <template-user-details id="userDetails" data="{{data}}" headers="{{headers}}"></template-user-details>
         </pd-table>
-        <pd-edit-panel id="editPanel" label="New Profile">
-            <paper-input  floatingLabel="true" label="First Name" value="{{newItem.firstName}}"></paper-input>
-            <paper-input  floatingLabel="true" label="Last Name"  value="{{newItem.lastName}}"></paper-input>
-            <pd-select    floatingLabel="true" label="Type"       value="{{newItem.type}}" options='["itadmin", "teacher", "principle"]' ></pd-select>
-            <paper-input  floatingLabel="true" label="Username"   value="{{newItem.username}}"></paper-input>
-            <pd-select    floatingLabel="true" label="Active"     value="{{newItem.active}}"options='["Active", "Inactive"]'></pd-select>
+        <pd-edit-panel id="editPanel" label="">
+            <paper-input  floatingLabel="true" label="First Name" value="{{rowModel.firstName}}"></paper-input>
+            <paper-input  floatingLabel="true" label="Last Name"  value="{{rowModel.lastName}}"></paper-input>
+            <pd-select    floatingLabel="true" label="Type"       value="{{rowModel.type}}" options='["itadmin", "teacher", "principle"]' ></pd-select>
+            <paper-input  floatingLabel="true" label="Username"   value="{{rowModel.username}}"></paper-input>
+            <pd-select    floatingLabel="true" label="Active"     value="{{rowModel.active}}"options='["Active", "Inactive"]'></pd-select>
         </pd-edit-panel>
         <paper-toast id="toast" text=""></paper-toast>
     </template>
@@ -32,7 +30,7 @@
     Polymer({
         is: "table-user-details-sample",
         properties:{
-            newItem:{
+            rowModel:{
                 type:Object,
                 value:{
                     firstName:"",
@@ -46,6 +44,12 @@
             data:{
                 type:Array,
                 notify:true
+            },
+            headers:{
+                type:Array,
+                value:[{"name":"ID", "sortable":false, "grid":2},{"name":"First Name", "sortable":true, "grid":4},
+                    {"name":"Last Name", "sortable":true, "grid":4},{"name":"Type", "sortable":true, "grid":4},
+                    {"name":"Username", "sortable":true, "grid":3},{"name":"Active", "sortable":true, "grid":2},{"name":"","sortable":false,"grid":3}]
             }
         },
         ready:function(){
@@ -64,10 +68,17 @@
                 console.log(e.detail);
             });
             self.$.table.addEventListener("addItem",function(e){
-                self.$.editPanel.togglePanel();
+                self.$.editPanel.label = "New Profile";
+                self.resetModel(self);
+                self.$.editPanel.showPanel();
             });
             self.$.editPanel.addEventListener("saveItem", function(obj){
-                self.$.repo.createItem(self.createdProfileCallback, self.newItem, self);
+                self.$.repo.createItem(self.createdProfileCallback, self.rowModel, self);
+            });
+            self.$.userDetails.addEventListener("editItem", function(e){
+                self.$.editPanel.label = "Edit Profile";
+                self.set("rowModel", e.detail.item);
+                self.$.editPanel.showPanel();
             });
         },
         dataCallback:function(data, self){
@@ -77,15 +88,18 @@
         deletedCallback:function(self){
             self.$.repo.getData(self.dataCallback, self);
         },
+        resetModel:function(self){
+            self.set('rowModel.id',null);
+            self.set('rowModel.firstName','');
+            self.set('rowModel.lastName','');
+            self.set('rowModel.type','');
+            self.set('rowModel.username','');
+            self.set('rowModel.active',false);
+        },
         createdProfileCallback:function(self){
             self.$.editPanel.togglePanel();
             self.$.repo.getData(self.dataCallback, self);
-
-            self.set('newItem.firstName','');
-            self.set('newItem.lastName','');
-            self.set('newItem.type','');
-            self.set('newItem.username','');
-            self.set('newItem.active',false);
+            self.resetModel(self);
         }
     });
 </script>

@@ -2,17 +2,17 @@
 <dom-module id="pd-table">
     <link href="../../components/pd-table/pd-table.css" rel="import" type="css"/>
     <style>
-        .alternate .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
-            border-color: var(--color-neutral-dark);
+        .alternate /deep/ .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
+            border-color: var(--color-neutral);
         }
-        .alternate .row:nth-child(even){
-            background-color: var(--color-neutral-dark);
+        .alternate /deep/ .row:nth-child(even){
+            background-color: var(--color-neutral);
         }
         .checkboxSelected .head{
             background-color:#edf4fd;
         }
         #tableBody /deep/ .selected{
-            background-color: var(--color-neutral-dark);
+            background-color: var(--primary-color-highlight);
         }
         .header-row{
             font-weight: 400;
@@ -20,7 +20,7 @@
         }
     </style>
     <template>
-        <div class$="{{checkboxSelected(numSelected)}}">
+        <div class$="{{checkboxSelected(numSelected,alternate)}}">
             <div class="head p-t-0-5 p-r-0-5 p-b-1 p-l-1">
                 <h2 class="f-left m-0 p-t-0-5 p-l-0-5">
                     <span class="headTitle">{{head}}</span>
@@ -93,9 +93,13 @@
         observers: [
             'dataChanged(data.*)'
         ],
-        checkboxSelected:function(numSelected){
+        checkboxSelected:function(numSelected,alternate){
+            var classes = [];
             if(numSelected > 0)
-                return "checkboxSelected";
+                classes.push("checkboxSelected");
+            if(alternate)
+                classes.push("alternate");
+            return classes.join(" ");
         },
         cellGrid:function(key){
             return this.headers[key].grid;

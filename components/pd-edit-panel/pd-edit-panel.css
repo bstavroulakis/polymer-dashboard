@@ -1,9 +1,9 @@
 /* Included Padding Vars */
 /* Included Sizes Vars */
 .edit-panel {
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 0;
+  top: 4em;
   height: 100%;
   width: 350px;
   transition: transform ease-in-out 0.3s; }
@@ -23,7 +23,7 @@
   margin-top: 30%;
   margin-left: 50%; }
 
-@media (max-width: 50em) {
+@media (max-width: 800px) {
   .edit-panel {
     width: 100%; }
 

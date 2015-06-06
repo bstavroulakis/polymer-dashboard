@@ -1,9 +1,9 @@
 @import '../../css/vars.scss';
 
 .edit-panel{
-    position:absolute;
+    position:fixed;
     left:0;
-    top:0;
+    top:4em;
     height:100%;
     width:350px;
     transition: transform ease-in-out 0.3s;

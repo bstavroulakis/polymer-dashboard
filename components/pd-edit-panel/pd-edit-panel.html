@@ -61,6 +61,13 @@ Polymer({
         }
         return "";
     },
+    showPanel:function(){
+        var self = this;
+        self.toggled = true;
+    },
+    hidePanel:function(){
+        this.toggled = false;
+    },
     togglePanel:function(){
         this.toggled = !this.toggled;
     },
