@@ -11,7 +11,7 @@
     <template>
         <div class$="{{toggledClass}}">
             <div class="edit-panel drawer-offset p-1 c-text-bg p-relative shadow-right">
-
+                <div class="inner-edit-panel">
                 <h2 class="m-b-0">{{label}}</h2>
 
                 <content></content>
@@ -24,6 +24,7 @@
                     <div class="closeBtnInner">
                         <paper-fab on-click="togglePanel" icon="clear" title="clear" tabindex="0"></paper-fab>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

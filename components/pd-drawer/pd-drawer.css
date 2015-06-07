@@ -54,7 +54,8 @@ paper-icon-button {
   right: -15em; }
 
 .left-drawer {
-  left: -15em; }
+  left: -15em;
+  z-index: 3; }
 
 .left-show .left-drawer {
   visibility: visible;

@@ -1,12 +1,14 @@
 @import '../../css/vars.scss';
 
 .edit-panel{
+  z-index: 2;
     position:fixed;
-    left:0;
     top:4em;
     height:100%;
-    width:350px;
+    width:330px;
     transition: transform ease-in-out 0.3s;
+
+margin-left:-2em;
 }
 
 .edit-panel{
@@ -18,13 +20,18 @@
 }
 
 .closeBtn{
-    position:absolute;
-    right:0px;
-    top:0px;
+  position:absolute;
+  top: -2em;
+  right: -1em;
 }
 .closeBtnInner{
     margin-top:30%;
     margin-left:50%;
+}
+
+.inner-edit-panel{
+  position: relative;
+  left:0em;
 }
 
 @media (max-width: $tablet-mode) {

@@ -24,6 +24,9 @@ a {
   color: #FBC02D; }
 
 /* Custom Classes */
+.c-p-highlight {
+  background-color: #edf4fd; }
+
 .c-p-light {
   background-color: #FFF9C4; }
 

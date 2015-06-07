@@ -23,6 +23,9 @@ a{
     color:$primary-color-dark;
 }
 /* Custom Classes */
+
+.c-p-highlight{ background-color:$primary-color-highlight; }
+
 .c-p-light{ background-color:$primary-color-light; }
 .c-p { background-color:$primary-color; color:$primary-color-text; }
 .c-p-dark{ background-color:$primary-color-dark; color:$primary-color-text;  }
