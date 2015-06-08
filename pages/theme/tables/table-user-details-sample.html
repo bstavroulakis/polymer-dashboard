@@ -3,6 +3,7 @@
 <link rel="import" href="../../../components/pd-edit-panel/pd-edit-panel.html" />
 <link rel="import" href="../../../pages/theme/tables/template-user-details.html" />
 <link rel="import" href="../../../components/pd-table/pd-table.html" />
+
 <dom-module id="table-user-details-sample">
     <template>
         <pd-repo-profile-table id="repo"></pd-repo-profile-table>
@@ -52,7 +53,6 @@
             }
         },
         ready:function(){
-            console.log("table initialized");
             var self = this;
             self.$.repo.getData(self.dataCallback, self);
             self.$.table.addEventListener("deleteItems",function(e){

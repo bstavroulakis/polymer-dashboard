@@ -11113,7 +11113,6 @@ animations to be run when switching to or switching out of the page.
 
 
 
-
 <script>
 
   /** @polymerBehavior */
@@ -11183,6 +11182,7 @@ Custom property | Description | Default
     --paper-checkbox-label-color: var(--primary-text-color);
   }
 </style>
+
 
 
 
@@ -14239,21 +14239,8 @@ https://github.com/yui/pure/blob/master/LICENSE.md
     });
 
 </script>
-<dom-module id="pd-select">
-    <style>
-        .select-body .line:hover{
-            background-color: var(--color-neutral-dark);
-        }
-        .selectToggled .label{
-            color: var(--primary-color);
-        }
-        .selectToggled .select-action{
-            border-bottom-color: var(--primary-color);
-            border-bottom-width: 2px;
-        }
-    </style>
-    <template>
-        <style type="css">.select-wrap{
+
+.select-wrap{
     width:100%;
 }
 
@@ -14293,7 +14280,21 @@ pd-animation-dropdown{
     position: absolute;
     right: 0;
     bottom: 0.2em;
-}</style>
+}<dom-module id="pd-select">
+    
+    <style>
+        .select-body .line:hover{
+            background-color: var(--color-neutral-dark);
+        }
+        .selectToggled .label{
+            color: var(--primary-color);
+        }
+        .selectToggled .select-action{
+            border-bottom-color: var(--primary-color);
+            border-bottom-width: 2px;
+        }
+    </style>
+    <template>
         <div id="pdSelector" class$="{{toggledClass}}">
             <div class="select-wrap p-relative m-t-0-5 m-b-0-5">
                 <label class="label p-b-0-5" hidden$="[[!label]]">[[label]]</label>
@@ -14664,7 +14665,6 @@ pd-animation-dropdown{
         </div>
     </template>
 </dom-module>
-
 <script>
 Polymer({
     is: "pd-edit-panel",
@@ -15042,6 +15042,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 /* Included Padding Vars */
 /* Included Sizes Vars */
+.head {
+  display: inline-block;
+  width: 100%; }
+
 .headOptions, .headNum {
   visibility: hidden; }
 
@@ -15108,22 +15112,23 @@ html /deep/ .mobile-mode-main .table /deep/ pd-ui-grid-item:before {
 /*# sourceMappingURL=pd-table.css.map */
 <dom-module id="pd-table">
     
-    <style is="custom-style">
-        .alternate /deep/ .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
+    <style>
+        :host /deep/ .alternate /deep/ .row:nth-child(even) /deep/ paper-checkbox #checkmark.paper-checkbox{
             border-color: var(--color-neutral);
         }
-        .alternate /deep/ .row:nth-child(even){
+        :host /deep/ .alternate /deep/ .row:nth-child(even){
             background-color: var(--color-neutral);
         }
-        .checkboxSelected .head{
-            background-color:#edf4fd;
+        :host /deep/ .checkboxSelected .head{
+            background-color:var(--primary-color-highlight);
         }
-        #tableBody /deep/ .selected{
+        :host /deep/ .selected{
             background-color: var(--primary-color-highlight);
         }
-        .header-row{
+        :host /deep/ .header-row{
             font-weight: 400;
-            border-bottom:1px solid var(--color-neutral);
+            border-bottom:1px solid;
+            border-color:var(--color-neutral);
         }
     </style>
     <template>
@@ -15323,7 +15328,6 @@ html /deep/ .mobile-mode-main .table /deep/ pd-ui-grid-item:before {
             }
         },
         ready:function(){
-            console.log("table initialized");
             var self = this;
             self.$.repo.getData(self.dataCallback, self);
             self.$.table.addEventListener("deleteItems",function(e){

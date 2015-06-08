@@ -12587,13 +12587,13 @@ paper-icon-button {
             self.$.repo.getMenu(self.title, self.menuCallback, this);
         },
         computeRouteUrl: function (routeUrl, url) {
-            if (url == '/#' + routeUrl || url == routeUrl)
+            if (url == '#' + routeUrl || url == routeUrl)
                 return "active";
             return "";
         },
         subPageSelected: function (routeUrl, subpages) {
             for (var i = 0; i <= subpages.length - 1; i++) {
-                if (subpages[i].url == routeUrl || subpages[i].url == '/#' + routeUrl)
+                if (subpages[i].url == routeUrl || subpages[i].url == '#' + routeUrl)
                 {
                     return true;
                 }
@@ -12798,7 +12798,6 @@ paper-icon-button {
                                   //console.log("loaded");
                               };
                               document.head.appendChild(l);
-                              //self.$.main.appendChild(l);
                           }
                       }
                       l = document.createElement('div');
@@ -12817,7 +12816,7 @@ paper-icon-button {
       getPathFromPages: function (route) {
           var self = this;
           for (var i = 0; i <= self.pages.length - 1; i++) {
-              if (self.pages[i].url == route || self.pages[i].url == "/#" + route) {
+              if (self.pages[i].url == route || self.pages[i].url == "#" + route) {
                   self.template = self.pages[i].template;
               }
           }
@@ -12871,7 +12870,7 @@ paper-icon-button {
                 self.route = self.router.getRoute() ?
                     self.router.getRoute().join(self.router.delimiter) : '';
                 if(self.route == "")
-                    window.location.hash = '!/'
+                    window.location.hash = '!/';
             },
             routeChanged: function (newValue, oldValue) {
                 if (newValue == null || newValue == "")

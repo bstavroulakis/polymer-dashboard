@@ -58,8 +58,8 @@
             return this.headers[key].name;
         },
         editItem:function(e){
-            var itemClicked = e.detail.sourceEvent.srcElement.parentNode;
-            var itemObj = JSON.parse(itemClicked.dataset.item);
+            var itemClicked = e.detail.sourceEvent.target.parentNode;
+            var itemObj = JSON.parse(itemClicked.getAttribute('data-item'));
             this.fire("editItem",{item:itemObj});
         },
         dataChanged:function(){

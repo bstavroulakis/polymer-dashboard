@@ -1,7 +1,7 @@
 <link href="../../bower_components/paper-ripple/paper-ripple.html" rel="import"/>
 <link href="../../components/pd-animation/pd-animation-dropdown.html" rel="import"/>
 <dom-module id="pd-select">
-    <link type="css" href="../../components/pd-select/pd-select.css" rel="import"/>
+    <link rel="import" type="css" href="../../components/pd-select/pd-select.css"/>
     <style>
         .select-body .line:hover{
             background-color: var(--color-neutral-dark);
@@ -98,7 +98,7 @@
             }
         },
         selectItem:function(e){
-            this.value = e.target.dataset.select;
+            this.value = e.target.getAttribute('data-select');
             this.selectToggled = false;
         },
         toggle:function(){

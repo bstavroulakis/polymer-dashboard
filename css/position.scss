@@ -171,6 +171,9 @@ code{
   padding:$p-0-1;
 }
 
+html /deep/ .clearfix, .clearfix{
+  clear:both;
+}
 
 @media (min-width: $tablet-mode) {
   [drawer-classes*="left-locked"] paper-toast

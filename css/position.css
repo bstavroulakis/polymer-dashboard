@@ -316,6 +316,9 @@ iron-icon {
 code {
   padding: 0.1em; }
 
+html /deep/ .clearfix, .clearfix {
+  clear: both; }
+
 @media (min-width: 800px) {
   [drawer-classes*="left-locked"] paper-toast {
     left: 18.5em; } }

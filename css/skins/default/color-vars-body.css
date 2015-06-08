@@ -1,5 +1,5 @@
 /* Included Color Vars */
-*, html /deep/ *, :root {
+* {
   --primary-color-dark: #303F9F;
   --primary-color: #3F51B5;
   --primary-color-light: #C5CAE9;

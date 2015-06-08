@@ -1,23 +1,25 @@
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
+<link rel="stylesheet" href="pd-table-responsive.css" type="text/css" />
 
 <dom-module id="pd-table">
-    <link href="../../components/pd-table/pd-table.css" rel="import" type="css"/>
-    <style is="custom-style">
-        .alternate /deep/ .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
+    <link rel="import" type="css" href="../../components/pd-table/pd-table.css"/>
+    <style>
+        :host /deep/ .alternate /deep/ .row:nth-child(even) /deep/ paper-checkbox #checkmark.paper-checkbox{
             border-color: var(--color-neutral);
         }
-        .alternate /deep/ .row:nth-child(even){
-            background-color: var(--color-neutral);
+        :host /deep/ #grid .row:nth-child(even){
+            background-color: var(--color-neutral) !important;
         }
-        .checkboxSelected .head{
-            background-color:#edf4fd;
+        :host /deep/ .checkboxSelected .head{
+            background-color:var(--primary-color-highlight);
         }
-        #tableBody /deep/ .selected{
-            background-color: var(--primary-color-highlight);
+        :host /deep/ .selected, :host /deep/ #grid .row:nth-child(even).selected{
+            background-color: var(--primary-color-highlight) !important;
         }
-        .header-row{
+        :host /deep/ .header-row{
             font-weight: 400;
-            border-bottom:1px solid var(--color-neutral);
+            border-bottom:1px solid;
+            border-color:var(--color-neutral);
         }
     </style>
     <template>

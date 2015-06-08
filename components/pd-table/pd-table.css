@@ -1,5 +1,9 @@
 /* Included Padding Vars */
 /* Included Sizes Vars */
+.head {
+  display: inline-block;
+  width: 100%; }
+
 .headOptions, .headNum {
   visibility: hidden; }
 
@@ -37,30 +41,8 @@
 
 .table /deep/ .row {
   clear: both;
+  width: 100%;
   display: inline-block;
-  width: 100%; }
-
-html /deep/ .mobile-mode-main .table /deep/ .select-chk {
-  text-align: left; }
-html /deep/ .mobile-mode-main .table /deep/ .header-row {
-  position: absolute;
-  top: -9999px;
-  left: -9999px; }
-html /deep/ .mobile-mode-main .table /deep/ .row {
-  border-bottom: 1px solid #ccc; }
-html /deep/ .mobile-mode-main .table /deep/ pd-ui-grid-item {
-  border: none;
-  position: relative;
-  padding-left: 50%; }
-html /deep/ .mobile-mode-main .table /deep/ pd-ui-grid-item:before {
-  position: absolute;
-  top: 30%;
-  right: 50%;
-  width: 50%;
-  padding-right: 10px;
-  white-space: nowrap;
-  content: attr(data-th) ": ";
-  text-align: right;
-  font-weight: 400; }
+  margin-top: -4px; }
 
 /*# sourceMappingURL=pd-table.css.map */
