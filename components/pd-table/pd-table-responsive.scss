@@ -1,26 +1,26 @@
-html /deep/ .mobile-mode-main {
+.mobile-mode-main {
 
-  .table /deep/ .select-chk{
+  .table .select-chk{
     text-align:left;
   }
 
-  .table /deep/ .header-row {
+  .table .header-row {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
 
-  .table /deep/ .row {
+  .table .row {
     border-bottom: 1px solid #ccc;
   }
 
-  .table /deep/ pd-ui-grid-item {
+  .table pd-ui-grid-item {
     border: none;
     position: relative;
     padding-left: 50%;
   }
 
-  .table /deep/ pd-ui-grid-item:before {
+  .table pd-ui-grid-item:before {
     position: absolute;
     top: 30%;
     right: 50%;

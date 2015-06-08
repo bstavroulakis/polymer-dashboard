@@ -325,23 +325,6 @@
       "active": "Active",
       "id": 3,
       "selected": false
-    },
-    {
-      "firstName": "sdfg",
-      "lastName": "gresgre",
-      "type": "itadmin",
-      "username": "dfgserg",
-      "active": "Inactive",
-      "id": 6,
-      "selected": false
-    },
-    {
-      "firstName": "esgr222",
-      "lastName": "esrgh",
-      "type": "teacher",
-      "username": "serg",
-      "active": "Inactive",
-      "id": 7
     }
   ]
 }

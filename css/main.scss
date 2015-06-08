@@ -20,6 +20,10 @@ html [hidden]{
     display:none !important;
 }
 
-html /deep/ .clearfix, .clearfix{
+.clearfix{
+    clear:both;
+}
+
+html /deep/ .clearfix{
     clear:both;
 }

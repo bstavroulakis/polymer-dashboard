@@ -1,5 +1,10 @@
 ﻿<dom-module id="pd-icon-page">
     <template>
+        <style>
+            :host /deep/ .pd-card-wrapper{
+                display:inline-block;
+            }
+        </style>
         <template is="dom-repeat" items="{{iconList}}">
             <pd-card head="{{item.title}}" class="p-r-1 p-l-1 p-b-1 p-t-1">
                 <pd-ui-grid class="p-t-1">
