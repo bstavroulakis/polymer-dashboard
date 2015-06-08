@@ -111,6 +111,8 @@
                 var self = this;
                 self.async(function(){
                     var el = self.$.drawer.querySelector("#main");
+                    if(el == null)
+                        return;
                     var width = el.offsetWidth;
                     if(width <= 500){
                         self.mobileMode = true;

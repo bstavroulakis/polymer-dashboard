@@ -61,13 +61,13 @@
             self.$.repo.getMenu(self.title, self.menuCallback, this);
         },
         computeRouteUrl: function (routeUrl, url) {
-            if (url == '/#' + routeUrl || url == routeUrl)
+            if (url == '#' + routeUrl || url == routeUrl)
                 return "active";
             return "";
         },
         subPageSelected: function (routeUrl, subpages) {
             for (var i = 0; i <= subpages.length - 1; i++) {
-                if (subpages[i].url == routeUrl || subpages[i].url == '/#' + routeUrl)
+                if (subpages[i].url == routeUrl || subpages[i].url == '#' + routeUrl)
                 {
                     return true;
                 }

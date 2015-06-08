@@ -1,6 +1,7 @@
 <link href="../../bower_components/paper-ripple/paper-ripple.html" rel="import"/>
 <link href="../../components/pd-animation/pd-animation-dropdown.html" rel="import"/>
 <dom-module id="pd-select">
+    <link type="css" href="../../components/pd-select/pd-select.css" rel="import"/>
     <style>
         .select-body .line:hover{
             background-color: var(--color-neutral-dark);
@@ -14,7 +15,6 @@
         }
     </style>
     <template>
-        <link rel="stylesheet" type="css" href="../../components/pd-select/pd-select.css"/>
         <div id="pdSelector" class$="{{toggledClass}}">
             <div class="select-wrap p-relative m-t-0-5 m-b-0-5">
                 <label class="label p-b-0-5" hidden$="[[!label]]">[[label]]</label>

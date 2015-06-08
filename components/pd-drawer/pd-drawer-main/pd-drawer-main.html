@@ -46,10 +46,13 @@
                   self.async(function () {
                       var links = response.detail.response.head.querySelectorAll("link");
                       for (var i = 0; i <= links.length - 1; i++) {
-                          if (!document.head.innerHTML.contains(links[i].href)) {
+                          if (!document.head.innerHTML.contains(links[i].href.toLowerCase())) {
                               var l = document.createElement('link');
                               l.rel = 'import';
-                              l.href = links[i].href;
+                              l.href = links[i].href.toLowerCase();
+                              l.onload = function(){
+                                  //console.log("loaded");
+                              };
                               document.head.appendChild(l);
                           }
                       }
@@ -69,7 +72,7 @@
       getPathFromPages: function (route) {
           var self = this;
           for (var i = 0; i <= self.pages.length - 1; i++) {
-              if (self.pages[i].url == route || self.pages[i].url == "/#" + route) {
+              if (self.pages[i].url == route || self.pages[i].url == "#" + route) {
                   self.template = self.pages[i].template;
               }
           }
@@ -83,7 +86,6 @@
       },
       loadHtml: function (url) {
           var self = this;
-
           self.$.main.innerHTML = "";
           self.$.ajax.url = url;
           self.$.ajax.generateRequest();

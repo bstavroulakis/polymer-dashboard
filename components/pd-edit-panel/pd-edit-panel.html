@@ -5,32 +5,28 @@
 <link href="../../bower_components/neon-animation/neon-animations.html" rel="import" />
 <link href="../../bower_components/neon-animation/neon-animated-pages.html" rel="import"/>
 <link href="../../components/pd-animation/pd-animation-dropdown.html" rel="import" />
-
 <dom-module id="pd-edit-panel">
     <link rel="import" type="css" href="../../components/pd-edit-panel/pd-edit-panel.css"/>
     <template>
         <div class$="{{toggledClass}}">
             <div class="edit-panel drawer-offset p-1 c-text-bg p-relative shadow-right">
                 <div class="inner-edit-panel">
-                <h2 class="m-b-0">{{label}}</h2>
-
-                <content></content>
-
-                <div class="clearfix"></div>
-                <div class="f-right p-t-1">
-                    <paper-button tabindex="0" raised on-click="saveItem">Save</paper-button>
-                </div>
-                <div class="closeBtn">
-                    <div class="closeBtnInner">
-                        <paper-fab on-click="togglePanel" icon="clear" title="clear" tabindex="0"></paper-fab>
+                    <h2 class="m-b-0">{{label}}</h2>
+                    <content></content>
+                    <div class="clearfix"></div>
+                    <div class="f-right p-t-1">
+                        <paper-button tabindex="0" raised on-click="saveItem">Save</paper-button>
                     </div>
-                </div>
+                    <div class="closeBtn">
+                        <div class="closeBtnInner">
+                            <paper-fab on-click="togglePanel" icon="clear" title="clear" tabindex="0"></paper-fab>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </template>
 </dom-module>
-
 <script>
 Polymer({
     is: "pd-edit-panel",

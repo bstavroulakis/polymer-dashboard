@@ -5,7 +5,7 @@ Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
 */
-.mobile-mode-main /deep/ {
+.mobile-mode-main {
   .pd-g .pd-u-sm-1,
   .pd-g .pd-u-sm-1-1,
   .pd-g .pd-u-sm-1-2,
@@ -219,7 +219,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
   }
 }
 
-.tablet-mode-main /deep/ {
+.tablet-mode-main {
   .pd-g .pd-u-md-1,
   .pd-g .pd-u-md-1-1,
   .pd-g .pd-u-md-1-2,
@@ -434,7 +434,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 /*@media screen and (min-width: $tablet-mode) {*/
-.pc-mode-main /deep/ {
+.pc-mode-main {
   .pd-g .pd-u-lg-1,
   .pd-g .pd-u-lg-1-1,
   .pd-g .pd-u-lg-1-2,
@@ -649,7 +649,7 @@ https://github.com/yui/pure/blob/master/LICENSE.md
 }
 
 /*@media screen and (min-width: $tablet-mode) {*/
-.pc-mode-large-main /deep/ {
+.pc-mode-large-main {
   .pd-g .pd-u-xl-1,
   .pd-g .pd-u-xl-1-1,
   .pd-g .pd-u-xl-1-2,

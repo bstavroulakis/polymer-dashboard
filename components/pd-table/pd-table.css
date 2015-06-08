@@ -35,6 +35,11 @@
 .table /deep/ .select-chk {
   text-align: center; }
 
+.table /deep/ .row {
+  clear: both;
+  display: inline-block;
+  width: 100%; }
+
 html /deep/ .mobile-mode-main .table /deep/ .select-chk {
   text-align: left; }
 html /deep/ .mobile-mode-main .table /deep/ .header-row {

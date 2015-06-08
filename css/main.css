@@ -19,8 +19,4 @@ html [hidden] {
 html /deep/ .clearfix, .clearfix {
   clear: both; }
 
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table; }
-
 /*# sourceMappingURL=main.css.map */

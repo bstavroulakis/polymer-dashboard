@@ -1,10 +1,4 @@
-﻿<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html" />
-<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html" />
-<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html" />
-<link rel="import" href="../../bower_components/iron-icons/iron-icons.html" />
-<link rel="import" href="../../components/pd-drawer/pd-drawer.html" />
-<dom-module id="pd-card">
+﻿<dom-module id="pd-card">
     <link rel="import" type="css" href="../../components/pd-card/pd-card.css" />
     <style>
         :host{
@@ -52,9 +46,9 @@
         },
         _computeFill:function(fill){
             if(fill == false)
-                return "p-t-0-5 p-l-1 p-r-1 p-b-0-5";
+                return "d-inline-block p-t-0-5 p-l-1 p-r-1 p-b-0-5";
             else
-                return "";
+                return "d-inline-block";
         },
         ready: function () {
         }

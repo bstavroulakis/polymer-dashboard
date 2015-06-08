@@ -34,7 +34,7 @@
                 self.route = self.router.getRoute() ?
                     self.router.getRoute().join(self.router.delimiter) : '';
                 if(self.route == "")
-                    window.location = '/#!/'
+                    window.location.hash = '!/';
             },
             routeChanged: function (newValue, oldValue) {
                 if (newValue == null || newValue == "")

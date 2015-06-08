@@ -2,7 +2,7 @@
 
 <dom-module id="pd-table">
     <link href="../../components/pd-table/pd-table.css" rel="import" type="css"/>
-    <style>
+    <style is="custom-style">
         .alternate /deep/ .row:nth-child(even) paper-checkbox /deep/ #checkmark.paper-checkbox{
             border-color: var(--color-neutral);
         }
@@ -125,7 +125,7 @@
                 self.initialized = true;
                 self.init();
             }
-            var el = self.$.tableBody.childNodes[0].nextElementSibling;
+            var el = self.$.tableBody.querySelector(".style-scope");
             if(el != null){
                 el.setAttribute("data", JSON.stringify(self.data));
             }
@@ -165,13 +165,13 @@
             for(var i=0; i<=self.data.length - 1; i++){
                 self.set("data." + i +".selected",self.$.toggleAll.checked);
             }
-            var el = self.$.tableBody.childNodes[0].nextElementSibling;
-            el.addEventListener("templateDataChanged",function(){
-                self.data = el.data;
-                self.dataChanged();
-            });
-        },
-        ready:function(){
+            var el = self.$.tableBody.querySelector(".style-scope");
+            if(el != null) {
+                el.addEventListener("templateDataChanged", function () {
+                    self.data = el.data;
+                    self.dataChanged();
+                });
+            }
         }
     });
 </script>

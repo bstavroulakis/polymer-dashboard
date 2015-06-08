@@ -58,7 +58,8 @@
             return this.headers[key].name;
         },
         editItem:function(e){
-            var itemObj = JSON.parse(e.detail.sourceEvent.path[1].dataset.item);
+            var itemClicked = e.detail.sourceEvent.srcElement.parentNode;
+            var itemObj = JSON.parse(itemClicked.dataset.item);
             this.fire("editItem",{item:itemObj});
         },
         dataChanged:function(){

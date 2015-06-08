@@ -6,14 +6,18 @@
 module.exports = function (grunt) {
 
     grunt.initConfig({
-        baseDir: 'wwwroot',
+        baseDir: '',
         vulcanize: {
             default: {
                 options: {
 
                 },
                 files: {
-                    'wwwroot/index.html': 'wwwroot/dev.html'
+                    'index.min.html': 'index.html',
+                    'pages/auth/auth.min.html': 'pages/auth/auth.html',
+                    'pages/main/main.min.html': 'pages/main/main.html',
+                    'pages/theme/icons/default.min.html': 'pages/theme/icons/default.html',
+                    'pages/theme/tables/tables.min.html':'pages/theme/tables/tables.html'
                 }
             }
         },
@@ -44,15 +48,14 @@ module.exports = function (grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'wwwroot/css/main.css': 'wwwroot/css/main.scss',
-                    'wwwroot/css/font.css': 'wwwroot/css/font.scss',
-                    'wwwroot/css/skins/default/colors.css': 'wwwroot/css/skins/default/colors.scss',
-                    'wwwroot/css/skins/light/colors.css': 'wwwroot/css/skins/light/colors.scss',
-                    'wwwroot/css/position.css': 'wwwroot/css/position.scss',
-                    'wwwroot/Components/pd-drawer/pd-drawer.css': 'wwwroot/Components/pd-drawer/pd-drawer.scss',
-                    //'wwwroot/Components/pd-drawer/pd-drawer-menu/pd-drawer-menu.css ': 'wwwroot/Components/pd-drawer/pd-drawer-menu/pd-drawer-menu.scss ',
-                    'wwwroot/Components/pd-page-dialog/pd-page-dialog.css': 'wwwroot/Components/pd-page-dialog/pd-page-dialog.scss',
-                    'wwwroot/pages/auth/auth.css': 'wwwroot/pages/auth/auth.scss'
+                    'css/main.css': 'css/main.scss',
+                    'css/font.css': 'css/font.scss',
+                    'css/skins/default/colors.css': 'css/skins/default/colors.scss',
+                    'css/skins/light/colors.css': 'css/skins/light/colors.scss',
+                    'css/position.css': 'css/position.scss',
+                    'components/pd-drawer/pd-drawer.css': 'components/pd-drawer/pd-drawer.scss',
+                    'components/pd-page-dialog/pd-page-dialog.css': 'components/pd-page-dialog/pd-page-dialog.scss',
+                    'pages/auth/auth.css': 'pages/auth/auth.scss'
                 }
             }
         }
@@ -64,5 +67,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks('grunt-file-append');
 
-    grunt.registerTask('default', ['file_append']);
+    grunt.registerTask('default', ['file_append', 'vulcanize']);
 };
