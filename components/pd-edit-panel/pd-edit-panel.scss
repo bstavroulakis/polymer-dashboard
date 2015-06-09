@@ -20,14 +20,11 @@ margin-left:-2em;
 }
 
 .closeBtn{
-  position:absolute;
-  top: -2em;
-  right: -1em;
+  position: absolute;
+  top: -1em;
+  right: -2.7em;
 }
-.closeBtnInner{
-    margin-top:30%;
-    margin-left:50%;
-}
+
 
 .inner-edit-panel{
   position: relative;
@@ -38,10 +35,7 @@ margin-left:-2em;
     .edit-panel{
         width:100%;
     }
-    .closeBtnInner{
-        right:100%;
-        margin-left:0;
-        margin-top:$p-1;
-        margin-right:$p-1;
+    .closeBtn{
+        right:0em;
     }
 }

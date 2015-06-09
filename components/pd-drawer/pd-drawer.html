@@ -161,6 +161,9 @@
                 window.addEventListener("resize",function(){
                     self.mobileModeCheck();
                 });
+                self.$.context.getData().addEventListener("pd-data-updated-model.route", function (event) {
+                    self.leftShow = false;
+                });
             }
         });
 </script>

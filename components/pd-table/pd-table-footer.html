@@ -1,0 +1,46 @@
+<link rel="import" href="../../components/pd-table/pd-pagination.html" />
+<dom-module id="pd-table-footer">
+    <template>
+        <pd-ui-grid>
+            <pd-ui-grid-item custom-class="p-l-1" large="6" medium="12" small="24">
+                Showing <span>{{firstItem}}</span> to <span>{{lastItem}}</span> of <span>{{pagination.total}}</span>
+            </pd-ui-grid-item>
+            <pd-ui-grid-item custom-class="p-r-1 t-right" large="18" medium="12" small="24">
+                <pd-pagination pagination="{{pagination}}"></pd-pagination>
+            </pd-ui-grid-item>
+        </pd-ui-grid>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: "pd-table-footer",
+        properties: {
+            pagination:{
+                type:Object,
+                notify:true,
+                reflectToAttribute:true
+            },
+            firstItem:{
+                type:Number,
+                value:0,
+                notify:true
+            },
+            lastItem:{
+                type:Number,
+                value:0,
+                notify:true
+            }
+        },
+        observers: [
+            'dataChanged(pagination.page,pagination.pageSize,pagination.total)'
+        ],
+        dataChanged:function(page,pageSize,total){
+            this.firstItem = (page - 1) * pageSize + 1;
+            if(page*pageSize < total){
+                this.lastItem = page*pageSize;
+            }else{
+                this.lastItem = total;
+            }
+        }
+    });
+</script>

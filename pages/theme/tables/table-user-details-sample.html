@@ -10,7 +10,6 @@
         <pd-table id="table"
                   head="Users"
                   alternate="true"
-                  paging="10"
                   headers="{{headers}}"
                   alternate
                 >
@@ -54,7 +53,7 @@
         },
         ready:function(){
             var self = this;
-            self.$.repo.getData(self.dataCallback, self);
+            self.refreshData();
             self.$.table.addEventListener("deleteItems",function(e){
                 self.$.repo.deleteItems(self.deletedCallback, e.detail, self);
             });
@@ -64,8 +63,8 @@
             self.$.table.addEventListener("search",function(e){
                 console.log(e.detail);
             });
-            self.$.table.addEventListener("page",function(e){
-                console.log(e.detail);
+            self.$.table.addEventListener("pageChanged",function(e){
+                self.refreshData();
             });
             self.$.table.addEventListener("addItem",function(e){
                 self.$.editPanel.label = "New Profile";
@@ -81,12 +80,18 @@
                 self.$.editPanel.showPanel();
             });
         },
-        dataCallback:function(data, self){
+        refreshData:function(){
+            var self = this;
+            self.$.repo.getData(self.dataCallback, self.$.table.pagination.page, self.$.table.pagination.pageSize, self);
+        },
+        dataCallback:function(data, total, self){
+            self.$.table.set("pagination.total", total);
             self.$.table.data = data;
+            self.$.table.total = total;
             self.data = data;
         },
         deletedCallback:function(self){
-            self.$.repo.getData(self.dataCallback, self);
+            self.refreshData();
         },
         resetModel:function(self){
             self.set('rowModel.id',null);
@@ -98,7 +103,7 @@
         },
         createdProfileCallback:function(self){
             self.$.editPanel.togglePanel();
-            self.$.repo.getData(self.dataCallback, self);
+            self.refreshData();
             self.resetModel(self);
         }
     });

@@ -27,16 +27,18 @@
             }
         },
         //GET /pages
-        getData: function (callback, selfCallback) {
+        getData: function (callback, page, pageSize, selfCallback) {
             var self = this;
             self.selfCallback = selfCallback;
             self.responseCallback = callback;
+            self.$.ajax.params = {"_start":((page-1)*pageSize),"_end":(page*pageSize)}
             self.$.ajax.url = self.$.context.service + "profiles";
             self.$.ajax.generateRequest();
         },
         dataSelected:function(response){
+            var total = parseInt(response.detail.xhr.getResponseHeader("X-Total-Count"));
             if(this.responseCallback != null) {
-                this.responseCallback(response.detail.response, this.selfCallback);
+                this.responseCallback(response.detail.response, total, this.selfCallback);
             }
         },
         deleteItems:function(callback,items,selfCallback){

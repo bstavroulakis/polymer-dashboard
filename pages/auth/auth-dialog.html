@@ -23,7 +23,7 @@
                 <img style="height:4em" src="../../images/LogoTextInverse.png" />
             </div>
             <div body class="p-t-2">
-                <paper-input no-label-float label="Username" value="{{user.username}}"></paper-input>
+                <paper-input id="username" no-label-float label="Username" value="{{user.username}}" autofocus></paper-input>
                 <paper-input no-label-float label="Password" type="password" value="{{user.password}}"></paper-input>
                 <paper-checkbox class="f-left remember-me" on-click=""></paper-checkbox><div class="f-left p-l-0-5 remember-me-txt">Remember me</div>
                 <paper-button on-click="login" tabindex="0" class="c-p f-right login-btn">Login</paper-button>

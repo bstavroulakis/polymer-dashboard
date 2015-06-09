@@ -1,0 +1,56 @@
+<dom-module id="pd-pagination">
+    <template>
+        <template is="dom-repeat" items="{{totalPages}}">
+            <template is="dom-if" if="{{pageSelected(item,pagination.page)}}">
+                <paper-button colored on-click="changePage" data-page$="{{item}}"><span>{{item}}</span></paper-button>
+            </template>
+            <template is="dom-if" if="{{!pageSelected(item,pagination.page)}}">
+                <paper-button raised on-click="changePage" data-page$="{{item}}"><span>{{item}}</span></paper-button>
+            </template>
+        </template>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: "pd-pagination",
+        properties: {
+            pagination:{
+                type:Object,
+                notify:true,
+                reflectToAttribute:true
+            },
+            totalPages:{
+                type:Array,
+                value:[],
+                notify:true
+            }
+        },
+        observers:['dataChanged(pagination.page,pagination.pageSize,pagination.total)'],
+        changePage:function(e, detail, target){
+            var itemClicked = e.target.parentNode;
+            if(itemClicked.tagName != 'PAPER-BUTTON')
+                itemClicked = itemClicked.parentNode;
+            this.set("pagination.page",parseInt(itemClicked.getAttribute('data-page')));
+        },
+        pageSelected:function(item,page){
+            if(this.pagination.page == item){
+                return true;
+            } else {
+                return false;
+            }
+        },
+        dataChanged: function(page,pageSize,total){
+            var self = this;
+            if(total == 0)
+                return;
+            if((page * pageSize) > total){
+                self.set("pagination.page",Math.ceil(total/pageSize));
+            }
+            var total = Math.ceil(total/pageSize);
+            self.totalPages = [];
+            for(var i=1; i<=total; i++){
+                self.push("totalPages",i);
+            }
+        }
+    });
+</script>

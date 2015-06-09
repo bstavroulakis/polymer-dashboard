@@ -1,0 +1,32 @@
+<dom-module id="pd-table-pagination">
+    <template>
+        pageSize:<span>{{pageSize}}</span><br/>
+        page:<span>{{page}}</span><br/>
+        total:<span>{{total}}</span>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: "pd-table-pagination",
+        properties: {
+            pageSize:{
+                type:Number,
+                value:0,
+                notify:true,
+                reflectToAttribute:true
+            },
+            page:{
+                type:Number,
+                value:1,
+                notify:true,
+                reflectToAttribute:true
+            },
+            total:{
+                type:Number,
+                value:0,
+                notify:true,
+                reflectToAttribute:true
+            }
+        }
+    });
+</script>

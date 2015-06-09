@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
+<link rel="import" href="../../components/pd-table/pd-table-footer.html" />
 <link rel="stylesheet" href="pd-table-responsive.css" type="text/css" />
 
 <dom-module id="pd-table">
@@ -53,6 +54,9 @@
                     <div id="tableBody">
                         <content id="tableContent"></content>
                     </div>
+
+                    <pd-table-footer pagination="{{pagination}}"></pd-table-footer>
+
                 </pd-ui-grid>
             </div>
         </div>
@@ -91,11 +95,27 @@
             initialized:{
                 type:Boolean,
                 value:false
+            },
+            pagination:{
+                type:Object,
+                value:function(){
+                    return {
+                        pageSize: 10,
+                        page: 1,
+                        total: 0
+                    }
+                },
+                notify:true,
+                reflectToAttribute:true
             }
         },
         observers: [
-            'dataChanged(data.*)'
+            'dataChanged(data.*)',
+            'pageChanged(pagination.page,pagination.pageSize,pagination.total)'
         ],
+        pageChanged:function(page,pageSize,total){
+            this.fire('pageChanged');
+        },
         checkboxSelected:function(numSelected,alternate){
             var classes = [];
             if(numSelected > 0)
