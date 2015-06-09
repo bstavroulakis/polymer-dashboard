@@ -5,10 +5,12 @@
   width: 100%; }
 
 .headOptions, .headNum {
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
 
 .checkboxSelected .headOptions, .checkboxSelected .headNum {
-  visibility: visible; }
+  visibility: visible;
+  display: block; }
 
 .table /deep/ pd-ui-grid-item {
   padding-top: 1em;

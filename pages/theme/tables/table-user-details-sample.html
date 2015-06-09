@@ -44,6 +44,10 @@
                 type:Array,
                 notify:true
             },
+            searchParams:{
+                type:Object,
+                value:{}
+            },
             headers:{
                 type:Array,
                 value:[{"name":"ID", "sortable":false, "grid":1},{"name":"First Name", "sortable":true, "grid":4},
@@ -60,8 +64,13 @@
             self.$.table.addEventListener("order",function(e){
                 console.log(e.detail);
             });
-            self.$.table.addEventListener("search",function(e){
-                console.log(e.detail);
+            self.$.table.$.search.addEventListener("search",function(e){
+                self.searchParams = {"username": e.detail};
+                self.refreshData();
+            });
+            self.$.table.$.search.addEventListener("searchClosed",function(e){
+                self.searchParams = {};
+                self.refreshData();
             });
             self.$.table.addEventListener("pageChanged",function(e){
                 self.refreshData();
@@ -82,7 +91,7 @@
         },
         refreshData:function(){
             var self = this;
-            self.$.repo.getData(self.dataCallback, self.$.table.pagination.page, self.$.table.pagination.pageSize, self);
+            self.$.repo.getData(self.dataCallback, self.$.table.pagination.page, self.$.table.pagination.pageSize, self.searchParams, self);
         },
         dataCallback:function(data, total, self){
             self.$.table.set("pagination.total", total);

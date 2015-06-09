@@ -27,11 +27,16 @@
             }
         },
         //GET /pages
-        getData: function (callback, page, pageSize, selfCallback) {
+        getData: function (callback, page, pageSize, searchParams, selfCallback) {
             var self = this;
             self.selfCallback = selfCallback;
             self.responseCallback = callback;
-            self.$.ajax.params = {"_start":((page-1)*pageSize),"_end":(page*pageSize)}
+            self.$.ajax.params = {"_start":((page-1)*pageSize),"_end":(page*pageSize)};
+            if(searchParams != null) {
+                for (var key in searchParams) {
+                    self.$.ajax.params[key] = searchParams[key];
+                }
+            }
             self.$.ajax.url = self.$.context.service + "profiles";
             self.$.ajax.generateRequest();
         },
