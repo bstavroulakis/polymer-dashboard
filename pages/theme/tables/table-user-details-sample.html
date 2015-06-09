@@ -50,16 +50,15 @@
             },
             headers:{
                 type:Array,
-                value:[{"name":"ID", "sortable":false, "grid":1},{"name":"First Name", "sortable":true, "grid":4},
-                    {"name":"Last Name", "sortable":true, "grid":4},{"name":"Type", "sortable":true, "grid":4},
-                    {"name":"Username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":3},{"name":"","sortable":false,"grid":2}]
+                value:[{"name":"ID", "sortable":false,  "grid":1},{"name":"First Name", "param":"firstName", "sortable":true, "grid":4},
+                    {"name":"Last Name", "param":"lastName", "sortable":true, "grid":4},{"name":"Type","param":"type",  "sortable":true, "grid":4},
+                    {"name":"Username", "param":"username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":3},{"name":"","sortable":false,"grid":2}]
             }
         },
         ready:function(){
             var self = this;
             self.refreshData();
             self.$.table.addEventListener("deleteItems",function(e){
-                console.log("delete Items")
                 self.$.repo.deleteItems(self.deletedCallback, e.detail, self);
             });
             self.$.table.addEventListener("order",function(e){
@@ -94,7 +93,6 @@
         },
         refreshData:function(){
             var self = this;
-            console.log("refresh data");
             self.$.repo.getData(self.dataCallback, self.$.table.pagination.page, self.$.table.pagination.pageSize, self.searchParams, self);
         },
         dataCallback:function(data, total, self){
@@ -102,10 +100,8 @@
             self.$.table.data = data;
             self.$.table.total = total;
             self.data = data;
-            console.log("data refreshed");
         },
         deletedCallback:function(self){
-            console.log("delete callback");
             self.refreshData();
         },
         resetModel:function(self){

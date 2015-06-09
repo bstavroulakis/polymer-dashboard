@@ -1,0 +1,29 @@
+<dom-module id="pd-table-header-row">
+    <template>
+        <pd-ui-grid no-padding>
+            <pd-ui-grid-item custom-class="t-center" large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
+            <template is="dom-repeat" items="{{headers}}" index-as="key_no">
+                <pd-ui-grid-item large="{{cellGrid(key_no)}}" medium="{{cellGrid(key_no)}}" small="{{cellGrid(key_no)}}">{{item.name}}</pd-ui-grid-item>
+            </template>
+            <div class="clearfix"></div>
+        </pd-ui-grid>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "pd-table-header-row",
+        properties:{
+            headers:{
+                type:Array,
+                notify:true
+            }
+        },
+        toggleAll:function(){
+            this.fire("toggleAll",this.$.toggleAll.checked);
+        },
+        cellGrid: function (key) {
+            return this.headers[key].grid;
+        }
+    });
+</script>

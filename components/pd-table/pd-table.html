@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
 <link rel="import" href="../../components/pd-table/pd-table-header.html" />
+<link rel="import" href="../../components/pd-table/pd-table-header-row.html" />
 <link rel="import" href="../../components/pd-table/pd-table-footer.html" />
 <link rel="stylesheet" href="../../components/pd-table/pd-table-responsive.css" type="text/css" />
 
@@ -27,21 +28,12 @@
             <pd-table-header id="header" head="[[head]]" searchable="[[searchable]]" num-selected$="{{numSelected}}"></pd-table-header>
 
             <div id="table">
-                <pd-ui-grid no-padding>
-                    <div class="row header-row">
-
-                        <pd-ui-grid-item custom-class="t-center" large="2" medium="2" small="2"><paper-checkbox id="toggleAll" on-click="toggleAll"></paper-checkbox></pd-ui-grid-item>
-                        <template is="dom-repeat" items="{{headers}}" index-as="key_no">
-                            <pd-ui-grid-item large="{{cellGrid(key_no)}}" medium="{{cellGrid(key_no)}}" small="{{cellGrid(key_no)}}">{{item.name}}</pd-ui-grid-item>
-                        </template>
-                        <div class="clearfix"></div>
-
-                    </div>
-                    <div id="tableBody">
-                        <content id="tableContent"></content>
-                    </div>
-
-                </pd-ui-grid>
+                <div id="tableHead" class="row header-row">
+                    <pd-table-header-row id="headerRow" headers="[[headers]]"></pd-table-header-row>
+                </div>
+                <div id="tableBody">
+                    <content id="tableContent"></content>
+                </div>
             </div>
 
             <pd-table-footer pagination="{{pagination}}"></pd-table-footer>
@@ -65,10 +57,6 @@
                     return [];
                 },
                 reflectToAttribute:true
-            },
-            dataParams:{
-                type:Array,
-                notify:true
             },
             numSelected:{
                 type:Number,
@@ -117,18 +105,8 @@
             classes.push("table");
             return classes.join(" ");
         },
-        cellGrid:function(key){
-            return this.headers[key].grid;
-        },
         dataChanged:function(){
             var self = this;
-            self.dataParams = [];
-            if(self.data.length > 0){
-                var item = self.data[0];
-                for(var prop in item){
-                    self.dataParams.push(prop);
-                }
-            }
             self.numSelected = 0;
             for(var i = 0;i <= self.data.length - 1; i++){
                 if(self.data[i].selected){
@@ -162,10 +140,10 @@
             };
             self.fire('deleteItems',deleteIDs);
         },
-        toggleAll:function(){
+        toggleAll:function(checked){
             var self = this;
             for(var i=0; i<=self.data.length - 1; i++){
-                self.set("data." + i +".selected",self.$.toggleAll.checked);
+                self.set("data." + i +".selected",checked);
             }
         },
         templateDataChanged:function(){
@@ -174,7 +152,7 @@
         init: function(){
             var self = this;
             for(var i=0; i<=self.data.length - 1; i++){
-                self.set("data." + i +".selected",self.$.toggleAll.checked);
+                self.set("data." + i +".selected",false);
             }
             var el = self.$.tableBody.querySelector(".style-scope");
             if(el != null) {
@@ -185,6 +163,9 @@
             }
             self.$.header.addEventListener("deleteItemsHead", function(){
                 self.deleteItems();
+            });
+            self.$.headerRow.addEventListener("toggleAll", function(e){
+                self.toggleAll(e.detail);
             });
         }
     });

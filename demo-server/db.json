@@ -331,14 +331,6 @@
       "username": "bill",
       "active": "Inactive",
       "id": 11
-    },
-    {
-      "firstName": "test",
-      "lastName": "",
-      "type": "",
-      "username": "",
-      "active": false,
-      "id": 12
     }
   ]
 }
