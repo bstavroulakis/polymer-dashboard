@@ -38,7 +38,7 @@
                         <paper-icon-button class="f-left" icon="delete" on-click="deleteItems"></paper-icon-button>
                     </div>
                 </div>
-                <pd-search id="search" class="m-t-0-2 f-right"></pd-search>
+                <pd-search hidden$="{{!searchable}}" id="search" class="m-t-0-2 f-right"></pd-search>
                 <div class="clearfix"></div>
             </div>
             <div id="table">
@@ -90,12 +90,17 @@
             },
             alternate:{
                 type:Boolean,
-                value:true,
+                value:false,
                 reflectToAttribute:true
             },
             initialized:{
                 type:Boolean,
                 value:false
+            },
+            searchable:{
+                type:Boolean,
+                value:false,
+                reflectToAttribute:true
             },
             pagination:{
                 type:Object,

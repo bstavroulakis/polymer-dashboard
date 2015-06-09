@@ -9,9 +9,9 @@
         <pd-repo-profile-table id="repo"></pd-repo-profile-table>
         <pd-table id="table"
                   head="Users"
-                  alternate="true"
                   headers="{{headers}}"
                   alternate
+                  searchable
                 >
             <template-user-details id="userDetails" data="{{data}}" headers="{{headers}}"></template-user-details>
         </pd-table>
@@ -64,14 +64,6 @@
             self.$.table.addEventListener("order",function(e){
                 console.log(e.detail);
             });
-            self.$.table.$.search.addEventListener("search",function(e){
-                self.searchParams = {"username": e.detail};
-                self.refreshData();
-            });
-            self.$.table.$.search.addEventListener("searchClosed",function(e){
-                self.searchParams = {};
-                self.refreshData();
-            });
             self.$.table.addEventListener("pageChanged",function(e){
                 self.refreshData();
             });
@@ -88,6 +80,17 @@
                 self.set("rowModel", e.detail.item);
                 self.$.editPanel.showPanel();
             });
+
+            self.$.table.$.search.addEventListener("search",function(e){
+                self.searchParams = {"username": e.detail};
+                self.refreshData();
+            });
+            self.$.table.$.search.addEventListener("searchClosed",function(e){
+                self.searchParams = {};
+                self.$.table.$.toggleAll.checked = false;
+                self.refreshData();
+            });
+
         },
         refreshData:function(){
             var self = this;
