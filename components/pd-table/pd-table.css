@@ -4,14 +4,6 @@
   display: inline-block;
   width: 100%; }
 
-.headOptions, .headNum {
-  visibility: hidden;
-  display: none; }
-
-.checkboxSelected .headOptions, .checkboxSelected .headNum {
-  visibility: visible;
-  display: block; }
-
 .table /deep/ pd-ui-grid-item {
   padding-top: 1em;
   padding-bottom: 1em;

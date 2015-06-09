@@ -301,30 +301,12 @@
   ],
   "profiles": [
     {
-      "id": 1,
-      "firstName": "Bill",
-      "lastName": "Stavroulakis",
-      "type": "teacher",
-      "username": "bill",
-      "active": "Inactive",
-      "selected": false
-    },
-    {
       "firstName": "Joy",
       "lastName": "Johnson",
       "type": "principle",
       "username": "joy",
       "active": "Inactive",
       "id": 2
-    },
-    {
-      "firstName": "test",
-      "lastName": "test2",
-      "type": "teacher",
-      "username": "test",
-      "active": "Active",
-      "id": 3,
-      "selected": false
     },
     {
       "firstName": "Joy",
@@ -340,47 +322,15 @@
       "type": "principle",
       "username": "joy",
       "active": "Inactive",
-      "id": 5
-    },
-    {
-      "firstName": "Joy",
-      "lastName": "Johnson",
-      "type": "principle",
-      "username": "joy",
-      "active": "Inactive",
-      "id": 6
-    },
-    {
-      "firstName": "Joy",
-      "lastName": "Johnson",
-      "type": "principle",
-      "username": "joy",
-      "active": "Inactive",
       "id": 7
     },
     {
-      "firstName": "Joy",
-      "lastName": "Johnson",
-      "type": "principle",
-      "username": "joy",
+      "firstName": "Bill",
+      "lastName": "Stavroulakis",
+      "type": "itadmin",
+      "username": "bill",
       "active": "Inactive",
-      "id": 8
-    },
-    {
-      "firstName": "Joy",
-      "lastName": "Johnson",
-      "type": "principle",
-      "username": "joy",
-      "active": "Inactive",
-      "id": 9
-    },
-    {
-      "firstName": "Joy",
-      "lastName": "Johnson",
-      "type": "principle",
-      "username": "joy",
-      "active": "Inactive",
-      "id": 10
+      "id": 11
     },
     {
       "firstName": "test",
@@ -388,7 +338,7 @@
       "type": "",
       "username": "",
       "active": false,
-      "id": 11
+      "id": 12
     }
   ]
 }

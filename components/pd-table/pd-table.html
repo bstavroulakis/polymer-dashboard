@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
+<link rel="import" href="../../components/pd-table/pd-table-header.html" />
 <link rel="import" href="../../components/pd-table/pd-table-footer.html" />
 <link rel="stylesheet" href="../../components/pd-table/pd-table-responsive.css" type="text/css" />
 
@@ -11,9 +12,6 @@
         :host /deep/ #grid .row:nth-child(even){
             background-color: var(--color-neutral) !important;
         }
-        :host /deep/ .checkboxSelected .head{
-            background-color:var(--primary-color-highlight);
-        }
         :host /deep/ .selected, :host /deep/ #grid .row:nth-child(even).selected{
             background-color: var(--primary-color-highlight) !important;
         }
@@ -24,23 +22,10 @@
         }
     </style>
     <template>
-        <div class$="{{checkboxSelected(numSelected,alternate)}}">
-            <div class="head p-t-0-5 p-r-0-5 p-b-1 p-l-1 p-relative">
-                <h2 class="f-left m-0 p-t-0-5 p-l-0-5">
-                    <span class="headTitle">{{head}}</span>
-                    <span class="headNum">
-                        <span>{{numSelected}}</span> selected
-                    </span>
-                </h2>
-                <paper-icon-button class="m-t-0-1 f-right" icon="add" on-click="addItem"></paper-icon-button>
-                <div class="f-right headOptions p-t-0-1">
-                    <div>
-                        <paper-icon-button class="f-left" icon="delete" on-click="deleteItems"></paper-icon-button>
-                    </div>
-                </div>
-                <pd-search hidden$="{{!searchable}}" id="search" class="m-t-0-2 f-right"></pd-search>
-                <div class="clearfix"></div>
-            </div>
+        <div class$="{{tableClasses(numSelected,alternate)}}">
+
+            <pd-table-header id="header" head="[[head]]" searchable="[[searchable]]" num-selected$="{{numSelected}}"></pd-table-header>
+
             <div id="table">
                 <pd-ui-grid no-padding>
                     <div class="row header-row">
@@ -56,10 +41,11 @@
                         <content id="tableContent"></content>
                     </div>
 
-                    <pd-table-footer pagination="{{pagination}}"></pd-table-footer>
-
                 </pd-ui-grid>
             </div>
+
+            <pd-table-footer pagination="{{pagination}}"></pd-table-footer>
+
         </div>
     </template>
 </dom-module>
@@ -122,7 +108,7 @@
         pageChanged:function(page,pageSize,total){
             this.fire('pageChanged');
         },
-        checkboxSelected:function(numSelected,alternate){
+        tableClasses:function(numSelected,alternate){
             var classes = [];
             if(numSelected > 0)
                 classes.push("checkboxSelected");
@@ -166,9 +152,6 @@
                 }
             }
         },
-        addItem:function(){
-            this.fire("addItem");
-        },
         deleteItems:function(){
             var self = this;
             var deleteIDs = [];
@@ -200,6 +183,9 @@
                     self.dataChanged();
                 });
             }
+            self.$.header.addEventListener("deleteItemsHead", function(){
+                self.deleteItems();
+            });
         }
     });
 </script>
