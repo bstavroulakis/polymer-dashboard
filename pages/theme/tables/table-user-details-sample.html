@@ -11,8 +11,7 @@
                   head="Users"
                   headers="{{headers}}"
                   alternate
-                  searchable
-                >
+                  searchable>
             <template-user-details id="userDetails" data="{{data}}" headers="{{headers}}"></template-user-details>
         </pd-table>
         <pd-edit-panel id="editPanel" label="">
@@ -48,11 +47,19 @@
                 type:Object,
                 value:{}
             },
+            sortBy:{
+                type:String,
+                value:""
+            },
+            sortDir:{
+                type:String,
+                value:""
+            },
             headers:{
                 type:Array,
                 value:[{"name":"ID", "sortable":false,  "grid":1},{"name":"First Name", "param":"firstName", "sortable":true, "grid":4},
                     {"name":"Last Name", "param":"lastName", "sortable":true, "grid":4},{"name":"Type","param":"type",  "sortable":true, "grid":4},
-                    {"name":"Username", "param":"username", "sortable":true, "grid":4},{"name":"Active", "sortable":true, "grid":3},{"name":"","sortable":false,"grid":2}]
+                    {"name":"Username", "param":"username", "sortable":true, "grid":4},{"name":"Active", "param":"active", "sortable":true, "grid":3},{"name":"","sortable":false,"grid":2}]
             }
         },
         ready:function(){
@@ -61,8 +68,10 @@
             self.$.table.addEventListener("deleteItems",function(e){
                 self.$.repo.deleteItems(self.deletedCallback, e.detail, self);
             });
-            self.$.table.addEventListener("order",function(e){
-                console.log(e.detail);
+            self.$.table.addEventListener("sort",function(e){
+                self.sortBy = e.detail.sortBy;
+                self.sortDir = e.detail.sortDir;
+                self.refreshData();
             });
             self.$.table.addEventListener("pageChanged",function(e){
                 self.refreshData();
@@ -86,14 +95,14 @@
             });
             self.$.table.$.header.$.search.addEventListener("searchClosed",function(e){
                 self.searchParams = {};
-                self.$.table.$.toggleAll.checked = false;
+                self.$.table.$.headerRow.$.toggleAll.checked = false;
                 self.refreshData();
             });
 
         },
         refreshData:function(){
             var self = this;
-            self.$.repo.getData(self.dataCallback, self.$.table.pagination.page, self.$.table.pagination.pageSize, self.searchParams, self);
+            self.$.repo.getData(self.dataCallback, self.$.table.pagination.page, self.$.table.pagination.pageSize, self.searchParams, self.sortBy, self.sortDir, self);
         },
         dataCallback:function(data, total, self){
             self.$.table.set("pagination.total", total);

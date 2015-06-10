@@ -27,7 +27,7 @@
             }
         },
         //GET /pages
-        getData: function (callback, page, pageSize, searchParams, selfCallback) {
+        getData: function (callback, page, pageSize, searchParams, sortBy, sortDir, selfCallback) {
             var self = this;
             self.selfCallback = selfCallback;
             self.responseCallback = callback;
@@ -36,6 +36,10 @@
                 for (var key in searchParams) {
                     self.$.ajax.params[key] = searchParams[key];
                 }
+            }
+            if(sortBy != "" && sortBy != null){
+                self.$.ajax.params["_sort"] = sortBy;
+                self.$.ajax.params["_order"] = sortDir;
             }
             self.$.ajax.url = self.$.context.service + "profiles";
             self.$.ajax.generateRequest();
