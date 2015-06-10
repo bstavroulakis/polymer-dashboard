@@ -311,10 +311,11 @@
     {
       "firstName": "Joy",
       "lastName": "Johnson",
-      "type": "principle",
+      "type": "teacher",
       "username": "joy",
       "active": "Inactive",
-      "id": 4
+      "id": 4,
+      "selected": false
     },
     {
       "firstName": "Joy",
@@ -393,6 +394,14 @@
       "active": "Inactive",
       "id": 18,
       "selected": false
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "type": "teacher",
+      "username": "",
+      "active": "Inactive",
+      "id": 19
     }
   ]
 }

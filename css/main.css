@@ -22,4 +22,7 @@ html [hidden] {
 html /deep/ .clearfix {
   clear: both; }
 
+code {
+  display: block; }
+
 /*# sourceMappingURL=main.css.map */

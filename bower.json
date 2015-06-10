@@ -23,7 +23,8 @@
     "paper-fab": "PolymerElements/paper-fab",
     "iron-selector": "PolymerElements/iron-selector#^1.0.0",
     "paper-ripple": "PolymerElements/paper-ripple",
-    "neon-animation": "PolymerElements/neon-animation#^1.0.0"
+    "neon-animation": "PolymerElements/neon-animation#^1.0.0",
+    "marked-element": "PolymerElements/marked-element"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.1",
