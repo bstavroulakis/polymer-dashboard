@@ -6,7 +6,7 @@ paper-toolbar.paper-toolbar-0, .paper-toolbar {
   position: fixed;
   display: inline-block;
   width: 100%;
-  height: 4em;
+  height: 2.6em;
   padding: 0.7em 0;
   z-index: 1; }
 
@@ -24,7 +24,11 @@ paper-icon-button {
   width: 100%;
   position: fixed;
   top: 4em;
-  height: 100%; }
+  height: 100%;
+  box-sizing: border-box; }
+
+.main-section {
+  box-sizing: border-box; }
 
 /* Drawers */
 .left-drawer, .right-drawer {
