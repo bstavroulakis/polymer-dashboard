@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-styles/default-theme.html">
-<link rel="import" href="../paper-behaviors/paper-radio-button-behavior.html">
+<link rel="import" href="../paper-behaviors/paper-inky-focus-behavior.html">
 
 <!--
 
@@ -75,7 +75,7 @@ Custom property | Description | Default
       is: 'paper-checkbox',
 
       behaviors: [
-        Polymer.PaperRadioButtonBehavior
+        Polymer.PaperInkyFocusBehavior
       ],
 
       hostAttributes: {
@@ -148,12 +148,14 @@ Custom property | Description | Default
         if (checked) {
           return 'checked';
         }
+        return '';
       },
 
       _computeCheckmarkClass: function(checked) {
         if (!checked) {
           return 'hidden';
         }
+        return '';
       }
     })
   </script>

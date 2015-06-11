@@ -25,8 +25,21 @@
         },
         {
           "title": "Forms",
-          "url": "#!/forms",
-          "icon": "assignment"
+          "icon": "assignment",
+          "pages": [
+            {
+              "title": "Form Elements",
+              "url": "#!/form/form-elements"
+            },
+            {
+              "title": "Advanced Form Elements",
+              "url": "#!/form/advanced-form-elements"
+            },
+            {
+              "title": "Form Validation",
+              "url": "#!/form/form-validation"
+            }
+          ]
         },
         {
           "title": "Icons",
@@ -285,6 +298,21 @@
       "title": "Cards",
       "url": "#!/ui-elements/cards",
       "template": "/pages/theme/ui-elements/cards.html"
+    },
+    {
+      "title": "Form Elements",
+      "url": "#!/form/form-elements",
+      "template": "/pages/theme/form/form-elements.html"
+    },
+    {
+      "title": "Advanced Form Elements",
+      "url": "#!/form/advanced-form-elements",
+      "template": "/pages/theme/form/advanced-form-elements.html"
+    },
+    {
+      "title": "Form Validation",
+      "url": "#!/form/form-validation",
+      "template": "/pages/theme/form/form-validation.html"
     }
   ],
   "users": [

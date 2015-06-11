@@ -1,7 +1,9 @@
-/*! @license Firebase v2.2.6
+/*! @license Firebase v2.2.7
     License: https://www.firebase.com/terms/terms-of-service.html */
-var CLOSURE_NO_DEPS = true;
-var COMPILED = false;
+(function(ns) {
+  ns.wrapper = function(goog, fb) {
+    var CLOSURE_NO_DEPS = true;
+    var COMPILED = false;
 var goog = goog || {};
 goog.global = this;
 goog.global.CLOSURE_UNCOMPILED_DEFINES;
@@ -4540,7 +4542,7 @@ fb.core.util.parseRepoInfo = function(dataURL) {
   if (parsedUrl.domain === "firebase") {
     fb.core.util.fatal(parsedUrl.host + " is no longer supported. " + "Please use <YOUR FIREBASE>.firebaseio.com instead");
   }
-  if (!namespace) {
+  if (!namespace || namespace == "undefined") {
     fb.core.util.fatal("Cannot parse Firebase url. " + "Please use https://<YOUR FIREBASE>.firebaseio.com");
   }
   if (!parsedUrl.secure) {
@@ -8565,7 +8567,7 @@ goog.require("fb.core.util.ValidationPath");
 goog.require("fb.util.obj");
 goog.require("fb.util.utf8");
 goog.require("fb.util.validation");
-fb.core.util.validation = {INVALID_KEY_REGEX_:/[\[\].#$\/\u0000-\u001F\u007F]/, INVALID_PATH_REGEX_:/[\[\].#$\u0000-\u001F\u007F]/, MAX_LEAF_SIZE_:10 * 1024 * 1024, isValidKey:function(key) {
+fb.core.util.validation = {INVALID_KEY_REGEX_:/[\[\].#$\/\u0000-\u001F\u007F]/, INVALID_PATH_REGEX_:/[\[\].#$\u0000-\u001F\u007F]/, VALID_AUTH_PROVIDER:/^[a-zA-Z][a-zA-Z._\-+]+$/, MAX_LEAF_SIZE_:10 * 1024 * 1024, isValidKey:function(key) {
   return goog.isString(key) && key.length !== 0 && !fb.core.util.validation.INVALID_KEY_REGEX_.test(key);
 }, isValidPathString:function(pathString) {
   return goog.isString(pathString) && pathString.length !== 0 && !fb.core.util.validation.INVALID_PATH_REGEX_.test(pathString);
@@ -8706,6 +8708,14 @@ fb.core.util.validation = {INVALID_KEY_REGEX_:/[\[\].#$\/\u0000-\u001F\u007F]/, 
   if (!goog.isString(string)) {
     throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + "must be a valid string.");
   }
+}, validateAuthProvider:function(fnName, argumentNumber, provider, optional) {
+  if (optional && !goog.isDef(provider)) {
+    return;
+  }
+  fb.core.util.validation.validateString(fnName, argumentNumber, provider, optional);
+  if (!fb.core.util.validation.VALID_AUTH_PROVIDER.test(provider)) {
+    throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + "'" + provider + "' is not a valid authentication provider.");
+  }
 }, validateObject:function(fnName, argumentNumber, obj, optional) {
   if (optional && !goog.isDef(obj)) {
     return;
@@ -8714,16 +8724,22 @@ fb.core.util.validation = {INVALID_KEY_REGEX_:/[\[\].#$\/\u0000-\u001F\u007F]/, 
     throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + "must be a valid object.");
   }
 }, validateObjectContainsKey:function(fnName, argumentNumber, obj, key, optional, opt_type) {
-  if (optional && !goog.isDef(obj)) {
-    return;
-  }
-  if (!goog.isObject(obj) || obj === null || !fb.util.obj.contains(obj, key)) {
-    throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + 'must contain the key "' + key + '"');
+  var objectContainsKey = goog.isObject(obj) && fb.util.obj.contains(obj, key);
+  if (!objectContainsKey) {
+    if (optional) {
+      return;
+    } else {
+      throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + 'must contain the key "' + key + '"');
+    }
   }
   if (opt_type) {
     var val = fb.util.obj.get(obj, key);
-    if (opt_type === "string" && !goog.isString(val) || opt_type === "boolean" && !goog.isBoolean(val) || opt_type === "function" && !goog.isFunction(val) || opt_type === "object" && !goog.isObject(val)) {
-      throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + 'must contain the key "' + key + '" with type "' + opt_type + '"');
+    if (opt_type === "number" && !goog.isNumber(val) || opt_type === "string" && !goog.isString(val) || opt_type === "boolean" && !goog.isBoolean(val) || opt_type === "function" && !goog.isFunction(val) || opt_type === "object" && !goog.isObject(val)) {
+      if (optional) {
+        throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + 'contains invalid value for key "' + key + '" (must be of type "' + opt_type + '")');
+      } else {
+        throw new Error(fb.util.validation.errorPrefix(fnName, argumentNumber, optional) + 'must contain the key "' + key + '" with type "' + opt_type + '"');
+      }
     }
   }
 }};
@@ -8937,45 +8953,55 @@ fb.login.SessionManager.prototype.clear = function(store) {
   });
 };
 goog.provide("fb.login.util.environment");
+fb.login.util.environment.getUA = function() {
+  if (typeof navigator !== "undefined" && typeof navigator["userAgent"] === "string") {
+    return navigator["userAgent"];
+  } else {
+    return "";
+  }
+};
 fb.login.util.environment.isMobileWrapper = function() {
   return fb.login.util.environment.isMobileCordova() || fb.login.util.environment.isMobileWindows() || fb.login.util.environment.isIosWebview();
 };
 fb.login.util.environment.isMobileCordova = function() {
-  return typeof window !== "undefined" && !!(window["cordova"] || window["phonegap"] || window["PhoneGap"]) && /ios|iphone|ipod|ipad|android|blackberry|iemobile/i.test(navigator["userAgent"]);
+  return typeof window !== "undefined" && !!(window["cordova"] || window["phonegap"] || window["PhoneGap"]) && /ios|iphone|ipod|ipad|android|blackberry|iemobile/i.test(fb.login.util.environment.getUA());
 };
 fb.login.util.environment.isMobileWindows = function() {
-  return typeof navigator !== "undefined" && (!!navigator["userAgent"].match(/Windows Phone/) || !!window["Windows"] && /^ms-appx:/.test(location.href));
+  return typeof navigator !== "undefined" && (!!fb.login.util.environment.getUA().match(/Windows Phone/) || !!window["Windows"] && /^ms-appx:/.test(location.href));
 };
 fb.login.util.environment.isMobileFirefox = function() {
-  return typeof navigator !== "undefined" && (navigator["userAgent"].indexOf("Fennec/") !== -1 || navigator["userAgent"].indexOf("Firefox/") !== -1 && navigator["userAgent"].indexOf("Android") !== -1);
+  var ua = fb.login.util.environment.getUA();
+  return ua.indexOf("Fennec/") !== -1 || ua.indexOf("Firefox/") !== -1 && ua.indexOf("Android") !== -1;
 };
 fb.login.util.environment.isIosWebview = function() {
-  return typeof navigator !== "undefined" && typeof window !== "undefined" && !!(navigator["userAgent"].match(/(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i) || navigator["userAgent"].match(/CriOS/) || navigator["userAgent"].match(/Twitter for iPhone/) || navigator["userAgent"].match(/FBAN\/FBIOS/) || window["navigator"]["standalone"]);
+  var ua = fb.login.util.environment.getUA();
+  return typeof navigator !== "undefined" && typeof window !== "undefined" && !!(ua.match(/(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i) || ua.match(/CriOS/) || ua.match(/Twitter for iPhone/) || ua.match(/FBAN\/FBIOS/) || window["navigator"]["standalone"]);
 };
 fb.login.util.environment.isHeadlessBrowser = function() {
-  return typeof navigator !== "undefined" && !!navigator["userAgent"].match(/PhantomJS/);
+  return!!fb.login.util.environment.getUA().match(/PhantomJS/);
 };
 fb.login.util.environment.isLocalFile = function() {
   return typeof location !== "undefined" && /^file:\//.test(location.href);
 };
 fb.login.util.environment.isIE = function() {
-  return typeof navigator !== "undefined" && !!(navigator["userAgent"].match(/MSIE/) || navigator["userAgent"].match(/Trident/));
+  var ua = fb.login.util.environment.getUA();
+  return!!(ua.match(/MSIE/) || ua.match(/Trident/));
 };
-fb.login.util.environment.isModernIE = function() {
-  if (typeof navigator === "undefined") {
+fb.login.util.environment.isIEVersionAtLeast = function(version) {
+  var ua = fb.login.util.environment.getUA(), match;
+  if (ua === "") {
     return false;
   }
-  var ua = navigator["userAgent"], match;
   if (navigator["appName"] === "Microsoft Internet Explorer") {
     match = ua.match(/MSIE ([0-9]{1,}[\.0-9]{0,})/);
     if (match && match.length > 1) {
-      return parseFloat(match[1]) >= 8;
+      return parseFloat(match[1]) >= version;
     }
   } else {
     if (ua.indexOf("Trident") > -1) {
       match = ua.match(/rv:([0-9]{2,2}[\.0-9]{0,})/);
       if (match && match.length > 1) {
-        return parseFloat(match[1]) >= 8;
+        return parseFloat(match[1]) >= version;
       }
     }
   }
@@ -9069,7 +9095,7 @@ fb.login.transports.PopupReceiver = function(cb) {
   var self = this;
   this.cb = cb;
   this.targetOrigin = "*";
-  if (fb.login.util.environment.isModernIE()) {
+  if (fb.login.util.environment.isIEVersionAtLeast(8)) {
     this.messageTarget = this.inboundTarget = fb.login.transports.util.findRelay();
   } else {
     this.messageTarget = window["opener"];
@@ -9091,7 +9117,7 @@ fb.login.transports.PopupReceiver = function(cb) {
 };
 fb.login.transports.PopupReceiver.prototype.doPost_ = function(msg) {
   msg = fb.util.json.stringify(msg);
-  if (fb.login.util.environment.isModernIE()) {
+  if (fb.login.util.environment.isIEVersionAtLeast(8)) {
     this.messageTarget["doPost"](msg, this.targetOrigin);
   } else {
     this.messageTarget["postMessage"](msg, this.targetOrigin);
@@ -9191,7 +9217,7 @@ fb.login.transports.Popup = function(options) {
   this.options = options;
 };
 fb.login.transports.Popup.prototype.open = function(url, params, cb) {
-  var self = this, isIE = fb.login.util.environment.isModernIE(), iframe, messageTarget;
+  var self = this, isIE = fb.login.util.environment.isIEVersionAtLeast(8), iframe, messageTarget;
   if (!this.options["relay_url"]) {
     return cb(new Error("invalid arguments: origin of url and relay_url must match"));
   }
@@ -9432,7 +9458,7 @@ fb.login.transports.XHR.prototype.open = function(url, params, cb) {
   xhr.send(payload);
 };
 fb.login.transports.XHR["isAvailable"] = function() {
-  return!NODE_CLIENT && !!window["XMLHttpRequest"] && (!fb.login.util.environment.isIE() || fb.login.util.environment.isModernIE());
+  return!NODE_CLIENT && !!window["XMLHttpRequest"] && (!fb.login.util.environment.isIE() || fb.login.util.environment.isIEVersionAtLeast(10));
 };
 fb.login.transports.XHR.prototype.classification = function() {
   return "json";
@@ -9582,7 +9608,7 @@ fb.login.transports.JSONP.prototype.writeScriptTag_ = function(id, url, cb) {
   }, 0);
 };
 fb.login.transports.JSONP["isAvailable"] = function() {
-  return!NODE_CLIENT;
+  return typeof document !== "undefined" && goog.isDefAndNotNull(document.createElement);
 };
 fb.login.transports.JSONP.prototype.classification = function() {
   return "json";
@@ -10097,7 +10123,7 @@ fb.realtime.BrowserPollConnection.forceDisallow = function() {
   fb.realtime.BrowserPollConnection.forceDisallow_ = true;
 };
 fb.realtime.BrowserPollConnection["isAvailable"] = function() {
-  return fb.realtime.BrowserPollConnection.forceAllow_ || !fb.realtime.BrowserPollConnection.forceDisallow_ && typeof document !== "undefined" && !fb.core.util.isChromeExtensionContentScript() && !fb.core.util.isWindowsStoreApp();
+  return fb.realtime.BrowserPollConnection.forceAllow_ || !fb.realtime.BrowserPollConnection.forceDisallow_ && typeof document !== "undefined" && goog.isDefAndNotNull(document.createElement) && !fb.core.util.isChromeExtensionContentScript() && !fb.core.util.isWindowsStoreApp();
 };
 fb.realtime.BrowserPollConnection.prototype.markConnectionHealthy = function() {
 };
@@ -12926,21 +12952,21 @@ Firebase.prototype.authWithCustomToken = function(token, onComplete, opt_options
 };
 Firebase.prototype.authWithOAuthPopup = function(provider, onComplete, opt_options) {
   fb.util.validation.validateArgCount("Firebase.authWithOAuthPopup", 2, 3, arguments.length);
-  fb.core.util.validation.validateString("Firebase.authWithOAuthPopup", 1, provider, false);
+  fb.core.util.validation.validateAuthProvider("Firebase.authWithOAuthPopup", 1, provider, false);
   fb.util.validation.validateCallback("Firebase.authWithOAuthPopup", 2, onComplete, false);
   fb.core.util.validation.validateObject("Firebase.authWithOAuthPopup", 3, opt_options, true);
   this.repo.auth.authWithPopup(provider, opt_options, onComplete);
 };
 Firebase.prototype.authWithOAuthRedirect = function(provider, onErr, opt_options) {
   fb.util.validation.validateArgCount("Firebase.authWithOAuthRedirect", 2, 3, arguments.length);
-  fb.core.util.validation.validateString("Firebase.authWithOAuthRedirect", 1, provider, false);
+  fb.core.util.validation.validateAuthProvider("Firebase.authWithOAuthRedirect", 1, provider, false);
   fb.util.validation.validateCallback("Firebase.authWithOAuthRedirect", 2, onErr, false);
   fb.core.util.validation.validateObject("Firebase.authWithOAuthRedirect", 3, opt_options, true);
   this.repo.auth.authWithRedirect(provider, opt_options, onErr);
 };
 Firebase.prototype.authWithOAuthToken = function(provider, params, onComplete, opt_options) {
   fb.util.validation.validateArgCount("Firebase.authWithOAuthToken", 3, 4, arguments.length);
-  fb.core.util.validation.validateString("Firebase.authWithOAuthToken", 1, provider, false);
+  fb.core.util.validation.validateAuthProvider("Firebase.authWithOAuthToken", 1, provider, false);
   fb.util.validation.validateCallback("Firebase.authWithOAuthToken", 3, onComplete, false);
   fb.core.util.validation.validateObject("Firebase.authWithOAuthToken", 4, opt_options, true);
   if (goog.isString(params)) {
@@ -12962,8 +12988,8 @@ Firebase.prototype.authWithPassword = function(params, onComplete, opt_options) 
   fb.core.util.validation.validateObject("Firebase.authWithPassword", 1, params, false);
   fb.core.util.validation.validateObjectContainsKey("Firebase.authWithPassword", 1, params, "email", false, "string");
   fb.core.util.validation.validateObjectContainsKey("Firebase.authWithPassword", 1, params, "password", false, "string");
-  fb.util.validation.validateCallback("Firebase.authAnonymously", 2, onComplete, false);
-  fb.core.util.validation.validateObject("Firebase.authAnonymously", 3, opt_options, true);
+  fb.util.validation.validateCallback("Firebase.authWithPassword", 2, onComplete, false);
+  fb.core.util.validation.validateObject("Firebase.authWithPassword", 3, opt_options, true);
   this.repo.auth.authWithCredential("password", params, opt_options, onComplete);
 };
 Firebase.prototype.createUser = function(params, onComplete) {
@@ -13047,5 +13073,8 @@ Firebase.INTERNAL = fb.api.INTERNAL;
 Firebase.Context = fb.core.RepoManager;
 Firebase.TEST_ACCESS = fb.api.TEST_ACCESS;
 
-Firebase.SDK_VERSION = '2.2.6';
+  }
+  ns.wrapper(ns.goog, ns.fb);
+}({goog:{}, fb:{}}));
+Firebase.SDK_VERSION = '2.2.7';
 

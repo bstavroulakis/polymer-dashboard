@@ -2,19 +2,170 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cda048c-664c-4a67-a7bb-f95f441f8410" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/theme/grids/grids.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/theme/form/advanced-form-elements.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/theme/form/form-elements.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/theme/form/form-validation.html" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\bower_components\paper-behaviors\paper-radio-button-behavior.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\pages\theme\forms\forms.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/.bower.json" afterPath="$PROJECT_DIR$/bower_components/chartist-js/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/firebase/.bower.json" afterPath="$PROJECT_DIR$/bower_components/firebase/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/.bower.json" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icons/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-checkbox/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-checkbox/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-fab/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-fab/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-input/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-styles/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/.bower.json" afterPath="$PROJECT_DIR$/bower_components/prism/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/promise-polyfill/.bower.json" afterPath="$PROJECT_DIR$/bower_components/promise-polyfill/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/CHANGELOG.md" afterPath="$PROJECT_DIR$/bower_components/chartist-js/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/LICENSE" afterPath="$PROJECT_DIR$/bower_components/prism/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/README.md" afterPath="$PROJECT_DIR$/bower_components/prism/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/dist/scss/settings/_chartist-settings.scss" afterPath="$PROJECT_DIR$/bower_components/chartist-js/dist/scss/settings/_chartist-settings.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/theme/ui-elements/buttons.html" afterPath="$PROJECT_DIR$/pages/theme/ui-elements/buttons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/theme/ui-elements/cards.html" afterPath="$PROJECT_DIR$/pages/theme/ui-elements/cards.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/theme/charts/charts.html" afterPath="$PROJECT_DIR$/pages/theme/charts/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/bower.json" afterPath="$PROJECT_DIR$/bower_components/chartist-js/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/firebase/bower.json" afterPath="$PROJECT_DIR$/bower_components/firebase/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/bower.json" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icons/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-checkbox/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-checkbox/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-fab/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-fab/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-input/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/bower.json" afterPath="$PROJECT_DIR$/bower_components/prism/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.js" afterPath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.min.css" afterPath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.min.js.map" afterPath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.min.js" afterPath="$PROJECT_DIR$/bower_components/chartist-js/dist/chartist.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chartist-js/dist/scss/chartist.scss" afterPath="$PROJECT_DIR$/bower_components/chartist-js/dist/scss/chartist.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components.js" afterPath="$PROJECT_DIR$/bower_components/prism/components.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-server/db.json" afterPath="$PROJECT_DIR$/demo-server/db.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/theme/grids/grids.html" afterPath="$PROJECT_DIR$/pages/theme/grids/grids.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/main/main.html" afterPath="$PROJECT_DIR$/pages/main/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.scss" afterPath="$PROJECT_DIR$/css/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-dashboard/pd-style-button.html" afterPath="$PROJECT_DIR$/components/pd-dashboard/pd-style-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-ui/pd-ui-grid/pd-ui-grid-item.html" afterPath="$PROJECT_DIR$/components/pd-ui/pd-ui-grid/pd-ui-grid-item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/examples.js" afterPath="$PROJECT_DIR$/bower_components/prism/examples.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/firebase/firebase-debug.js" afterPath="$PROJECT_DIR$/bower_components/firebase/firebase-debug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/firebase/firebase.js" afterPath="$PROJECT_DIR$/bower_components/firebase/firebase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/gulpfile.js" afterPath="$PROJECT_DIR$/bower_components/prism/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/hydrolysis.js" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/hydrolysis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-fab/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-fab/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/demo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/iron-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/iron-icons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/iron-validatable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/iron-validatable-behavior.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/package.json" afterPath="$PROJECT_DIR$/bower_components/prism/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-checkbox/paper-checkbox.html" afterPath="$PROJECT_DIR$/bower_components/paper-checkbox/paper-checkbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-fab/paper-fab.html" afterPath="$PROJECT_DIR$/bower_components/paper-fab/paper-fab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-addon-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-addon-behavior.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-behavior.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-container.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-container.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-container.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-container.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-radio-button-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-radio-button-behavior.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/paper-radio-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/paper-radio-button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-textarea.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-textarea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-actionscript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-actionscript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-apacheconf.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-apacheconf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-applescript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-applescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-aspnet.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-aspnet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-bash.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-bash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-c.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-c.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-coffeescript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-coffeescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-core.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-coy.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-coy.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-cpp.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-cpp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-css-extras.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-css-extras.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-css.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-dark.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-dark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-dart.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-dart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-eiffel.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-eiffel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-erlang.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-erlang.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/file-highlight/prism-file-highlight.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/file-highlight/prism-file-highlight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-fortran.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-fortran.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-fsharp.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-fsharp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-funky.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-funky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-gherkin.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-gherkin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-git.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-git.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-go.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-go.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-groovy.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-groovy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haml.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-handlebars.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-handlebars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haskell.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haskell.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-http.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-http.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jade.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jade.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-java.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-java.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-javascript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-javascript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jsx.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jsx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-julia.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-julia.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-latex.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-latex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-less.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-less.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-less.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-less.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-lolcode.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-lolcode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-markdown.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-markdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-markup.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-markup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-matlab.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-matlab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nasm.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nasm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nsis.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nsis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-objectivec.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-objectivec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-okaidia.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-okaidia.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-pascal.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-pascal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-perl.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-perl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-php-extras.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-php-extras.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-php.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-php.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-powershell.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-powershell.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-python.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-python.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-python.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-python.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-r.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-r.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rest.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rip.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ruby.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ruby.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rust.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rust.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sas.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scala.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scala.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scheme.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scheme.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scss.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scss.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.min.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-smalltalk.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-smalltalk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-smarty.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-smarty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sql.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sql.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-stylus.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-stylus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-swift.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-swift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-tomorrow.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-tomorrow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-twig.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-twig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-twilight.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-twilight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-typescript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-typescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-wiki.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-wiki.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/prism.js" afterPath="$PROJECT_DIR$/bower_components/prism/prism.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/vendor/promise.js" afterPath="$PROJECT_DIR$/bower_components/prism/vendor/promise.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/test-radio-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/test-radio-button.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polymer-dashboard.iws" />
@@ -36,101 +187,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.923077">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grids.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/theme/grids/grids.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-41.846153">
-              <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pd-card.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-card/pd-card.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cards.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/theme/ui-elements/cards.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tables.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/theme/tables/tables.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="table-user-details-sample.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-71.26923">
-              <caret line="109" column="39" selection-start-line="109" selection-start-column="39" selection-end-line="109" selection-end-column="39" />
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="19" column="151" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="151" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/main/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.692307">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="27" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charts.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="charts.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/theme/charts/charts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39494833">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="1" column="71" selection-start-line="1" selection-start-column="71" selection-end-line="2" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pd-edit-panel.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grids.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/theme/grids/grids.css">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo-server/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo-server/db.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.192308">
+              <caret line="304" column="56" selection-start-line="304" selection-start-column="56" selection-end-line="304" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.307692">
+              <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form-elements.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/theme/form/form-elements.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8392652">
+              <caret line="73" column="53" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advanced-form-elements.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/theme/form/advanced-form-elements.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form-validation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/theme/form/form-validation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -144,9 +275,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/index.min.html" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.html" />
         <option value="$PROJECT_DIR$/components/pd-list/pd-list-menu.html" />
         <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
@@ -164,7 +292,6 @@
         <option value="$PROJECT_DIR$/components/pd-table/pd-table-responsive.scss" />
         <option value="$PROJECT_DIR$/pages/theme/icons/pd-icon-page.html" />
         <option value="$PROJECT_DIR$/pages/auth/auth-dialog.html" />
-        <option value="$PROJECT_DIR$/demo-server/db.json" />
         <option value="$PROJECT_DIR$/pages/theme/tables/tables.html" />
         <option value="$PROJECT_DIR$/components/pd-table/pd-table-pagination.html" />
         <option value="$PROJECT_DIR$/components/pd-table/pd-table-footer.html" />
@@ -175,7 +302,6 @@
         <option value="$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html" />
         <option value="$PROJECT_DIR$/components/pd-search/pd-search.html" />
         <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer.html" />
-        <option value="$PROJECT_DIR$/pages/theme/forms/forms.html" />
         <option value="$PROJECT_DIR$/pages/theme/lists/lists.html" />
         <option value="$PROJECT_DIR$/components/pd-table/pd-table-head.html" />
         <option value="$PROJECT_DIR$/components/pd-table/pd-table.scss" />
@@ -186,7 +312,6 @@
         <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-profile-table.html" />
         <option value="$PROJECT_DIR$/components/pd-dashboard/pd-style-button.html" />
         <option value="$PROJECT_DIR$/pages/theme/ui-elements/buttons.html" />
-        <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/css/main.scss" />
         <option value="$PROJECT_DIR$/components/pd-ui/pd-ui-grid/pd-ui-grid-item.html" />
         <option value="$PROJECT_DIR$/pages/theme/grids/grids.css" />
@@ -195,6 +320,12 @@
         <option value="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.scss" />
         <option value="$PROJECT_DIR$/pages/main/main.html" />
         <option value="$PROJECT_DIR$/pages/theme/charts/charts.html" />
+        <option value="$PROJECT_DIR$/pages/theme/forms/forms.html" />
+        <option value="$PROJECT_DIR$/demo-server/db.json" />
+        <option value="$PROJECT_DIR$/pages/theme/form/advanced-form-elements.html" />
+        <option value="$PROJECT_DIR$/pages/theme/form/form-validation.html" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/pages/theme/form/form-elements.html" />
       </list>
     </option>
   </component>
@@ -279,10 +410,6 @@
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -320,7 +447,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="charts" />
+              <option name="myItemId" value="tables" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,7 +465,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,6 +486,24 @@
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -380,11 +529,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pd-edit-panel" />
+              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -398,11 +543,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pd-card" />
+              <option name="myItemId" value="paper-behaviors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -571,55 +716,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/pd-list/pd-list-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33180252">
-          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo-server/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.95752">
-          <caret line="401" column="1" selection-start-line="401" selection-start-column="1" selection-end-line="401" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo-server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4548495">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/iron-ajax/iron-ajax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4536817">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/paper-button/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09758898">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="102" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-dashboard/pd-theme/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019517796">
-          <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/iron-input/iron-input.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.309092">
@@ -631,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.0384617">
           <caret line="72" column="38" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/auth/auth-dialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3818182">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -680,13 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="79" selection-start-line="0" selection-start-column="79" selection-end-line="0" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/forms/forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019517796">
-          <caret line="1" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -843,14 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/prism-element/prism-highlighter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13662457">
@@ -899,34 +973,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/tables/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/pd-card/pd-card.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693">
           <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/grids/grids.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-41.846153">
-          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-71.26923">
-          <caret line="109" column="39" selection-start-line="109" selection-start-column="39" selection-end-line="109" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -939,10 +989,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/grids/grids.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.249139">
+          <caret line="64" column="26" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-server/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.192308">
+          <caret line="304" column="56" selection-start-line="304" selection-start-column="56" selection-end-line="304" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/theme/charts/charts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39494833">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="71" selection-start-line="1" selection-start-column="71" selection-end-line="2" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/auth/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/auth/auth-dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-input/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.153847">
+          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5419059">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/tables/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="151" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="151" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/form/advanced-form-elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/form/form-validation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/form/form-elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8392652">
+          <caret line="73" column="53" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
           <folding />
         </state>
       </provider>

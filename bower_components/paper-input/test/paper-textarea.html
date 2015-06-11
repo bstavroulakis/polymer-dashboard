@@ -59,6 +59,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </template>
   </test-fixture>
 
+  <test-fixture id="always-float-label">
+    <template>
+      <paper-textarea always-float-label label="label"></paper-textarea>
+    </template>
+  </test-fixture>
+
   <script>
 
     suite('basic', function() {
@@ -75,6 +81,51 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var error = Polymer.dom(input.root).querySelector('paper-input-error');
         assert.ok(error, 'paper-input-error exists');
         assert.notEqual(getComputedStyle(error).display, 'none', 'error is not display:none');
+      });
+
+      test('caret position is preserved', function() {
+        var input = fixture('basic');
+        var ironTextarea = Polymer.dom(input.root).querySelector('iron-autogrow-textarea');
+        input.value = 'nananana';
+        ironTextarea.selectionStart = 2;
+        ironTextarea.selectionEnd = 2;
+
+        input.updateValueAndPreserveCaret('nanananabatman');
+
+        assert.equal(ironTextarea.selectionStart, 2, 'selectionStart is preserved');
+        assert.equal(ironTextarea.selectionEnd, 2, 'selectionEnd is preserved');
+      });
+
+      test('input attributes are bound to textarea', function() {
+        var input = fixture('basic');
+        var attrs = {
+          'autocomplete': 'true',
+          'autofocus': true,
+          'inputmode': 'number',
+          'name': 'foo',
+          'placeholder': 'bar',
+          'readonly': true,
+          'required': true,
+          'maxlength': 3
+        };
+        for (var attr in attrs) {
+          input[attr] = attrs[attr];
+        }
+        for (var attr in attrs) {
+          var inputAttr = input.inputElement.getAttribute(attr);
+          if (typeof attrs[attr] === 'boolean') {
+            assert.equal(inputAttr !== null, attrs[attr], 'attribute "' + attr + '" is equal to property (' + attrs[attr] + ', ' + inputAttr !== null + ')');
+          } else {
+            assert.equal(inputAttr, attrs[attr], 'attribute "' + attr + '" is equal to property (' + attrs[attr] + ', ' + inputAttr + ')');
+          }
+        }
+      });
+
+      test('always-float-label attribute works', function() {
+        var input = fixture('always-float-label');
+        var container = Polymer.dom(input.root).querySelector('paper-input-container');
+        var inputContent = Polymer.dom(container.root).querySelector('.input-content');
+        assert.isTrue(inputContent.classList.contains('label-is-floating'), 'label is floating');
       });
 
     });

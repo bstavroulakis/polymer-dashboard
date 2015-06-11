@@ -54,6 +54,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </template>
   </test-fixture>
 
+  <test-fixture id="required-no-auto-validate">
+    <template>
+      <paper-input required error-message="error"></paper-input>
+    </template>
+  </test-fixture>
+
+
   <test-fixture id="required-char-counter">
     <template>
       <paper-input auto-validate char-counter required error-message="error"></paper-input>
@@ -63,6 +70,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <test-fixture id="char-counter">
     <template>
       <paper-input char-counter value="foobar"></paper-input>
+    </template>
+  </test-fixture>
+
+  <test-fixture id="always-float-label">
+    <template>
+      <paper-input always-float-label label="foo"></paper-input>
     </template>
   </test-fixture>
 
@@ -98,6 +111,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         assert.ok(floatingLabel);
       });
 
+      test('always-float-label attribute works without placeholder', function() {
+        var input = fixture('always-float-label');
+        var container = Polymer.dom(input.root).querySelector('paper-input-container');
+        var inputContent = Polymer.dom(container.root).querySelector('.input-content');
+        assert.isTrue(inputContent.classList.contains('label-is-floating'), 'label is floating');
+      });
+
       test('error message is displayed', function() {
         var input = fixture('error');
         forceXIfStamp(input);
@@ -125,6 +145,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       test('validator is used', function() {
         var input = fixture('validator');
         assert.ok(input.inputElement.invalid, 'input is invalid');
+      });
+
+      test('caret position is preserved', function() {
+        var input = fixture('basic');
+        var ironInput = Polymer.dom(input.root).querySelector('input[is="iron-input"]');
+        input.value = 'nananana';
+        ironInput.selectionStart = 2;
+        ironInput.selectionEnd = 2;
+
+        input.updateValueAndPreserveCaret('nanananabatman');
+
+        assert.equal(ironInput.selectionStart, 2, 'selectionStart is preserved');
+        assert.equal(ironInput.selectionEnd, 2, 'selectionEnd is preserved');
+      });
+
+    });
+
+    suite('validation', function() {
+
+      test('invalid attribute updated after calling validate()', function() {
+        var input = fixture('required-no-auto-validate');
+        forceXIfStamp(input);
+        input.validate();
+        var error = Polymer.dom(input.root).querySelector('paper-input-error');
+        assert.ok(error, 'paper-input-error exists');
+        assert.notEqual(getComputedStyle(error).display, 'none', 'error is not display:none');
+        assert.isTrue(input.invalid, 'invalid is true');
       });
 
     });
