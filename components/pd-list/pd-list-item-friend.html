@@ -1,0 +1,44 @@
+<dom-module id="pd-list-item-friend">
+    <style>
+    </style>
+    <template>
+        <pd-ui-grid>
+            <pd-ui-grid-item large="7" medium="7" large="7">
+                <iron-icon icon="{{icon}}" name="{{icon}}"></iron-icon>
+            </pd-ui-grid-item>
+            <pd-ui-grid-item large="17" medium="17" large="17">
+                <span>{{name}}</span>
+                <span>{{status}}</span>
+            </pd-ui-grid-item>
+        </pd-ui-grid>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "pd-list-item-friend",
+        properties: {
+            name: {
+                type: String,
+                value: true,
+                reflectToAttribute: true,
+                notify:true
+            },
+            icon: {
+                type: String,
+                value: "",
+                reflectToAttribute: true,
+                notify: true
+            },
+            status: {
+                type: String,
+                reflectToAttribute: true,
+                value:"",
+                notify: true
+            }
+        },
+        ready: function () {
+
+        }
+    });
+</script>

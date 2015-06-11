@@ -27,6 +27,7 @@
 <link rel="import" href="../../components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
 <link rel="import" href="../../components/pd-flatiron-director/pd-flatiron-director.html" />
 <link rel="import" href="../../components/pd-dashboard/pd-style.html"/>
+<link rel="import" href="../../components/pd-drawer/pd-drawer-friends/pd-drawer-friends.html" />
 
 <script>
     String.prototype.contains = function (it) { return this.indexOf(it) != -1; };
@@ -54,6 +55,9 @@
             </div>
             <div class="left-menu">
                 <pd-drawer-menu></pd-drawer-menu>
+            </div>
+            <div class="right-menu">
+                <pd-drawer-friends></pd-drawer-friends>
             </div>
         </pd-drawer>
         <pd-flatiron-director></pd-flatiron-director>
