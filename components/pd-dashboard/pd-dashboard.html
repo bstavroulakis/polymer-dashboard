@@ -31,6 +31,9 @@
 
 <script>
     String.prototype.contains = function (it) { return this.indexOf(it) != -1; };
+    String.prototype.replaceAll = function(find, replace) {
+        return this.replace(new RegExp(find, 'g'), replace);
+    }
 </script>
 
 <dom-module id="pd-dashboard">

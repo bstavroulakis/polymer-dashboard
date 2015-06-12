@@ -1,10 +1,12 @@
-var jsonServer = require('../node_modules/json-server')
-var express = require("../node_modules/express");
+var jsonServer   = require('../node_modules/json-server')
+var express      = require("../node_modules/express");
 var cookieParser = require('../node_modules/cookie-parser');
-var session = require('../node_modules/express-session');
-var server = jsonServer.create() // Returns an Express server
-var router = jsonServer.router('demo-server/db.json') // Returns an Express router
-var path    = require("path");var app = express();
+var session      = require('../node_modules/express-session');
+var server       = jsonServer.create() // Returns an Express server
+var router       = jsonServer.router('demo-server/db.json') // Returns an Express router
+var path         = require("path");
+var app          = express();
+
 server.use(cookieParser("secret", {"path": "/"}));
 server.use(function(req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:8080");res.setHeader("Access-Control-Allow-Credentials", "true");
@@ -44,4 +46,13 @@ app.get('/pages/auth/auth.html', function(req, res){
     res.sendFile(path.join(__dirname+'\\..\\pages/auth/auth.html'));
 });
 app.use(express.static(path.join(__dirname, '..\\')));
-app.listen(8080);
+
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+http.listen(8080);
+
+io.on('connection', function(socket){
+    socket.on('chat message', function(msg){
+        io.emit('chat message', msg);
+    });
+});

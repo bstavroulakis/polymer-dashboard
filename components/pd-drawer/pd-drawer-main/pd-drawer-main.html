@@ -1,4 +1,5 @@
 ﻿<link href="../../../components/pd-repo/pd-repo-page.html" rel="import" />
+<script src="../../../bower_components/xregexp/min/xregexp-all-min.js"></script>
 <dom-module id="pd-drawer-main">
     <template>
         <iron-ajax id="ajax" url="" handle-as="document" progress="{{progress}}"></iron-ajax>
@@ -72,8 +73,26 @@
       getPathFromPages: function (route) {
           var self = this;
           for (var i = 0; i <= self.pages.length - 1; i++) {
-              if (self.pages[i].url == route || self.pages[i].url == "#" + route) {
-                  self.template = self.pages[i].template;
+              var url = self.pages[i].url;
+              url = url.replace(/:(.*?)\//,"(?<$1>.*?)/")
+                      .replace(/:(.*?)$/,"(?<$1>.*?)")
+                      .replace("#","")
+                      .replaceAll("/","\\/");
+              url = "^" + url + "$";
+
+              var regex = XRegExp(url);
+              var isfound = XRegExp.exec(route, regex);
+              if(isfound){
+                  var queryString = [];
+                  var paramStarted = false;
+                  for(var param in isfound){
+                      if(paramStarted){
+                          queryString.push(param + "=" + isfound[param]);
+                      }
+                      if(param == "input")
+                        paramStarted = true;
+                  }
+                  self.template = self.pages[i].template + "?" + queryString.join("&");
               }
           }
       },

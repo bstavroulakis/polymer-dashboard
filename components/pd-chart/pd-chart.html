@@ -1,7 +1,7 @@
+<script src="../../bower_components/chartist-js/dist/chartist.min.js"></script>
 <dom-module id="pd-chart">
     <link rel="stylesheet" type="text/css" href="../../bower_components/chartist-js/dist/chartist.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../components/pd-chart/pd-chart.css"/>
-    <script src="../../bower_components/chartist-js/dist/chartist.js"></script>
     <template>
         <div id="chartWrapper">
             <div id="chart" class="ct-chart"></div>
@@ -55,7 +55,7 @@
                 }
                 var chartType = self.chartType;
                 eval("new Chartist." + chartType + "('.ct-chart', self.data, self.options, self.responsiveOptions)");
-            },200);
+            },500);
 
         }
     });

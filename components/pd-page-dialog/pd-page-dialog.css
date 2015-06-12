@@ -7,7 +7,8 @@
   background: #fff;
   box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
   vertical-align: middle;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
 
 @media (max-width: 470px) {
   .main-container {

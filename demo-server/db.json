@@ -313,6 +313,11 @@
       "title": "Form Validation",
       "url": "#!/form/form-validation",
       "template": "/pages/theme/form/form-validation.html"
+    },
+    {
+      "title": "Thread",
+      "url": "#!/thread/:id/:name",
+      "template": "/pages/thread/thread.html"
     }
   ],
   "users": [
@@ -327,6 +332,34 @@
       "password": "material"
     }
   ],
+  "friends": [
+    {
+      "username": "bill",
+      "friends": [
+        {
+          "name": "Joy Johnson",
+          "status": "Available",
+          "username": "joy"
+        }
+      ]
+    }
+  ],
+  "threads": [
+    {
+      "id": 1,
+      "users": [
+        "bill",
+        "joy"
+      ],
+      "messages": [
+        {
+          "user": "bill",
+          "message": "hey",
+          "datetime": ""
+        }
+      ]
+    }
+  ],
   "profiles": [
     {
       "firstName": "Joy",
@@ -337,97 +370,97 @@
       "id": 2
     },
     {
-      "firstName": "Joy",
-      "lastName": "Johnson",
-      "type": "teacher",
-      "username": "joy",
-      "active": "Inactive",
-      "id": 4,
-      "selected": false
-    },
-    {
-      "firstName": "Joy",
-      "lastName": "Johnson",
-      "type": "principle",
-      "username": "joy",
-      "active": "Inactive",
-      "id": 7
-    },
-    {
       "firstName": "Bill",
       "lastName": "Stavroulakis",
       "type": "itadmin",
       "username": "bill",
-      "active": "Inactive",
+      "active": "Active",
+      "id": 4,
+      "selected": false
+    },
+    {
+      "firstName": "George",
+      "lastName": "Gatsis",
+      "type": "principle",
+      "username": "george",
+      "active": "Active",
+      "id": 7
+    },
+    {
+      "firstName": "Kostas",
+      "lastName": "Vulcan",
+      "type": "itadmin",
+      "username": "kostas",
+      "active": "Active",
       "id": 11
     },
     {
-      "firstName": "test",
-      "lastName": "test",
+      "firstName": "Nikos",
+      "lastName": "Printer",
       "type": "teacher",
-      "username": "test",
+      "username": "nikos",
       "active": "Active",
       "id": 12
     },
     {
-      "firstName": "test",
-      "lastName": "test",
+      "firstName": "Greg",
+      "lastName": "Rock",
       "type": "teacher",
-      "username": "test",
+      "username": "greg",
       "active": "Inactive",
       "id": 13,
       "selected": false
     },
     {
-      "firstName": "qwer",
-      "lastName": "fdsa",
+      "firstName": "Alkis",
+      "lastName": "Garden",
       "type": "teacher",
-      "username": "aaaa",
+      "username": "alkis",
       "active": false,
       "id": 14,
       "selected": false
     },
     {
-      "firstName": "asdf",
-      "lastName": "fdsa",
-      "type": "itadmin",
-      "username": "fddff",
+      "firstName": "George",
+      "lastName": "Longjohn",
+      "type": "teacher",
+      "username": "longjohn",
       "active": "Inactive",
       "id": 15,
       "selected": false
     },
     {
-      "firstName": "asdf",
-      "lastName": "fdsa",
+      "firstName": "Peter",
+      "lastName": "Smallcross",
       "type": "teacher",
-      "username": "fdsa",
+      "username": "pete",
       "active": "Inactive",
       "id": 16,
       "selected": false
     },
     {
-      "firstName": "fsaa",
-      "lastName": "fdsa",
+      "firstName": "Timos",
+      "lastName": "Pless",
       "type": "teacher",
-      "username": "fdsa",
+      "username": "timos",
       "active": "Active",
       "id": 17,
       "selected": false
     },
     {
-      "firstName": "test22",
-      "lastName": "test22",
+      "firstName": "Mon",
+      "lastName": "Fliger",
       "type": "teacher",
-      "username": "tesaasdf",
+      "username": "harris",
       "active": "Inactive",
       "id": 18,
       "selected": false
     },
     {
-      "firstName": "",
-      "lastName": "",
+      "firstName": "Theodore",
+      "lastName": "Snake",
       "type": "teacher",
-      "username": "",
+      "username": "theodore",
       "active": "Inactive",
       "id": 19
     }

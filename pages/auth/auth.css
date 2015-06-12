@@ -21,7 +21,8 @@ body:after {
 
 .main-container {
   text-align: left;
-  padding: 3em; }
+  padding: 3em;
+  box-sizing: border-box; }
 
 .login-btn {
   margin-top: 1.1em; }

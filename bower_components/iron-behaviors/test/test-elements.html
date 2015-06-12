@@ -42,3 +42,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   });
 
 </script>
+
+<dom-module id="nested-focusable">
+
+  <template>
+    <input id="input">
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'nested-focusable',
+
+    behaviors: [
+      Polymer.IronControlState
+    ]
+
+  });
+
+</script>

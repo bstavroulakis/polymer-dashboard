@@ -25,6 +25,7 @@ body:after {
 .main-container{
     text-align:left;
     padding:$p-3;
+  box-sizing:border-box;
 }
 
 .login-btn{

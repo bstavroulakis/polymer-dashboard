@@ -2,21 +2,26 @@
 
 .edit-panel{
   z-index: 2;
-    position:fixed;
-    top:4em;
-    height:100%;
-    width:330px;
-    transition: transform ease-in-out 0.3s;
-
-margin-left:-2em;
+  position:fixed;
+  top:4em;
+  height:100%;
+  width:330px;
+  transition: transform ease-in-out 0.3s;
+  box-sizing:border-box;
+  margin-left:-2em;
+  left:0;
 }
 
 .edit-panel{
-    transform:translate(-200%);
+  transform:translate(-200%);
 }
 
-.toggled .edit-panel{
-    transform:translate(0);
+.toggled .edit-panel {
+  transform:translateX(0);
+}
+
+html /deep/ .left-locked .toggled .edit-panel{
+  transform: translateX(83%);
 }
 
 .closeBtn{
