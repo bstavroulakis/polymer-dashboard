@@ -83,16 +83,15 @@
               var regex = XRegExp(url);
               var isfound = XRegExp.exec(route, regex);
               if(isfound){
-                  var queryString = [];
+                  var routeParams = {};
                   var paramStarted = false;
                   for(var param in isfound){
-                      if(paramStarted){
-                          queryString.push(param + "=" + isfound[param]);
-                      }
+                      routeParams[param] = isfound[param];
                       if(param == "input")
                         paramStarted = true;
                   }
-                  self.template = self.pages[i].template + "?" + queryString.join("&");
+                  self.$.repo.$.context.getData().update("routeParams", routeParams);
+                  self.template = self.pages[i].template;
               }
           }
       },

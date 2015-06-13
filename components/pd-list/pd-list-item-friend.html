@@ -11,6 +11,10 @@
             background-color: var(--primary-color-highlight);
             cursor:pointer;
         }
+        :host[selected]{
+            background-color: var(--primary-color-highlight);
+            font-weight:400;
+        }
     </style>
     <template>
         <pd-ui-grid on-click="loadThread">
@@ -49,6 +53,12 @@
             },
             href: {
                 type: String,
+                reflectToAttribute: true,
+                notify: true
+            },
+            selected: {
+                type: Boolean,
+                value:false,
                 reflectToAttribute: true,
                 notify: true
             }
