@@ -3,13 +3,24 @@
 
 <dom-module id="pd-drawer-friends">
     <style>
+        ul,li{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+        }
     </style>
     <template>
         <pd-repo-friends id="repo"></pd-repo-friends>
         <div class="m-t-2">
+            <ul>
             <template is="dom-repeat" items="{{friends}}">
-                <pd-list-item-friend name="{{item.name}}" status="{{item.status}}" icon="face" href="{{item.href}}" selected="{{item.selected}}"></pd-list-item-friend>
+                <li>
+                    <a href="{{item.href}}">
+                        <pd-list-item-friend name="{{item.name}}" status="{{item.status}}" icon="face" selected="{{item.selected}}"></pd-list-item-friend>
+                    </a>
+                </li>
             </template>
+            </ul>
         </div>
     </template>
 </dom-module>

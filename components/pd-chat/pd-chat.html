@@ -1,19 +1,68 @@
+<link rel="import" href="../../components/pd-repo/pd-repo-chat.html"/>
+
 <dom-module id="pd-chat">
+    <link rel="import" type="css" href="pd-chat.css" />
     <template>
-        <pd-repo-friends id="repo"></pd-repo-friends>
-        PD Chat
+        <pd-repo-chat id="repo"></pd-repo-chat>
+        <template is="dom-repeat" items="{{messages}}">
+            <div class$="{{messageClasses(item.user)}}">
+                <span>{{item.message}}</span>
+            </div>
+        </template>
     </template>
 </dom-module>
 <script>
     Polymer({
         is: "pd-chat",
         properties: {
-            friends:{
-                type:Array
+            messages:{
+                type:Array,
+                value:[],
+                notify:true
+            },
+            threadId:{
+                type:Number,
+                value:0,
+                notify: true,
+                reflectToAttribute:true
+            },
+            users:{
+                type:Array,
+                value:[],
+                notify: true,
+                reflectToAttribute:true
+            },
+            previousUser:{
+                type:String,
+                value:""
+            }
+        },
+        observers:[
+            "usersChanged(users.*)"
+        ],
+        messageClasses:function(user){
+            var self = this;
+            if(self.previousUser == "")
+                self.previousUser = user;
+            if(user == self.previousUser){
+                return "message left";
+            }else{
+                return "message right";
+
             }
         },
         ready: function () {
-            console.log(this.$.repo.$.context.getData().model.routeParams.username);
+            this.$.repo.getThread(this.users, this.callback, this);
+        },
+        usersChanged: function(){
+            this.$.repo.getThread(this.users, this.callback, this);
+        },
+        callback: function(response, self){
+            self.set("messages",[]);
+            if(response != null) {
+                self.messages = response.messages;
+                self.threadId = response.id;
+            }
         }
     });
 </script>
