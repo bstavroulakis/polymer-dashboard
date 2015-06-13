@@ -1,11 +1,14 @@
-﻿<dom-module id="pd-drawer-menu">
+﻿<link href="../../../components/pd-repo/pd-repo-menu.html" rel="import" />
+<link href="../../../components/pd-repo/pd-repo-profile.html" rel="import" />
+<dom-module id="pd-drawer-menu">
     <link rel="import" type="css" href="pd-drawer-menu.css" />
     <template>
+        <pd-repo-profile id="repo"></pd-repo-profile>
         <div id="drawer" class="drawer-profile">
             <pd-ui-toggle>
                 <div id="profileBox" class="drawer-profile-name c-text-light toggle-trigger">
                     <pd-list-item url="" position="right" icon="hardware:keyboard-arrow-down" class="drawer-profile-menu-toggle">
-                        billaraw
+                        <span>{{profile.username}}</span>
                     </pd-list-item>
                 </div>
                 <div class="drawer-profile-menu toggle-body">
@@ -22,9 +25,19 @@
   Polymer({
       is: "pd-drawer-menu",
       properties:{
+        profile:{
+            type:Object,
+            value:{},
+            notify:true
+        }
       },
       ready: function () {
           this.$.profileBox.toggleIcon = false;
+          this.$.repo.getProfile(this.getProfileCallback, this);
+      },
+      getProfileCallback:function(profile, self){
+        self.profile = profile;
+          console.log(profile);
       }
   });
 </script>

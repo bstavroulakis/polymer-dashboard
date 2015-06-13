@@ -27,6 +27,16 @@ server.post('/auth/login', function(req, res){
         }
     }
 });
+server.get('/profile', function(req,res){
+    var userID = req.signedCookies.usersession;
+    var users = router.db.object.profiles;
+    for(var i=0;i<=users.length -1;i++){
+        if(users[i].userId == userID){
+            res.send(JSON.stringify(users[i]));
+        }
+    }
+    res.send();
+})
 server.use(jsonServer.defaults) // logger, static and cors middlewares
 server.use(router) // Mount router on '/'
 server.listen(5000);

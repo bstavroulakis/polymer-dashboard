@@ -316,7 +316,7 @@
     },
     {
       "title": "Thread",
-      "url": "#!/thread/:id/:name",
+      "url": "#!/thread/:username",
       "template": "/pages/thread/thread.html"
     }
   ],
@@ -340,6 +340,16 @@
           "name": "Joy Johnson",
           "status": "Available",
           "username": "joy"
+        },
+        {
+          "name": "George Gatsis",
+          "status": "Available",
+          "username": "george"
+        },
+        {
+          "name": "Timos Pless",
+          "status": "Available",
+          "username": "timos"
         }
       ]
     }
@@ -367,7 +377,8 @@
       "type": "principle",
       "username": "joy",
       "active": "Inactive",
-      "id": 2
+      "id": 2,
+      "userId": 2
     },
     {
       "firstName": "Bill",
@@ -376,7 +387,8 @@
       "username": "bill",
       "active": "Active",
       "id": 4,
-      "selected": false
+      "selected": false,
+      "userId": 1
     },
     {
       "firstName": "George",
@@ -384,7 +396,8 @@
       "type": "principle",
       "username": "george",
       "active": "Active",
-      "id": 7
+      "id": 7,
+      "userId": 3
     },
     {
       "firstName": "Kostas",
@@ -392,7 +405,8 @@
       "type": "itadmin",
       "username": "kostas",
       "active": "Active",
-      "id": 11
+      "id": 11,
+      "userId": 4
     },
     {
       "firstName": "Nikos",
@@ -400,7 +414,8 @@
       "type": "teacher",
       "username": "nikos",
       "active": "Active",
-      "id": 12
+      "id": 12,
+      "userId": 5
     },
     {
       "firstName": "Greg",
@@ -409,7 +424,7 @@
       "username": "greg",
       "active": "Inactive",
       "id": 13,
-      "selected": false
+      "userId": 6
     },
     {
       "firstName": "Alkis",
@@ -418,7 +433,7 @@
       "username": "alkis",
       "active": false,
       "id": 14,
-      "selected": false
+      "userId": 7
     },
     {
       "firstName": "George",
@@ -427,7 +442,7 @@
       "username": "longjohn",
       "active": "Inactive",
       "id": 15,
-      "selected": false
+      "userId": 8
     },
     {
       "firstName": "Peter",
@@ -436,7 +451,7 @@
       "username": "pete",
       "active": "Inactive",
       "id": 16,
-      "selected": false
+      "userId": 9
     },
     {
       "firstName": "Timos",
@@ -445,7 +460,7 @@
       "username": "timos",
       "active": "Active",
       "id": 17,
-      "selected": false
+      "userId": 10
     },
     {
       "firstName": "Mon",
@@ -454,7 +469,7 @@
       "username": "harris",
       "active": "Inactive",
       "id": 18,
-      "selected": false
+      "userId": 11
     },
     {
       "firstName": "Theodore",
@@ -462,7 +477,8 @@
       "type": "teacher",
       "username": "theodore",
       "active": "Inactive",
-      "id": 19
+      "id": 19,
+      "userId": 12
     }
   ]
 }

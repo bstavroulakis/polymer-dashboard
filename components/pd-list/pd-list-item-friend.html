@@ -1,8 +1,19 @@
 <dom-module id="pd-list-item-friend">
     <style>
+        :host{
+            padding-bottom:0.5em;
+            padding-top:0.5em;
+            display:inline-block;
+            width:100%;
+            border-bottom:1px solid var(--color-neutral-dark);
+        }
+        :host:hover{
+            background-color: var(--primary-color-highlight);
+            cursor:pointer;
+        }
     </style>
     <template>
-        <pd-ui-grid>
+        <pd-ui-grid on-click="loadThread">
             <pd-ui-grid-item large="7" medium="7" large="7">
                 <iron-icon icon="{{icon}}" name="{{icon}}"></iron-icon>
             </pd-ui-grid-item>
@@ -35,7 +46,15 @@
                 reflectToAttribute: true,
                 value:"",
                 notify: true
+            },
+            href: {
+                type: String,
+                reflectToAttribute: true,
+                notify: true
             }
+        },
+        loadThread:function(){
+            window.location.href = this.href;
         },
         ready: function () {
 

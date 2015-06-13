@@ -11,16 +11,6 @@
     <link href="components/pd-dashboard/pd-dashboard.html" rel="import" />
 </head>
 <body>
-    <pd-data id="pd-data" service="http://localhost:5000/"></pd-data>
     <pd-dashboard></pd-dashboard>
-
-    <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
-    <script>
-        var socket = io();
-        socket.emit('chat message', "hey");
-        socket.on('chat message', function(msg){
-            console.log(msg);
-        });
-    </script>
 </body>
 </html>

@@ -1,10 +1,13 @@
 <link rel="import" href="../../../components/pd-list/pd-list-item-friend.html" />
 <dom-module id="pd-drawer-friends">
+    <pd-repo-friends id="repo"></pd-repo-friends>
+    <style>
+
+    </style>
     <template>
-        <pd-list-item-friend name="Joy Johnson" status="Available" icon="face"></pd-list-item-friend>
-        <pd-list-item-friend name="George Catman" status="Available" icon="face"></pd-list-item-friend>
-        <pd-list-item-friend name="Nikos Printer" status="Available" icon="face"></pd-list-item-friend>
-        <pd-list-item-friend name="Kostas Vulcan" status="Available" icon="face"></pd-list-item-friend>
+        <div class="m-t-2">
+            <pd-list-item-friend name="Joy Johnson" status="Available" icon="face" href="/#!/thread/joy"></pd-list-item-friend>
+        </div>
     </template>
 </dom-module>
 <script>
@@ -13,6 +16,7 @@
         properties:{
         },
         ready: function () {
+
         }
     });
 </script>

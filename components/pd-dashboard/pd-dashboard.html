@@ -23,18 +23,16 @@
 <link rel="import" href="../../components/pd-list/pd-list-item.html"/>
 <link rel="import" href="../../components/pd-list/pd-list-menu.html" />
 <link rel="import" href="../../components/pd-repo/pd-context.html" />
+<link rel="import" href="../../components/pd-data/pd-data.html" />
 <link rel="import" href="../../components/pd-ui/pd-ui-toggle/pd-ui-toggle.html" />
 <link rel="import" href="../../components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
 <link rel="import" href="../../components/pd-flatiron-director/pd-flatiron-director.html" />
 <link rel="import" href="../../components/pd-dashboard/pd-style.html"/>
 <link rel="import" href="../../components/pd-drawer/pd-drawer-friends/pd-drawer-friends.html" />
+<link rel="import" href="../../../Components/pd-card/pd-card.html" />
+<link rel="import" href="../../../Components/pd-ui/pd-ui-grid/pd-ui-grid.html" />
 
-<script>
-    String.prototype.contains = function (it) { return this.indexOf(it) != -1; };
-    String.prototype.replaceAll = function(find, replace) {
-        return this.replace(new RegExp(find, 'g'), replace);
-    }
-</script>
+<script src="../../components/pd-dashboard/global.js"></script>
 
 <dom-module id="pd-dashboard">
     <link rel="stylesheet" type="text/css" href="../../css/main.css" />
@@ -50,6 +48,8 @@
         }
     </style>
     <template>
+        <pd-context service="http://localhost:5000/"></pd-context>
+        <pd-realtime id="realtime"></pd-realtime>
         <pd-drawer class$="{{drawerClasses}}">
             <div class="logo">
                 <a href="/#!/">
