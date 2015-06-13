@@ -1,7 +1,9 @@
 <link href="../../components/pd-repo/pd-context.html" rel="import" />
+<link href="../../components/pd-repo/pd-repo-profile.html" rel="import" />
 <dom-module id="pd-repo-friends">
     <template>
         <pd-context id="context"></pd-context>
+        <iron-ajax id="ajax" url="{{service}}" handle-as="json" method="GET" on-response="getCallback" with-credentials="true"></iron-ajax>
     </template>
 </dom-module>
 
@@ -9,14 +11,20 @@
     Polymer({
         is: "pd-repo-friends",
         properties: {
-            selfCallback:{},
-            callback:{}
         },
-        ready: function () {
-
+        getFriends: function () {
+            var self = this;
+            if (self.$.context.getData().model.friends.length > 0) {
+                return self.$.context.getData().model.friends;
+            } else {
+                self.$.ajax.url = self.$.context.service + "friends";
+                self.$.ajax.params = {"username" : self.$.context.getData().model.profile.username};
+                self.$.ajax.generateRequest();
+            };
         },
-        getFriends: function (username) {
-
+        getCallback:function(response){
+            var friends = response.detail.response[0].friends;
+            this.$.context.getData().update("friends", friends);
         }
     });
 </script>

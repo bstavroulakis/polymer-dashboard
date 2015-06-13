@@ -1,12 +1,16 @@
 <link rel="import" href="../../../components/pd-list/pd-list-item-friend.html" />
+<link rel="import" href="../../../components/pd-repo/pd-repo-friends.html" />
+
 <dom-module id="pd-drawer-friends">
-    <pd-repo-friends id="repo"></pd-repo-friends>
     <style>
 
     </style>
     <template>
+        <pd-repo-friends id="repo"></pd-repo-friends>
         <div class="m-t-2">
-            <pd-list-item-friend name="Joy Johnson" status="Available" icon="face" href="/#!/thread/joy"></pd-list-item-friend>
+            <template is="dom-repeat" items="{{friends}}">
+                <pd-list-item-friend name="{{item.name}}" status="{{item.status}}" icon="face" href="{{item.href}}"></pd-list-item-friend>
+            </template>
         </div>
     </template>
 </dom-module>
@@ -14,9 +18,23 @@
     Polymer({
         is: "pd-drawer-friends",
         properties:{
+            friends:{
+                type:Array,
+                value:[]
+            }
         },
         ready: function () {
-
+            var self = this;
+            this.$.repo.$.context.getData().addEventListener("pd-data-updated-model.profile", function (event) {
+                self.$.repo.getFriends();
+            });
+            this.$.repo.$.context.getData().addEventListener("pd-data-updated-model.friends", function (event) {
+                console.log(event.detail.value);
+                self.friends = event.detail.value;
+                for(var i=0;i<=self.friends.length - 1;i++){
+                    self.friends[i].href = "/#!/thread/" + self.friends[i].username;
+                }
+            });
         }
     });
 </script>

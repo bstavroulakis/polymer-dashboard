@@ -32,12 +32,14 @@
         }
       },
       ready: function () {
+          var self = this;
           this.$.profileBox.toggleIcon = false;
           this.$.repo.getProfile(this.getProfileCallback, this);
+          this.$.repo.$.context.getData().addEventListener("pd-data-updated-model.profile", function (event) {
+              self.profile = event.detail.value;
+          });
       },
       getProfileCallback:function(profile, self){
-        self.profile = profile;
-          console.log(profile);
       }
   });
 </script>

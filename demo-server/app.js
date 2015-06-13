@@ -19,13 +19,13 @@ server.post('/auth/login', function(req, res){
     var username = req.query.username;
     var password = req.query.password;
     for(var i=0;i<=users.length -1;i++){
-        if(users[i].username == username && users[i].password == password){
-            res.cookie('usersession',users[i].id, { maxAge: 9000000, httpOnly: false, signed:true });
-            res.send(JSON.stringify({ success: true }));
-        }else{
-            res.send(JSON.stringify({ success: false, error: 'Wrong username or password' }));
+        if(users[i].username == username && users[i].password == password) {
+            res.cookie('usersession', users[i].id, {maxAge: 9000000, httpOnly: false, signed: true});
+            res.send(JSON.stringify({success: true}));
+            return;
         }
     }
+    res.send(JSON.stringify({ success: false, error: 'Wrong username or password' }));
 });
 server.get('/profile', function(req,res){
     var userID = req.signedCookies.usersession;
@@ -33,6 +33,7 @@ server.get('/profile', function(req,res){
     for(var i=0;i<=users.length -1;i++){
         if(users[i].userId == userID){
             res.send(JSON.stringify(users[i]));
+            return;
         }
     }
     res.send();

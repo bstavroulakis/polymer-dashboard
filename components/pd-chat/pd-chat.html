@@ -1,5 +1,6 @@
 <dom-module id="pd-chat">
     <template>
+        <pd-repo-friends id="repo"></pd-repo-friends>
         PD Chat
     </template>
 </dom-module>
@@ -7,9 +8,11 @@
     Polymer({
         is: "pd-chat",
         properties: {
+            friends:{
+                type:Array
+            }
         },
         ready: function () {
-            console.log("OK");
             console.log(PDDashboard.utils.getUrlVars());
         }
     });
