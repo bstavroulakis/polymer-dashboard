@@ -1,14 +1,39 @@
-<link rel="import" href="../../components/pd-repo/pd-repo-chat.html"/>
+<link rel="import" href="../../components/pd-repo/pd-repo-chat.html" />
+<link rel="import" href="../../components/pd-chat/pd-chat-footer.html" />
+<link rel="stylesheet" type="text/css" href="../../components/pd-chat/pd-chat-global.css" />
 
 <dom-module id="pd-chat">
-    <link rel="import" type="css" href="pd-chat.css" />
+    <link rel="import" type="css" href="../../components/pd-chat/pd-chat.css" />
+    <style>
+        .left .message-bubble{
+            background-color:var(--primary-color-highlight);
+        }
+        .left .message-bubble:after{
+            border-color: transparent var(--primary-color-highlight);
+        }
+        .message{
+            color:var(--color-neutral-text);
+        }
+        .message-user, .message-datetime{
+            color:var(--color-neutral-text-dark);
+        }
+    </style>
     <template>
         <pd-repo-chat id="repo"></pd-repo-chat>
-        <template is="dom-repeat" items="{{messages}}">
-            <div class$="{{messageClasses(item.user)}}">
-                <span>{{item.message}}</span>
-            </div>
-        </template>
+        <div  class="p-1 messages">
+            <template is="dom-repeat" items="{{messages}}">
+                <div class$="{{messageClasses(item.user)}}">
+                    <div class="message-bubble">
+                        <div class="message-user">{{item.user}}</div>
+                        <span>{{item.message}}</span>
+                    </div>
+                    <div class="message-datetime">
+                        <span>{{item.datetime}}</span>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <pd-chat-footer></pd-chat-footer>
     </template>
 </dom-module>
 <script>

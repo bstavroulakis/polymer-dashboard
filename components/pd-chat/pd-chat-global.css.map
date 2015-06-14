@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;AAEA,aAAa;EACX,MAAM,EAAE,6BAA6B;;AAIvC,yBAAiC;EAE/B,kCAAmC;IACjC,YAAY,ECEF,IAAI;;EDChB,mCAAoC;IAClC,aAAa,ECFH,IAAI;ADMlB,0BAA0B;EACxB,QAAQ,EAAE,KAAK;EACf,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,IAAI;EACX,IAAI,EAAE,CAAC;EACP,UAAU,EAAE,UAAU;EACtB,UAAU,EAAC,iBAAiB",
+"sources": ["pd-chat-global.scss","../../css/vars.scss"],
+"names": [],
+"file": "pd-chat-global.css"
+}

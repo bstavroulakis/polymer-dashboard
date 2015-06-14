@@ -1,0 +1,20 @@
+/* Included Padding Vars */
+/* Included Sizes Vars */
+.main-section {
+  height: calc(100% - 7.5em) !important; }
+
+@media (min-width: 800px) {
+  .left-locked /deep/ pd-chat-footer {
+    padding-left: 15em; }
+
+  .right-locked /deep/ pd-chat-footer {
+    padding-right: 15em; } }
+html /deep/ pd-chat-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  border-top: 1px solid #dfdfdf; }
+
+/*# sourceMappingURL=pd-chat-global.css.map */

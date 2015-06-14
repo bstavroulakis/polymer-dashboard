@@ -1,45 +1,45 @@
 <style is="custom-style">
-paper-button.colorful {
+html /deep/ paper-button.colorful {
     color: var(--primary-color);
 }
 
-paper-button[raised].colorful {
+html /deep/ paper-button[raised].colorful {
     background: var(--primary-color);
     color: #fff;
 }
 
-paper-button[toggles] {
+html /deep/ paper-button[toggles] {
     transition: background-color 0.3s;
 }
 
-paper-button[toggles][active] {
+html /deep/ paper-button[toggles][active] {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-paper-button[toggles][active].colorful {
+html /deep/ paper-button[toggles][active].colorful {
     background-color: var(--primary-color);
     color:var(--primary-color-text);
 }
 
-paper-button[toggles][active][raised].colorful {
+html /deep/ paper-button[toggles][active][raised].colorful {
     background-color: var(--primary-color);
 }
 
-paper-button.hover:hover {
+html /deep/ paper-button.hover:hover {
     background: #eee;
 }
 
-paper-button.ripple::shadow paper-ripple {
+html /deep/ paper-button.ripple::shadow paper-ripple {
     color: var(--primary-color-highlight);
 }
 
-paper-button.ripple paper-ripple {
+html /deep/ paper-button.ripple paper-ripple {
     color: var(--primary-color-highlight);
 }
-paper-radio-button /deep/ #onRadio.paper-radio-button{
+html /deep/ paper-radio-button /deep/ #onRadio.paper-radio-button{
     background-color: var(--primary-color);
 }
-paper-radio-button[checked] /deep/ #offRadio.paper-radio-button {
+html /deep/ paper-radio-button[checked] /deep/ #offRadio.paper-radio-button {
     border-color: var(--primary-color);
 }
 </style>
