@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;AAEA,yBAAiC;EAC/B,oDAAqD;IACnD,IAAI,ECQM,IAAI",
+"sources": ["pd-edit-panel-global.scss","../../css/vars.scss"],
+"names": [],
+"file": "pd-edit-panel-global.css"
+}

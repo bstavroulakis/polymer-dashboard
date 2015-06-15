@@ -20,19 +20,21 @@
     </style>
     <template>
         <pd-repo-chat id="repo"></pd-repo-chat>
-        <div id="messages" class="p-1 messages">
-            <template is="dom-repeat" items="{{messages}}">
-                <div class$="{{messageClasses(item.user)}}">
-                    <div class="message-bubble">
-                        <div class="message-user">{{item.user}}</div>
-                        <span>{{item.message}}</span>
+        <div id="wrapper" class="message-wrapper">
+            <div id="messages" class="p-1 messages">
+                <template is="dom-repeat" items="{{messages}}">
+                    <div class$="{{messageClasses(item.user)}}">
+                        <div class="message-bubble">
+                            <div class="message-user">{{item.user}}</div>
+                            <span>{{item.message}}</span>
+                        </div>
+                        <div class="message-datetime">
+                            <span>{{item.datetime}}</span>
+                        </div>
                     </div>
-                    <div class="message-datetime">
-                        <span>{{item.datetime}}</span>
-                    </div>
-                </div>
-            </template>
-            <div class="clearfix"></div>
+                </template>
+                <div class="clearfix"></div>
+            </div>
         </div>
         <pd-chat-footer></pd-chat-footer>
     </template>
@@ -90,7 +92,9 @@
             this.$.repo.getThread(this.users, this.callback, this);
         },
         scrollToBottom:function(self){
-            self.fire("scrollToBottom");
+            self.async(function(){
+                self.$.wrapper.scrollTop = self.$.wrapper.scrollHeight;
+            },0);
         },
         callback: function(response, self){
             self.set("messages",[]);

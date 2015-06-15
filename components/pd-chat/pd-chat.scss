@@ -1,3 +1,10 @@
+.message-wrapper{
+  position: absolute;
+  top: 0;
+  overflow-y: scroll;
+  height:calc(100% - 5em);
+}
+
 .message{
   margin-bottom:0.5em;
 }

@@ -1,9 +1,5 @@
 @import '../../css/vars.scss';
 
-.main-section, .messages{
-  height: calc(100% - 9em) !important;
-}
-
 @media (min-width: $tablet-mode) {
 
   .left-locked /deep/ pd-chat-footer {

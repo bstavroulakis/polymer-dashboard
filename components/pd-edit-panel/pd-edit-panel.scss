@@ -8,7 +8,6 @@
   width:330px;
   transition: transform ease-in-out 0.3s;
   box-sizing:border-box;
-  margin-left:-2em;
   left:0;
 }
 
@@ -18,10 +17,6 @@
 
 .toggled .edit-panel {
   transform:translateX(0);
-}
-
-html /deep/ .left-locked .toggled .edit-panel{
-  transform: translateX(83%);
 }
 
 .closeBtn{

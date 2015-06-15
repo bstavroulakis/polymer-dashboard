@@ -1,8 +1,5 @@
 /* Included Padding Vars */
 /* Included Sizes Vars */
-.main-section, .messages {
-  height: calc(100% - 9em) !important; }
-
 @media (min-width: 800px) {
   .left-locked /deep/ pd-chat-footer {
     padding-left: 15em; }

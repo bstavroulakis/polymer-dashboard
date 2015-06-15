@@ -511,6 +511,14 @@
       "active": "Inactive",
       "id": 19,
       "userId": 12
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "type": "",
+      "username": "",
+      "active": false,
+      "id": 20
     }
   ],
   "getThread": [
