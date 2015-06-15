@@ -25,6 +25,7 @@
         }
     </style>
     <template>
+        <pd-repo-chat id="repo"></pd-repo-chat>
         <iron-a11y-keys target="{{chatFooter}}" keys="enter" on-keys-pressed="sendMessage"></iron-a11y-keys>
         <div id="chatFooter" class="chat-footer">
             <div class="respond-input-wrapper">
@@ -40,9 +41,18 @@
         properties: {
         },
         ready:function(){
+            var self = this;
+            this.async(function(){
+                self.querySelector(".respond-input").$.input.focus();
+            },200);
+
         },
         sendMessage:function(){
-            console.log("send message");
+            var sendValue = this.querySelector(".respond-input").value;
+            if(sendValue != "") {
+                this.$.repo.sendMessage(sendValue);
+                this.querySelector(".respond-input").value = "";
+            }
         }
     });
 </script>

@@ -165,6 +165,11 @@
                 self.$.context.getData().addEventListener("pd-data-updated-model.route", function (event) {
                     self.leftShow = false;
                 });
+                self.addEventListener("scrollToBottom", function(){
+                    self.async(function(){
+                        self.$.drawer.querySelector(".main-section").scrollTop = self.$.drawer.querySelector(".main-section").scrollHeight - 500;
+                    },0);
+                });
             }
         });
 </script>

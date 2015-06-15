@@ -1,9 +1,8 @@
 @import '../../css/vars.scss';
 
-.main-section{
-  height: calc(100% - 7.5em) !important;
+.main-section, .messages{
+  height: calc(100% - 9em) !important;
 }
-
 
 @media (min-width: $tablet-mode) {
 

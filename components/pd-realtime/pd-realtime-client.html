@@ -1,6 +1,6 @@
+<link rel="import" href="../../components/pd-realtime/pd-realtime.html" />
 <dom-module id="pd-realtime-client">
     <template>
-        PD Chat
     </template>
 </dom-module>
 <script>
@@ -13,7 +13,17 @@
             }
         },
         ready: function () {
-
+            this.setupRealtime();
+        },
+        setupRealtime: function () {
+            var self = this;
+            if (!window.document.querySelector("pd-realtime#pd-realtime")) {
+                var div = document.createElement("div");
+                div.innerHTML = "<pd-realtime id='pd-realtime'></pd-realtime>";
+                window.document.body.appendChild(div.childNodes[0]);
+            }
+            var dom = window.document.querySelector("pd-realtime#pd-realtime");
+            self.socket = dom.socket;
         }
     });
 </script>

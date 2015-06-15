@@ -347,6 +347,16 @@
           "username": "timos"
         }
       ]
+    },
+    {
+      "username": "joy",
+      "friends": [
+        {
+          "name": "Bill Stavroulakis",
+          "status": "Available",
+          "username": "bill"
+        }
+      ]
     }
   ],
   "threads": [

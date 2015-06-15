@@ -20,7 +20,7 @@
     </style>
     <template>
         <pd-repo-chat id="repo"></pd-repo-chat>
-        <div  class="p-1 messages">
+        <div id="messages" class="p-1 messages">
             <template is="dom-repeat" items="{{messages}}">
                 <div class$="{{messageClasses(item.user)}}">
                     <div class="message-bubble">
@@ -32,6 +32,7 @@
                     </div>
                 </div>
             </template>
+            <div class="clearfix"></div>
         </div>
         <pd-chat-footer></pd-chat-footer>
     </template>
@@ -77,10 +78,19 @@
             }
         },
         ready: function () {
+            var self = this;
             this.$.repo.getThread(this.users, this.callback, this);
+            this.$.repo.addEventListener("messageReceived", function(e){
+                var msgObj = e.detail;
+                self.push("messages", {'user':msgObj.user, 'message':msgObj.message, 'datetime':msgObj.datetime});
+                self.scrollToBottom(self);
+            });
         },
         usersChanged: function(){
             this.$.repo.getThread(this.users, this.callback, this);
+        },
+        scrollToBottom:function(self){
+            self.fire("scrollToBottom");
         },
         callback: function(response, self){
             self.set("messages",[]);
@@ -88,6 +98,7 @@
                 self.messages = response.messages;
                 self.threadId = response.id;
             }
+            self.scrollToBottom(self);
         }
     });
 </script>
