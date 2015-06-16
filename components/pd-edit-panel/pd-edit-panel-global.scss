@@ -1,7 +1,10 @@
 @import '../../css/vars.scss';
 
 @media (min-width: $tablet-mode) {
-  html /deep/ .left-locked /deep/ .toggled .edit-panel {
+  html /deep/ .left-locked /deep/ .toggled .edit-panel{
+    left: $drawer-width;
+  }
+  .left-locked .toggled .edit-panel{
     left: $drawer-width;
   }
 }

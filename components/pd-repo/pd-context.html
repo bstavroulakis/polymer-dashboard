@@ -14,10 +14,11 @@
             service: {
                 type: String,
                 value: "",
-                reflectToAttribute: true
+                reflectToAttribute: true,
+                notify:true
             }
         },
-        ready: function () {
+        attached  : function () {
             this.setupContext();
         },
         getData: function () {
@@ -30,9 +31,10 @@
                 var div = document.createElement("div");
                 div.innerHTML = "<pd-data id='pd-data' service='" + self.service + "'></pd-data>";
                 window.document.body.appendChild(div.childNodes[0]);
+                self.data.service = self.service;
             }
             self.data = window.document.querySelector("pd-data#pd-data");
-            this.service = self.data.service;
+            self.service = self.data.getAttribute('service');
         }
   });
 </script>

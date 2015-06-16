@@ -58,7 +58,9 @@
             self.$.repo.$.context.getData().addEventListener("pd-data-updated-model.route", function (event) {
                 self.routeUrl = event.detail.value;
             });
-            self.$.repo.getMenu(self.title, self.menuCallback, this);
+            self.async(function(){
+                self.$.repo.getMenu(self.title, self.menuCallback, self);
+            },0);
         },
         computeRouteUrl: function (routeUrl, url) {
             if (url == '#' + routeUrl || url == routeUrl)

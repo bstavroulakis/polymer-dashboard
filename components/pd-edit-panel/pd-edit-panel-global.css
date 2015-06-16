@@ -2,6 +2,9 @@
 /* Included Sizes Vars */
 @media (min-width: 800px) {
   html /deep/ .left-locked /deep/ .toggled .edit-panel {
+    left: 15em; }
+
+  .left-locked .toggled .edit-panel {
     left: 15em; } }
 
 /*# sourceMappingURL=pd-edit-panel-global.css.map */

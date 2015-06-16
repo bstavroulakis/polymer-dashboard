@@ -30,7 +30,7 @@ paper-icon-button {
 }
 
 #main{
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -64,6 +64,7 @@ paper-icon-button {
 }
 .right-drawer{
     right:-$drawer-width;
+    z-index:3;
 }
 .left-drawer{
     left:-$drawer-width;

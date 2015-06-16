@@ -1,4 +1,5 @@
 <link rel="import" href="../../components/pd-repo/pd-context.html" />
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html" />
 <dom-module id="pd-repo-auth">
     <template>
         <pd-context id="context"></pd-context>
@@ -15,7 +16,6 @@
             user:{}
         },
         ready: function () {
-
         },
         login: function (user, callback, selfCallback) {
             var self = this;

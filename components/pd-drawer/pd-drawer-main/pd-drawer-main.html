@@ -23,7 +23,6 @@
           },
           progress: {
               type: Number,
-              value: 0,
               observer: "progressChanged",
               notify:true
           }
@@ -33,15 +32,15 @@
       },
       ready: function () {
           var self = this;
-          self.$.repo.getPages(self.pageCallback,self);
+          self.async(function(){
+              self.$.repo.getPages(self.pageCallback,self);;
+          },0);
           self.$.repo.$.context.getData().addEventListener("pd-data-updated-model.route", function (event) {
               self.getPathFromPages(event.detail.value);
           });
-
           self.$.ajax.addEventListener('request', function (response) {
               self.$.repo.$.context.getData().update("progress", 50);
           });
-
           self.$.ajax.addEventListener('response', function (response) {
               try {
                   self.async(function () {

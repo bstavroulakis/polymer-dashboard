@@ -19,11 +19,10 @@
 <link rel="import" href="../../components/pd-search/pd-search.html" />
 <link rel="import" href="../../components/pd-drawer/pd-drawer-menu/pd-drawer-menu.html" />
 <link rel="import" href="../../components/pd-drawer/pd-drawer.html" />
-<link rel="import" href="../../components/pd-data/pd-data.html" />
 <link rel="import" href="../../components/pd-list/pd-list-item.html"/>
 <link rel="import" href="../../components/pd-list/pd-list-menu.html" />
-<link rel="import" href="../../components/pd-repo/pd-context.html" />
 <link rel="import" href="../../components/pd-data/pd-data.html" />
+<link rel="import" href="../../components/pd-repo/pd-context.html" />
 <link rel="import" href="../../components/pd-ui/pd-ui-toggle/pd-ui-toggle.html" />
 <link rel="import" href="../../components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
 <link rel="import" href="../../components/pd-flatiron-director/pd-flatiron-director.html" />
@@ -45,12 +44,8 @@
         paper-input{
             color:var(--color-neutral);
         }
-        a{
-
-        }
     </style>
     <template>
-        <pd-context service="http://localhost:5000/"></pd-context>
         <pd-drawer class$="{{drawerClasses}}">
             <div class="logo">
                 <a href="/#!/">
@@ -70,6 +65,8 @@
 
 <script>
   Polymer({
-      is: "pd-dashboard"
+      is: "pd-dashboard",
+      ready:function(){
+      }
   });
 </script>

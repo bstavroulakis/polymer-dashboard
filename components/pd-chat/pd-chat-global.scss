@@ -1,24 +1,13 @@
 @import '../../css/vars.scss';
 
 @media (min-width: $tablet-mode) {
-  .left-locked /deep/ pd-chat-footer {
-    padding-left: $drawer-width;
+  .left-locked .chat-footer, .left-locked .message-wrapper {
+    left: $drawer-width !important;
   }
-
-  .left-locked /deep/ .messages  {
-    padding-left: $drawer-width;
+  .right-locked .chat-footer{
+    right: $drawer-width !important;
   }
-
-  .right-locked /deep/ pd-chat-footer {
-    padding-right: $drawer-width;
+  .right-locked .message-wrapper{
+    width:calc(100% - 15em) !important;
   }
-}
-
-html /deep/ pd-chat-footer{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  border-top:1px solid #dfdfdf;
 }

@@ -8,9 +8,12 @@
     <meta name="mobile-web-app-capable" content="yes">
     <title>EduNet</title>
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link href="components/pd-dashboard/pd-dashboard.html" rel="import" />
+    <link rel="import" href="components/pd-data/pd-data.html" />
+    <link rel="import" href="components/pd-dashboard/pd-dashboard.html" />
+
 </head>
 <body>
+    <pd-data id="pd-data" service="http://localhost:5000/"></pd-data>
     <pd-dashboard></pd-dashboard>
 </body>
 </html>

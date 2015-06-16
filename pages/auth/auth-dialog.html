@@ -1,4 +1,5 @@
 ﻿<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../components/pd-data/pd-data.html" />
 <link rel="import" href="../../bower_components/paper-input/paper-input.html"/>
 <link rel="import" href="../../bower_components/paper-button/paper-button.html" />
 <link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html" />
@@ -6,10 +7,8 @@
 <link rel="import" href="../../components/pd-page-dialog/pd-page-dialog.html">
 <link rel="import" href="../../components/pd-card/pd-card.html" />
 <link rel="import" href="../../components/pd-repo/pd-repo-auth.html" />
-<link rel="import" href="../../components/pd-data/pd-data.html" />
 <link rel="import" href="../../bower_components/paper-toast/paper-toast.html" />
 <link rel="import" href="../../components/pd-repo/pd-context.html" />
-<link rel="import" href="../../components/pd-data/pd-data.html" />
 
 <dom-module id="auth-dialog">
     <link rel="stylesheet" href="../../css/main.css" />
@@ -50,6 +49,7 @@
             }
         },
         ready: function(){
+            this.$.username.$.input.focus();
         },
         login: function(){
             this.$.repo.login(this.user, this.loginCallback, this);

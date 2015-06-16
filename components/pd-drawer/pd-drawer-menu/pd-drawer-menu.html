@@ -34,7 +34,9 @@
       ready: function () {
           var self = this;
           this.$.profileBox.toggleIcon = false;
-          this.$.repo.getProfile(this.getProfileCallback, this);
+          self.async(function(){
+              self.$.repo.getProfile(self.getProfileCallback, self);
+          },100);
           this.$.repo.$.context.getData().addEventListener("pd-data-updated-model.profile", function (event) {
               self.profile = event.detail.value;
           });

@@ -64,7 +64,6 @@
         },
         ready:function(){
             var self = this;
-            self.refreshData();
             self.$.table.addEventListener("deleteItems",function(e){
                 self.$.repo.deleteItems(self.deletedCallback, e.detail, self);
             });
@@ -98,7 +97,9 @@
                 self.$.table.$.headerRow.$.toggleAll.checked = false;
                 self.refreshData();
             });
-
+            self.async(function(){
+                self.refreshData();
+            },0);
         },
         refreshData:function(){
             var self = this;

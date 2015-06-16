@@ -1,7 +1,6 @@
-﻿<dom-module id="pd-data">
-    <template>
-
-    </template>
+﻿<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="pd-data">
+    <template></template>
 </dom-module>
 
 <script>
@@ -10,7 +9,9 @@
     properties: {
         service: {
             type: String,
-            value:""
+            value:"",
+            reflectToAttribute:true,
+            notify:true
         },
         model: {
             type: Object,

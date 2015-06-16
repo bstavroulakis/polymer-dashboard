@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cda048c-664c-4a67-a7bb-f95f441f8410" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/user/profile-edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/pd-realtime/socket-io/socket.io-1.3.5.js" />
+      <change type="DELETED" beforePath="D:\polymer-dashboard\pages\theme\tables\tables.min.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/LogoText.png" afterPath="$PROJECT_DIR$/images/LogoText.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/LogoTextInverse.png" afterPath="$PROJECT_DIR$/images/LogoTextInverse.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/auth/auth-dialog.html" afterPath="$PROJECT_DIR$/pages/auth/auth-dialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/auth/auth.html" afterPath="$PROJECT_DIR$/pages/auth/auth.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-server/db.json" afterPath="$PROJECT_DIR$/demo-server/db.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/theme/lists/lists.html" afterPath="$PROJECT_DIR$/pages/theme/lists/lists.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/main/main.html" afterPath="$PROJECT_DIR$/pages/main/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-chart/pd-chart.html" afterPath="$PROJECT_DIR$/components/pd-chart/pd-chart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-chat/pd-chat-footer.html" afterPath="$PROJECT_DIR$/components/pd-chat/pd-chat-footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-chat/pd-chat-global.css.map" afterPath="$PROJECT_DIR$/components/pd-chat/pd-chat-global.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-chat/pd-chat-global.css" afterPath="$PROJECT_DIR$/components/pd-chat/pd-chat-global.css" />
@@ -15,23 +18,24 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-chat/pd-chat.css" afterPath="$PROJECT_DIR$/components/pd-chat/pd-chat.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-chat/pd-chat.html" afterPath="$PROJECT_DIR$/components/pd-chat/pd-chat.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-chat/pd-chat.scss" afterPath="$PROJECT_DIR$/components/pd-chat/pd-chat.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-repo/pd-context.html" afterPath="$PROJECT_DIR$/components/pd-repo/pd-context.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html" afterPath="$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-data/pd-data.html" afterPath="$PROJECT_DIR$/components/pd-data/pd-data.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html" afterPath="$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-drawer/pd-drawer-menu/pd-drawer-menu.html" afterPath="$PROJECT_DIR$/components/pd-drawer/pd-drawer-menu/pd-drawer-menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.css.map" afterPath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.css" afterPath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.html" afterPath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.scss" afterPath="$PROJECT_DIR$/components/pd-drawer/pd-drawer.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-list/pd-list-item-friend.html" afterPath="$PROJECT_DIR$/components/pd-list/pd-list-item-friend.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-list/pd-list-menu.css" afterPath="$PROJECT_DIR$/components/pd-list/pd-list-menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.css.map" afterPath="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.css" afterPath="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.scss" afterPath="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-list/pd-list-menu.html" afterPath="$PROJECT_DIR$/components/pd-list/pd-list-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-page-dialog/pd-page-dialog.scss" afterPath="$PROJECT_DIR$/components/pd-page-dialog/pd-page-dialog.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-repo/pd-repo-friends.html" afterPath="$PROJECT_DIR$/components/pd-repo/pd-repo-friends.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-repo/pd-repo-profile.html" afterPath="$PROJECT_DIR$/components/pd-repo/pd-repo-profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-select/pd-select.html" afterPath="$PROJECT_DIR$/components/pd-select/pd-select.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/position.css.map" afterPath="$PROJECT_DIR$/css/position.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/position.css" afterPath="$PROJECT_DIR$/css/position.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/position.scss" afterPath="$PROJECT_DIR$/css/position.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/profile.html" afterPath="$PROJECT_DIR$/pages/user/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/thread/thread-page.html" afterPath="$PROJECT_DIR$/pages/thread/thread-page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-realtime/pd-realtime-client.html" afterPath="$PROJECT_DIR$/components/pd-realtime/pd-realtime-client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-realtime/pd-realtime.html" afterPath="$PROJECT_DIR$/components/pd-realtime/pd-realtime.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-repo/pd-repo-auth.html" afterPath="$PROJECT_DIR$/components/pd-repo/pd-repo-auth.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/pd-repo/pd-repo-chat.html" afterPath="$PROJECT_DIR$/components/pd-repo/pd-repo-chat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html" afterPath="$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polymer-dashboard.iws" />
@@ -53,31 +57,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lists.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/theme/lists/lists.html">
+      <file leaf-file-name="pd-chat.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="12" column="97" selection-start-line="12" selection-start-column="97" selection-end-line="12" selection-end-column="97" />
+            <state vertical-scroll-proportion="-71.92308">
+              <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pd-drawer.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer.scss">
+      <file leaf-file-name="pd-repo-chat.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63267815">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.74791914">
+              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pd-list-item-friend.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/pd-list/pd-list-item-friend.html">
+      <file leaf-file-name="pd-context.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-context.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462">
-              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+            <state vertical-scroll-proportion="-23.538462">
+              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -91,41 +95,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/theme/icons/editor.html" />
-        <option value="$PROJECT_DIR$/pages/theme/icons/hardware.html" />
-        <option value="$PROJECT_DIR$/pages/theme/icons/image.html" />
-        <option value="$PROJECT_DIR$/pages/theme/icons/maps.html" />
         <option value="$PROJECT_DIR$/pages/theme/icons/notification.html" />
         <option value="$PROJECT_DIR$/pages/theme/icons/social.html" />
         <option value="$PROJECT_DIR$/pages/user/settings.html" />
-        <option value="$PROJECT_DIR$/pages/auth/auth.html" />
-        <option value="$PROJECT_DIR$/pages/auth/auth-dialog.html" />
-        <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-auth.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer-friends/pd-drawer-friends.html" />
         <option value="$PROJECT_DIR$/components/pd-list/pd-list-item-message.html" />
         <option value="$PROJECT_DIR$/demo-server/app.js" />
         <option value="$PROJECT_DIR$/pages/thread/thread.html" />
         <option value="$PROJECT_DIR$/components/pd-dashboard/pd-style-button.html" />
         <option value="$PROJECT_DIR$/components/pd-chat/pd-chat.css" />
         <option value="$PROJECT_DIR$/components/pd-chat/pd-chat-global.css" />
-        <option value="$PROJECT_DIR$/components/pd-realtime/pd-realtime.html" />
-        <option value="$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html" />
-        <option value="$PROJECT_DIR$/components/pd-realtime/pd-realtime-client.html" />
-        <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-chat.html" />
         <option value="$PROJECT_DIR$/demo-server/db.json" />
-        <option value="$PROJECT_DIR$/components/pd-data/pd-data.html" />
         <option value="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.scss" />
         <option value="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.css" />
         <option value="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.html" />
-        <option value="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.scss" />
-        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat-footer.html" />
-        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer.html" />
-        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer-menu/pd-drawer-menu.html" />
-        <option value="$PROJECT_DIR$/components/pd-list/pd-list-menu.html" />
         <option value="$PROJECT_DIR$/components/pd-page-dialog/pd-page-dialog.scss" />
         <option value="$PROJECT_DIR$/components/pd-list/pd-list-menu.css" />
-        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
         <option value="$PROJECT_DIR$/pages/thread/thread-page.html" />
         <option value="$PROJECT_DIR$/pages/user/profile.html" />
         <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-profile.html" />
@@ -136,12 +120,32 @@
         <option value="$PROJECT_DIR$/css/position.scss" />
         <option value="$PROJECT_DIR$/pages/main/main.html" />
         <option value="$PROJECT_DIR$/components/pd-chart/pd-chart.html" />
-        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat.scss" />
-        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat-global.scss" />
-        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat.html" />
         <option value="$PROJECT_DIR$/components/pd-list/pd-list-item-friend.html" />
         <option value="$PROJECT_DIR$/pages/theme/lists/lists.html" />
+        <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-auth.html" />
+        <option value="$PROJECT_DIR$/pages/auth/auth.html" />
+        <option value="$PROJECT_DIR$/pages/auth/auth-dialog.html" />
+        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer.html" />
+        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer-friends/pd-drawer-friends.html" />
+        <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-page.html" />
+        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html" />
+        <option value="$PROJECT_DIR$/components/pd-list/pd-list-menu.html" />
+        <option value="$PROJECT_DIR$/components/pd-data/pd-data.html" />
+        <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer-menu/pd-drawer-menu.html" />
+        <option value="$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/components/pd-repo/pd-repo-chat.html" />
+        <option value="$PROJECT_DIR$/components/pd-realtime/pd-realtime-client.html" />
+        <option value="$PROJECT_DIR$/components/pd-realtime/socket-io/socket.io-1.3.5.js" />
+        <option value="$PROJECT_DIR$/components/pd-realtime/pd-realtime.html" />
+        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat.scss" />
+        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat-footer.html" />
+        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat-global.scss" />
+        <option value="$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html" />
+        <option value="$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.scss" />
         <option value="$PROJECT_DIR$/components/pd-drawer/pd-drawer.scss" />
+        <option value="$PROJECT_DIR$/components/pd-repo/pd-context.html" />
+        <option value="$PROJECT_DIR$/components/pd-chat/pd-chat.html" />
       </list>
     </option>
   </component>
@@ -224,60 +228,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lists" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -296,7 +246,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pd-list" />
+              <option name="myItemId" value="pd-repo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,51 +264,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pd-drawer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pd-drawer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pd-drawer-menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="polymer-dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pd-drawer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pd-drawer-friends" />
+              <option name="myItemId" value="pd-chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -486,11 +392,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1548999" sideWeight="0.733871" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1332982" sideWeight="0.733871" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12539515" sideWeight="0.26612905" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10064935" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08658009" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -504,7 +411,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.103896104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -526,123 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-context.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41731265">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-realtime/pd-realtime-client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="33" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-realtime/pd-realtime.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10981912">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.807693">
-          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-data/pd-data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="1" selection-start-column="15" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo-server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14875">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.576923">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.615385">
-          <caret line="7" column="100" selection-start-line="7" selection-start-column="100" selection-end-line="7" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.2">
-          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-page-dialog/pd-page-dialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/skins/skin-template.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.5">
-          <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-page-dialog/pd-page-dialog.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-menu/pd-drawer-menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/pd-list/pd-list-menu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17075893">
@@ -651,26 +440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat-footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74252874">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/thread/thread.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="64" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1724138">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -731,30 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/tables/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/tables/template-user-details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-38.945454">
-          <caret line="126" column="34" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/paper-toast/demo/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="7.076923">
@@ -767,14 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33293697">
           <caret line="122" column="9" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-friends.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -803,6 +544,214 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-chart/pd-chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-37.26923">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/lists/lists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23448277">
+          <caret line="12" column="97" selection-start-line="12" selection-start-column="97" selection-end-line="12" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="100" selection-start-line="7" selection-start-column="100" selection-end-line="7" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/iron-ajax/iron-ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="51.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-friends.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="27" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321839">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-list/pd-list-item-friend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7307692">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8241379">
+          <caret line="165" column="43" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-friends/pd-drawer-friends.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-list/pd-list-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5636363">
+          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-menu/pd-drawer-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.2">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/auth/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7818182">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-data/pd-data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="70" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/main/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6126126">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/auth/auth-dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.12741312">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-realtime/socket-io/socket.io-1.3.5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="27522" selection-start-line="2" selection-start-column="27522" selection-end-line="2" selection-end-column="27522" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-realtime/pd-realtime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat-footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1636364">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat-global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1954023">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-realtime/pd-realtime-client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5471264">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/thread/thread-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11724138">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -813,120 +762,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/position.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.963636">
+        <state vertical-scroll-proportion="-10.923077">
           <caret line="165" column="13" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-list/pd-list-menu.html">
+    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-main/pd-drawer-main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20214032">
-          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        <state vertical-scroll-proportion="-22.884615">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-dashboard/pd-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33293697">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2735632">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/thread/thread-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-chart/pd-chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.26923">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat-global.scss">
+    <entry file="file://$PROJECT_DIR$/components/pd-edit-panel/pd-edit-panel-global.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-friends/pd-drawer-friends.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35172415">
-          <caret line="18" column="154" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="154" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer-menu/pd-drawer-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/pd-list/pd-list-item-friend.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/theme/lists/lists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="97" selection-start-line="12" selection-start-column="97" selection-end-line="12" selection-end-column="97" />
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/pd-drawer/pd-drawer.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63267815">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state vertical-scroll-proportion="-6.7636366">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/tables/table-user-details-sample.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.145454">
+          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/tables/template-user-details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6643678">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/theme/tables/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-context.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.538462">
+          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-chat/pd-chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-71.92308">
+          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pd-repo/pd-repo-chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74791914">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="52" />
           <folding />
         </state>
       </provider>

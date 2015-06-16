@@ -1,6 +1,6 @@
 <link rel="import" href="../../components/pd-repo/pd-repo-chat.html" />
 <link rel="import" href="../../components/pd-chat/pd-chat-footer.html" />
-<link rel="stylesheet" type="text/css" href="../../components/pd-chat/pd-chat-global.css" />
+<link type="text/css" rel="stylesheet" href="../../components/pd-chat/pd-chat-global.css" />
 
 <dom-module id="pd-chat">
     <link rel="import" type="css" href="../../components/pd-chat/pd-chat.css" />
@@ -16,6 +16,9 @@
         }
         .message-user, .message-datetime{
             color:var(--color-neutral-text-dark);
+        }
+        .hidden{
+            display:none;
         }
     </style>
     <template>
@@ -91,6 +94,7 @@
         },
         ready: function () {
             var self = this;
+            console.log(this.users);
             if(this.users.length > 0) {
                 this.$.repo.getThread(this.users, this.callback, this);
             }

@@ -51,7 +51,6 @@
 {
   border-width: 15px 15px 15px 0;
   border-color: transparent #FFFFFF;
-  z-index: 1;
   left: -15px;
   top: 15px;
 }
@@ -60,7 +59,6 @@
 {
   border-width: 15px 15px 15px 0;
   border-color: transparent #7F7F7F;
-  z-index: 0;
   left: -16px;
   top: 15px;
 }
@@ -69,7 +67,6 @@
 {
   border-width: 15px 0 15px 15px;
   border-color: transparent #FFFFFF;
-  z-index: 1;
   right: -15px;
   top: 15px;
 }
@@ -78,7 +75,6 @@
 {
   border-width: 15px 0 15px 15px;
   border-color: transparent #7F7F7F;
-  z-index: 0;
   right: -16px;
   top: 15px;
 }
@@ -98,3 +94,4 @@
   text-align: left;
   padding-left: 1em;
 }
+

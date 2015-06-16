@@ -28,7 +28,7 @@ paper-icon-button {
   box-sizing: border-box; }
 
 #main {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .main-section {
@@ -59,7 +59,8 @@ paper-icon-button {
   width: 300px; }
 
 .right-drawer {
-  right: -15em; }
+  right: -15em;
+  z-index: 3; }
 
 .left-drawer {
   left: -15em;

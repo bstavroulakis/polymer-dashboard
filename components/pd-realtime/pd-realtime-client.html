@@ -15,12 +15,15 @@
         ready: function () {
             this.setupRealtime();
         },
+        getSocket:function(){
+            return window.document.querySelector("pd-realtime#pd-realtime").socket;
+        },
         setupRealtime: function () {
             var self = this;
             if (!window.document.querySelector("pd-realtime#pd-realtime")) {
-                var div = document.createElement("div");
-                div.innerHTML = "<pd-realtime id='pd-realtime'></pd-realtime>";
-                window.document.body.appendChild(div.childNodes[0]);
+                var divReal = document.createElement("pd-realtime");
+                divReal.id = 'pd-realtime';
+                window.document.body.appendChild(divReal);
             }
             var dom = window.document.querySelector("pd-realtime#pd-realtime");
             self.socket = dom.socket;

@@ -17,11 +17,12 @@
             user:{}
         },
         ready: function () {
-            this.messageReceivedSetup();
+            var self = this;
+            self.messageReceivedSetup();
         },
         messageReceivedSetup: function(){
             var self = this;
-            this.$.realtime.socket.on('chat message', function(msg){
+            this.$.realtime.getSocket().on('chat message', function(msg){
                 var msgObj = JSON.parse(msg);
                 self.fire("messageReceived", msgObj);
             });
