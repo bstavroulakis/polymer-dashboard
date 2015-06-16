@@ -21,6 +21,9 @@
         attached  : function () {
             this.setupContext();
         },
+        ready:function(){
+            this.setupContext();
+        },
         getData: function () {
             this.setupContext();
             return window.document.querySelector("pd-data#pd-data");

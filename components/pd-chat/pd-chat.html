@@ -94,7 +94,6 @@
         },
         ready: function () {
             var self = this;
-            console.log(this.users);
             if(this.users.length > 0) {
                 this.$.repo.getThread(this.users, this.callback, this);
             }

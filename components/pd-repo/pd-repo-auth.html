@@ -27,7 +27,6 @@
             self.$.ajax.generateRequest();
         },
         responseCallback: function(response){
-            console.log(response.detail.response);
             this.callback(response.detail.response, this.selfCallback);
         }
     });
