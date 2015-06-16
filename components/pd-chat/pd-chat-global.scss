@@ -1,8 +1,11 @@
 @import '../../css/vars.scss';
 
 @media (min-width: $tablet-mode) {
-
   .left-locked /deep/ pd-chat-footer {
+    padding-left: $drawer-width;
+  }
+
+  .left-locked /deep/ .messages  {
     padding-left: $drawer-width;
   }
 
@@ -14,8 +17,8 @@
 html /deep/ pd-chat-footer{
   position: fixed;
   bottom: 0;
-  width: 100%;
   left: 0;
+  width: 100%;
   box-sizing: border-box;
   border-top:1px solid #dfdfdf;
 }

@@ -1,8 +1,12 @@
+@import '../../css/vars.scss';
+
 .message-wrapper{
   position: absolute;
   top: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   height:calc(100% - 5em);
+  left:0;
+  width:100%;
 }
 
 .message{

@@ -87,8 +87,10 @@
                   var queryParams = [];
                   var paramStarted = false;
                   for(var param in isfound){
-                      routeParams[param] = isfound[param];
-                      queryParams.push(param + "=" + isfound[param]);
+                      if(paramStarted) {
+                          routeParams[param] = isfound[param];
+                          queryParams.push(param + "=" + isfound[param]);
+                      }
                       if(param == "input")
                         paramStarted = true;
                   }

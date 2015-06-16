@@ -3,7 +3,7 @@
     <link rel="import" type="css" href="pd-list-menu.css" />
     <template>
         <pd-repo-menu id="repo"></pd-repo-menu>
-        <ul id="list" class="pd-drawer-list c-text">
+        <ul id="list" class="pd-drawer-list c-text m-t-0-5 m-b-0-5">
             <template is="dom-repeat" items="{{menuPages}}">
                 <li class$="{{computeRouteUrl(routeUrl, item.url)}}">
                     <pd-ui-toggle toggle-icon="{{showToggleIcon(item.pages)}}" toggle-status="{{subPageSelected(routeUrl, item.pages)}}">

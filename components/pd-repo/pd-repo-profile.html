@@ -3,6 +3,7 @@
     <template>
         <pd-context id="context"></pd-context>
         <iron-ajax id="ajax" url="{{service}}" handle-as="json" method="GET" on-response="getProfileCallback" with-credentials="true"></iron-ajax>
+        <iron-ajax id="saveProfileRequest" url="{{service}}" handle-as="json" method="POST" on-response="saveProfileCallback" with-credentials="true"></iron-ajax>
     </template>
 </dom-module>
 
@@ -14,8 +15,6 @@
             callback:{}
         },
         ready: function () {
-            var self = this;
-
         },
         getProfile: function (callback, selfCallback) {
             var self = this;
@@ -30,7 +29,6 @@
         },
         getProfileCallback:function(response){
             this.$.context.getData().update("profile", response.detail.response);
-            //this.callback(response.detail.response, this.selfCallback);
         }
     });
 </script>

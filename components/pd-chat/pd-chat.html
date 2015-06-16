@@ -20,8 +20,12 @@
     </style>
     <template>
         <pd-repo-chat id="repo"></pd-repo-chat>
+        <div class$="{{_noMessage(messages.length)}}">
+            <div class="p-1">No Messages</div>
+        </div>
         <div id="wrapper" class="message-wrapper">
-            <div id="messages" class="p-1 messages">
+            <div id="messages" class="messages">
+                <div class="p-1">
                 <template is="dom-repeat" items="{{messages}}">
                     <div class$="{{messageClasses(item.user)}}">
                         <div class="message-bubble">
@@ -33,6 +37,7 @@
                         </div>
                     </div>
                 </template>
+                </div>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -68,6 +73,11 @@
         observers:[
             "usersChanged(users.*)"
         ],
+        _noMessage:function(length){
+            if(length > 0)
+                return "hidden";
+            return "";
+        },
         messageClasses:function(user){
             var self = this;
             if(self.previousUser == "")
@@ -81,7 +91,9 @@
         },
         ready: function () {
             var self = this;
-            this.$.repo.getThread(this.users, this.callback, this);
+            if(this.users.length > 0) {
+                this.$.repo.getThread(this.users, this.callback, this);
+            }
             this.$.repo.addEventListener("messageReceived", function(e){
                 var msgObj = e.detail;
                 self.push("messages", {'user':msgObj.user, 'message':msgObj.message, 'datetime':msgObj.datetime});
@@ -99,7 +111,7 @@
         callback: function(response, self){
             self.set("messages",[]);
             if(response != null) {
-                self.messages = response.messages;
+                self.set("messages",response.messages);
                 self.threadId = response.id;
             }
             self.scrollToBottom(self);

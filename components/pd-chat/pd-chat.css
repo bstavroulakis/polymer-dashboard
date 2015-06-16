@@ -1,8 +1,12 @@
+/* Included Padding Vars */
+/* Included Sizes Vars */
 .message-wrapper {
   position: absolute;
   top: 0;
-  overflow-y: scroll;
-  height: calc(100% - 5em); }
+  overflow-y: auto;
+  height: calc(100% - 5em);
+  left: 0;
+  width: 100%; }
 
 .message {
   margin-bottom: 0.5em; }

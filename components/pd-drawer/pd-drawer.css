@@ -27,6 +27,10 @@ paper-icon-button {
   height: 100%;
   box-sizing: border-box; }
 
+#main {
+  max-width: 800px;
+  margin: 0 auto; }
+
 .main-section {
   box-sizing: border-box; }
 

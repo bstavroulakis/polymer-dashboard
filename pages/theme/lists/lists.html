@@ -3,9 +3,17 @@
 </div>
 
 <pd-ui-grid>
-    <pd-ui-grid-item large="24" medium="24" small="24">
-        <pd-card head="Basic List">
-            List here
+    <pd-ui-grid-item large="12" medium="12" small="24">
+        <pd-card head="Menu List">
+            <pd-list-menu title="user" position="left"></pd-list-menu>
+        </pd-card>
+    </pd-ui-grid-item>
+    <pd-ui-grid-item large="12" medium="12" small="24">
+        <pd-card head="People List">
+            <pd-list-item-friend name="Bill Stavroulakis" status="Available" icon="face" selected></pd-list-item-friend>
+            <pd-list-item-friend name="Joy Johnson" status="Available" icon="face"></pd-list-item-friend>
+            <pd-list-item-friend name="George Gatsis" status="Available" icon="face"></pd-list-item-friend>
+            <pd-list-item-friend name="Timos Pless" status="Available" icon="face"></pd-list-item-friend>
         </pd-card>
     </pd-ui-grid-item>
 </pd-ui-grid>

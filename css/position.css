@@ -160,7 +160,7 @@
   margin-top: 0.2em; }
 
 .m-t-0-5 {
-  margin-top: 0.5em; }
+  margin-top: 0.5em !important; }
 
 .m-t-1 {
   margin-top: 1em; }
@@ -232,7 +232,7 @@
   margin-bottom: 0.2em; }
 
 .m-b-0-5 {
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em !important; }
 
 .m-b-1 {
   margin-bottom: 1em; }
@@ -273,7 +273,7 @@
 .d-inline-block {
   display: inline-block; }
 
-.hidden {
+html /deep/ .hidden, .hidden {
   display: none; }
 
 /* Fillings */
@@ -308,6 +308,10 @@
 /* Z-Index */
 .z-index-1 {
   z-index: 1; }
+
+/* Widths */
+.w-100 {
+  width: 100%; }
 
 /* Polymer Compoents */
 iron-icon {

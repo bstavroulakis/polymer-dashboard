@@ -4,13 +4,16 @@
   .left-locked /deep/ pd-chat-footer {
     padding-left: 15em; }
 
+  .left-locked /deep/ .messages {
+    padding-left: 15em; }
+
   .right-locked /deep/ pd-chat-footer {
     padding-right: 15em; } }
 html /deep/ pd-chat-footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
   left: 0;
+  width: 100%;
   box-sizing: border-box;
   border-top: 1px solid #dfdfdf; }
 

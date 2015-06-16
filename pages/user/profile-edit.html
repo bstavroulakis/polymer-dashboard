@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/paper-button/paper-button.html" />
+<link rel="import" href="../../components/pd-select/pd-select.html" />
+<link rel="import" href="../../components/pd-repo/pd-repo-profile-table.html" />
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html" />
+<dom-module id="profile-edit">
+    <template>
+        <pd-repo-profile-table id="repo"></pd-repo-profile-table>
+        <pd-ui-grid>
+            <pd-ui-grid-item large="24" medium="24" small="24">
+                <pd-card head="Profile Details">
+                    <paper-input label="first name" value="{{profile.firstName}}"></paper-input>
+                    <paper-input label="last name" value="{{profile.lastName}}"></paper-input>
+                    <paper-input label="username" disabled value="{{profile.username}}"></paper-input>
+                    <pd-select floatingLabel="true" label="type" value="{{profile.type}}" options='["itadmin", "teacher", "principle"]' ></pd-select>
+                    <pd-select floatingLabel="true" label="status" value="{{profile.status}}" options='["Active", "Inactive"]' ></pd-select>
+                    <paper-button raised colored tabindex="0" class="f-right m-0-5" on-tap="saveProfile">Save</paper-button>
+                    <div class="clearfix"></div>
+                </pd-card>
+            </pd-ui-grid-item>
+        </pd-ui-grid>
+        <paper-toast id="toast" text=""></paper-toast>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is:"profile-edit",
+        properties:{
+            profile:{
+                type:Object,
+                value:{}
+            }
+        },
+        ready:function(){
+            this.profile = this.$.repo.$.context.getData().model.profile;
+        },
+        saveProfile:function(){
+            this.$.repo.createItem(this.itemSaved, this.profile, this);
+        },
+        itemSaved:function(self){
+            self.$.toast.text = "Item Saved";
+            self.$.toast.show();
+            self.$.repo.$.context.getData().update("profile", self.profile);
+        }
+    });
+</script>

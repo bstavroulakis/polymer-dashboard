@@ -59,7 +59,7 @@
 .m-t-0{ margin-top:$p-0; }
 .m-t-0-1{ margin-top:$p-0-1; }
 .m-t-0-2{ margin-top:$p-0-2; }
-.m-t-0-5{ margin-top:$p-0-5; }
+.m-t-0-5{ margin-top:$p-0-5 !important; }
 .m-t-1{ margin-top:$p-1; }
 .m-t-2{ margin-top:$p-2; }
 .m-t-3{ margin-top:$p-3; }
@@ -86,7 +86,7 @@
 .m-b-0{ margin-bottom:$p-0; }
 .m-b-0-1{ margin-bottom:$p-0-1; }
 .m-b-0-2{ margin-bottom:$p-0-2; }
-.m-b-0-5{ margin-bottom:$p-0-5; }
+.m-b-0-5{ margin-bottom:$p-0-5 !important; }
 .m-b-1{ margin-bottom:$p-1; }
 .m-b-2{ margin-bottom:$p-2; }
 .m-b-3{ margin-bottom:$p-3; }
@@ -127,7 +127,7 @@
   display:inline-block;
 }
 
-.hidden{
+html /deep/ .hidden, .hidden{
   display:none;
 }
 
@@ -161,6 +161,10 @@
   z-index:1;
 }
 
+/* Widths */
+.w-100{
+  width:100%;
+}
 
 /* Polymer Compoents */
 iron-icon{

@@ -420,7 +420,8 @@
       "active": "Active",
       "id": 4,
       "selected": false,
-      "userId": 1
+      "userId": 1,
+      "status": "Active"
     },
     {
       "firstName": "George",

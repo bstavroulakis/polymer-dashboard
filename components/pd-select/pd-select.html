@@ -16,7 +16,7 @@
     </style>
     <template>
         <div id="pdSelector" class$="{{toggledClass}}">
-            <div class="select-wrap p-relative m-t-0-5 m-b-0-5">
+            <div class="select-wrap p-relative m-t-0-5 m-b-1">
                 <label class="label p-b-0-5" hidden$="[[!label]]">[[label]]</label>
                 <div class="select-action  p-b-0-2" on-click="toggle">
                     <template is="dom-if" if="{{selectedEmpty}}">
@@ -81,7 +81,7 @@
             }
         },
         _computeSelectedEmpty:function(selected){
-            if(selected == "")
+            if(selected == null || selected == "" || this.options.indexOf(selected) == -1)
                 return true;
             return false;
         },
@@ -106,7 +106,8 @@
         },
         ready:function(){
             var self = this;
-
+            if(this.value == null)
+                this.set("value","");
             document.body.addEventListener('click',function () {
                 self.selectToggled = false;
             });
