@@ -33,7 +33,7 @@
       ready: function () {
           var self = this;
           self.async(function(){
-              self.$.repo.getPages(self.pageCallback,self);;
+              self.$.repo.getPages(self.pageCallback,self);
           },0);
           self.$.repo.$.context.getData().addEventListener("pd-data-updated-model.route", function (event) {
               self.getPathFromPages(event.detail.value);
