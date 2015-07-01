@@ -7,7 +7,7 @@
   .right-locked .chat-footer{
     right: $drawer-width !important;
   }
-  .right-locked .message-wrapper{
+  .left-locked .message-wrapper{
     width:calc(100% - 15em) !important;
   }
 }

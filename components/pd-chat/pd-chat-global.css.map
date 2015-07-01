@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";;AAEA,yBAAiC;EAC/B,wDAAyD;IACvD,IAAI,EAAE,eAAwB;;EAEhC,0BAA0B;IACxB,KAAK,EAAE,eAAwB;;EAEjC,8BAA8B;IAC5B,KAAK,EAAC,4BAA4B",
+"mappings": ";;AAEA,yBAAiC;EAC/B,wDAAyD;IACvD,IAAI,EAAE,eAAwB;;EAEhC,0BAA0B;IACxB,KAAK,EAAE,eAAwB;;EAEjC,6BAA6B;IAC3B,KAAK,EAAC,4BAA4B",
 "sources": ["pd-chat-global.scss"],
 "names": [],
 "file": "pd-chat-global.css"
