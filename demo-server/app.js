@@ -43,9 +43,9 @@ server.listen(5000);
 app.use(cookieParser("secret", {"path": "/"}));
 app.get('/', function(req, res){
     if (!req.signedCookies.usersession) {
-        res.redirect('/pages/auth/auth.html');
+        res.redirect('app/pages/auth/auth.html');
     }else{
-        res.sendFile(path.join(__dirname+'\\..\\index.html'));
+        res.sendFile(path.join(__dirname+'\\..\\app\\index.html'));
     }
 });
 app.get('/auth/logout', function(req, res){
@@ -53,7 +53,7 @@ app.get('/auth/logout', function(req, res){
     res.redirect('/pages/auth/auth.html');
 });
 app.get('/pages/auth/auth.html', function(req, res){
-    res.sendFile(path.join(__dirname+'\\..\\pages/auth/auth.html'));
+    res.sendFile(path.join(__dirname+'\\..\\app\\pages/auth/auth.html'));
 });
 app.use(express.static(path.join(__dirname, '..\\')));
 var http = require('http').Server(app);
