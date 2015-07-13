@@ -1,5 +1,4 @@
-<link href="../../bower_components/paper-ripple/paper-ripple.html" rel="import"/>
-<link href="../../components/pd-animation/pd-animation-dropdown.html" rel="import"/>
+
 <dom-module id="pd-select">
     <link rel="import" type="css" href="../../components/pd-select/pd-select.css"/>
     <style>
@@ -12,6 +11,12 @@
         .selectToggled .select-action{
             border-bottom-color: var(--primary-color);
             border-bottom-width: 2px;
+        }
+        #toggleAnimation{
+            background-color: var(--color-neutral-text-bg);
+            border-left:1px solid var(--color-neutral-text-dark);
+            border-right:1px solid var(--color-neutral-text-dark);
+            border-bottom:1px solid var(--color-neutral-text-dark);
         }
     </style>
     <template>
@@ -29,7 +34,7 @@
                         <iron-icon icon="expand-more"></iron-icon>
                     </span>
                 </div>
-                <pd-animation-dropdown  id="toggleAnimation">
+                <div  id="toggleAnimation">
                 <div class="select-body c-text-bgs">
                     <template is="dom-repeat" items="{{options}}">
                         <div class="line">
@@ -37,7 +42,7 @@
                         </div>
                     </template>
                 </div>
-                </pd-animation-dropdown>
+                </div>
             </div>
         </div>
     </template>
@@ -87,9 +92,9 @@
         },
         _computetoggledClass:function(toggled){
             if(toggled){
-                this.$.toggleAnimation.show();
+                this.$.toggleAnimation.style.display = "inline-block";//.show();
             }else{
-                this.$.toggleAnimation.hide();
+                this.$.toggleAnimation.style.display = "none";//.hide();
             }
             if(toggled){
                 return "selectToggled";

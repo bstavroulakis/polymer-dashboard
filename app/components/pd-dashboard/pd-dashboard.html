@@ -1,4 +1,4 @@
-﻿<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html" />
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html" />
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html"/>
@@ -29,37 +29,37 @@
 <script src="../../components/pd-dashboard/global.js"></script>
 
 <dom-module id="pd-dashboard">
-    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/position.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/font.css" />
-    <link rel="import" type="css" href="../../components/pd-dashboard/pd-style-button.html"/>
-    <style>
-        paper-input{
-            color:var(--color-neutral);
-        }
-    </style>
-    <template>
-        <pd-drawer class$="{{drawerClasses}}">
-            <div class="logo">
-                <a href="/#!/">
-                    <img src="../../images/LogoSymbol.png" /><img class="p-l-0-5" src="../../images/LogoText.png" />
-                </a>
-            </div>
-            <div class="left-menu">
-                <pd-drawer-menu></pd-drawer-menu>
-            </div>
-            <div class="right-menu">
-                <pd-drawer-friends></pd-drawer-friends>
-            </div>
-        </pd-drawer>
-        <pd-flatiron-director></pd-flatiron-director>
-    </template>
+  <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/position.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/font.css" />
+  <link rel="import" type="css" href="../../components/pd-dashboard/pd-style-button.html"/>
+  <style>
+    paper-input{
+      color:var(--color-neutral);
+    }
+  </style>
+  <template>
+    <pd-drawer class$="{{drawerClasses}}">
+      <div class="logo">
+        <a href="/#!/">
+          <img src="../../images/LogoSymbol.png" /><img class="p-l-0-5" src="../../images/LogoText.png" />
+        </a>
+      </div>
+      <div class="left-menu">
+        <pd-drawer-menu></pd-drawer-menu>
+      </div>
+      <div class="right-menu">
+        <pd-drawer-friends></pd-drawer-friends>
+      </div>
+    </pd-drawer>
+    <pd-flatiron-director></pd-flatiron-director>
+  </template>
 </dom-module>
 
 <script>
   Polymer({
-      is: "pd-dashboard",
-      ready:function(){
-      }
+    is: "pd-dashboard",
+    ready:function(){
+    }
   });
 </script>
