@@ -28,13 +28,12 @@
     "paper-radio-button": "PolymerElements/paper-radio-button#^1.0.0",
     "paper-behaviors": "PolymerElements/paper-behaviors#^1.0.0",
     "socket.io": "Automattic/socket.io",
-    "xregexp": "slevithan/xregexp#2.0.0"
+    "xregexp": "slevithan/xregexp#2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^3.3.0",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
   },
   "resolutions": {
-    "webcomponentsjs": "^0.7.1",
-    "promise-polyfill": "2.0.0",
-    "polymer": "^1.0.0",
-    "iron-component-page": "^1.0.0"
+    "polymer": "^1.0.0"
   },
   "ignore": [
     "**/.*",

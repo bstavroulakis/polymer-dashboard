@@ -128,7 +128,7 @@
           "pages": [
             {
               "title": "Login",
-              "url": "/pages/auth/auth.html"
+              "url": "/app/pages/auth/auth.html"
             },
             {
               "title": "404",
@@ -415,13 +415,13 @@
     {
       "firstName": "Bill",
       "lastName": "Stavroulakis",
-      "type": "principle",
+      "type": "teacher",
       "username": "bill",
       "active": "Active",
       "id": 4,
       "selected": false,
       "userId": 1,
-      "status": "Active"
+      "status": "Inactive"
     }
   ],
   "getThread": [

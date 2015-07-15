@@ -41,15 +41,15 @@ gulp.task('copy', function () {
 });
 
 gulp.task('vulcanize', function () {
-    return gulp.src('app/components/pd-dashboard/pd-dashboard.vulcanized.html')
+    return gulp.src('../app/components/pd-dashboard/pd-dashboard.vulcanized.html')
         .pipe(vulcanize({
             abspath: '',
-            excludes: ['bower_components/polymer/polymer.html',
-                'app/bower_components/polymer/polymer.html'
+            excludes: ['../bower_components/polymer/polymer.html',
+                '../app/bower_components/polymer/polymer.html'
             ],
             stripExcludes: false
         }))
-        .pipe(gulp.dest('app/components/pd-dashboard'));
+        .pipe(gulp.dest('../app/components/pd-dashboard'));
 });
 
 gulp.task('precache', function (callback) {
@@ -62,3 +62,5 @@ gulp.task('default',  function (cb) {
         'vulcanize', 'precache',
         cb)
     });
+
+require('web-component-tester').gulp.init(gulp);
