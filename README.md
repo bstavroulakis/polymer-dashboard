@@ -18,6 +18,8 @@ Or a working demo at http://demo.polymer-dashboard.com/pages/auth/auth.html
 
 6) Run "gulp"
 
-7) Run "node demo-server/app.js"
+7) "cd demo-server"
 
-8) Visit http://localhost:8080 to preview project
+8) Run "node app.js"
+
+9) Visit http://localhost:8080 to preview project
