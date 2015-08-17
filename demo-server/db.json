@@ -128,7 +128,7 @@
           "pages": [
             {
               "title": "Login",
-              "url": "/app/pages/auth/auth.html"
+              "url": "/pages/auth/auth.html"
             },
             {
               "title": "404",
@@ -421,6 +421,17 @@
       "id": 4,
       "selected": false,
       "userId": 1,
+      "status": "Inactive"
+    },
+    {
+      "firstName": "Benedito",
+      "lastName": "Batista",
+      "type": "teacher",
+      "username": "benedito",
+      "active": "Active",
+      "id": 6,
+      "selected": false,
+      "userId": 3,
       "status": "Inactive"
     }
   ],
