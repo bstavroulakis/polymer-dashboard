@@ -29,9 +29,9 @@
 <script src="../../components/pd-dashboard/global.js"></script>
 
 <dom-module id="pd-dashboard">
-  <link rel="stylesheet" href="../../../app/css/main.css" />
-  <link rel="stylesheet" href="../../../app/css/position.css" />
-  <link rel="stylesheet" href="../../../app/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../../../app/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="../../../app/css/position.css" />
+  <link rel="stylesheet" type="text/css" href="../../../app/css/font.css" />
   <link rel="import" type="css" href="../../components/pd-dashboard/pd-style-button.html"/>
   <style>
     paper-input{

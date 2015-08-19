@@ -1,6 +1,6 @@
 ﻿<link rel="import" href="../../components/pd-drawer/pd-progress/pd-progress.html" />
 <dom-module id="pd-drawer">
-    <link rel="stylesheet" href="../../components/pd-drawer/pd-drawer.css" />
+    <link rel="stylesheet" href="pd-drawer.css" />
     <style>
         pd-progress{
             position: absolute;
