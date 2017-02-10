@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;AAIA,eAAgB;EACZ,KAAK,EAHQ,KAAK;EAIlB,MAAM,EAAE,MAAM;EACd,OAAO,EAAC,YAAY;EACpB,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,8BAA0B;EACtC,cAAc,EAAE,MAAM;EACtB,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAC,UAAU;;AAGzB,yBAA6C;EACzC,eAAgB;IACZ,KAAK,EAAC,GAAG",
-"sources": ["pd-page-dialog.scss"],
-"names": [],
-"file": "pd-page-dialog.css"
-}

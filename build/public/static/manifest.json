@@ -1,0 +1,15 @@
+{
+	"name": "Polymer Dashboard",
+	"short_name": "Polymer Dashboard",
+	"scope": "./",
+	"start_url": "./",
+	"background_color": "#f1f1f1",
+	"theme_color": "#002b49",
+	"display": "standalone",
+	"orientation": "portrait",
+	"icons": [{
+	    "src": "icons/icon-512x512.png",
+	    "type": "image/png",
+	    "sizes": "512x512"
+	  }]
+}

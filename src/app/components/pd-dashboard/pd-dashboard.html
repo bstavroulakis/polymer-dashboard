@@ -1,0 +1,48 @@
+<link rel="import" href="bower_components/polymer/polymer-element.html">
+<link rel="import" href="bower_components/app-layout/app-layout.html">
+
+<dom-module id="polymer-dashboard">
+    <template>
+
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+
+        <app-header reveals>
+            <app-toolbar>
+                <paper-icon-button icon="menu" onclick="drawer.toggle()"></paper-icon-button>
+                <div main-title>Polymer Dashboard</div>
+                <paper-icon-button icon="delete"></paper-icon-button>
+                <paper-icon-button icon="search"></paper-icon-button>
+                <paper-icon-button icon="close"></paper-icon-button>
+                <paper-progress value="10" indeterminate bottom-item></paper-progress>
+            </app-toolbar>
+        </app-header>
+        <app-drawer id="drawer" swipe-open></app-drawer>
+        <sample-content size="10"></sample-content>
+
+    </template>
+
+    <script>
+        // Extend Polymer.Element base class
+        class PolymerDashboard extends Polymer.Element {
+
+            static get is() { return 'polymer-dashboard' }
+
+            static get config() {
+                // properties, observers meta data
+                return {};
+            }
+
+            connectedCallback() {
+                super.connectedCallback();
+            }
+
+        }
+
+        // Register custom element definition using standard platform API
+        customElements.define(PolymerDashboard.is, PolymerDashboard);
+    </script>
+</dom-module>

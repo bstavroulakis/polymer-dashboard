@@ -1,45 +1,13 @@
 {
-  "name": "Polymer Dashboard",
+  "name": "polymer-dashboard",
+  "authors": [
+    "Bill Stavroulakis"
+  ],
+  "license": "LICENSE.txt",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.3",
-    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.0",
-    "paper-toolbar": "PolymerElements/paper-toolbar#^1.0.0",
-    "paper-icon-button": "PolymerElements/paper-icon-button#^1.0.0",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
-    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
-    "paper-input": "PolymerElements/paper-input#^1.0.0",
-    "paper-button": "PolymerElements/paper-button#^1.0.0",
-    "paper-checkbox": "PolymerElements/paper-checkbox#^1.0.0",
-    "paper-menu": "PolymerElements/paper-menu#^1.0.0",
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "iron-pages": "PolymerElements/iron-pages#^1.0.0",
-    "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
-    "promise-polyfill": "PolymerLabs/promise-polyfill#^1.0.0",
-    "paper-progress": "PolymerElements/paper-progress#^1.0.0",
-    "iron-a11y-keys": "PolymerElements/iron-a11y-keys#^1.0.0",
-    "paper-toast": "PolymerElements/paper-toast#^1.0.0",
-    "chartist-js": "gionkunz/chartist-js",
-    "firebase-element": "GoogleWebComponents/firebase-element",
-    "paper-fab": "PolymerElements/paper-fab",
-    "iron-selector": "PolymerElements/iron-selector#^1.0.0",
-    "paper-ripple": "PolymerElements/paper-ripple",
-    "neon-animation": "PolymerElements/neon-animation#^1.0.0",
-    "marked-element": "PolymerElements/marked-element#^1.0.0",
-    "paper-radio-button": "PolymerElements/paper-radio-button#^1.0.0",
-    "paper-behaviors": "PolymerElements/paper-behaviors#^1.0.0",
-    "socket.io": "Automattic/socket.io",
-    "xregexp": "slevithan/xregexp#2.0.0",
-    "web-component-tester": "Polymer/web-component-tester#^3.3.0",
-    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
+    "polymer": "Polymer/polymer#2.0-preview",
+    "polymer-redux": "polymer-2",
+    "app-layout": "PolymerElements/app-layout#2.0-preview"
   },
-  "resolutions": {
-    "polymer": "^1.0.0"
-  },
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "private": true
 }
