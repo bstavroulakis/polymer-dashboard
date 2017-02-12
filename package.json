@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "description": "Polymer Dashboard",
   "scripts": {
-    "dev": "mkdirp ./build & nodemon -e js,scss -w src -x & 'node build && node ./build/server.js'",
-    "start": "node build && node ./build/server.js"
+    "dev": "mkdirp ./build & nodemon -e html,js,scss -w src -x & 'node build && node ./build/server/server.js'",
+    "start": "node build && node ./build/server/server.js"
   },
   "dependencies": {
     "compression": "1.6.2",

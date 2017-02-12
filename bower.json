@@ -6,7 +6,7 @@
   "license": "LICENSE.txt",
   "dependencies": {
     "polymer": "Polymer/polymer#2.0-preview",
-    "polymer-redux": "polymer-2",
+    "polymer-redux": "tur-nr/polymer-redux#polymer-2",
     "app-layout": "PolymerElements/app-layout#2.0-preview"
   },
   "private": true

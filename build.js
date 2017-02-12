@@ -31,11 +31,11 @@ const server = () => rollup({
     buble({ jsx: 'h' })
   ]
 }).then((bundle) => {
-  return bundle.write({ sourceMap: true, format: 'cjs', dest: `build/server.js` })
+  return bundle.write({ sourceMap: true, format: 'cjs', dest: `build/server/server.js` })
 })
 
 const clean = () => exec('rm -rf ./build && mkdirp ./build/public')
-const copy = () => exec('cp -R ./src/app/static/ ./build/public/ && cp -R ./src/app/components/ ./build/public/')
+const copy = () => exec('cp -R ./src/app/* ./build/public/')
 
 const tasks = new Map()
 const run = (task) => {
