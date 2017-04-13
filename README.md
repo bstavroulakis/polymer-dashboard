@@ -1,3 +1,11 @@
+# Version Warning
+
+This project is 2 years old. It was written with the release of Polymer 1.0. From 2014-2015 a lot has changed! So with the release of Polymer 2.0 it will need a full rewrite with the new syntax and build process (Webpack, Progressive Web Apps, ES2015, ES2016 e.t.c)
+
+Although it implements the basic concepts of the platform it will require a rewrite.
+
+Thank you for your support and I'll keep you updated on the progress.
+
 # polymer-dashboard
 
 You can view the Project site at http://polymer-dashboard.com/
