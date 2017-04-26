@@ -38,3 +38,5 @@ http://app.pluralsight.com/courses/building-web-application-polymer-material-des
 8) Run "node app.js"
 
 9) Visit http://localhost:8080 to preview project
+
+10) Login with username "bill" and password "polymer"
